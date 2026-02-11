@@ -11,8 +11,17 @@ export default function Navbar() {
     const closeMenu = () => {
         sideMenuRef.current.style.transform = 'translateX(16rem)';
     }
-    const toggleTheme = () => {
+    // const toggleTheme = () => {
 
+    //     document.documentElement.classList.toggle('dark');
+
+    //     if (document.documentElement.classList.contains('dark')) {
+    //         localStorage.theme = 'dark';
+    //     } else {
+    //         localStorage.theme = 'light';
+    //     }
+    // }
+    const toggleTheme = () => {
         document.documentElement.classList.toggle('dark');
 
         if (document.documentElement.classList.contains('dark')) {
@@ -21,6 +30,7 @@ export default function Navbar() {
             localStorage.theme = 'light';
         }
     }
+
 
     useEffect(() => {
 
@@ -54,7 +64,7 @@ export default function Navbar() {
 
                 <a href="#!">
                     {/*============= Logo ==============*/}
-                    <img src="./assets/A Logo2.png" alt="Logo" className="w-28 cursor-pointer mr-14 dark:hidden" />    
+                    <img src="./assets/A Logo2.png" alt="Logo" className="w-28 cursor-pointer mr-14 dark:hidden" />
                     <img src="./assets/A Logo2.png" alt="Logo" className="w-28 cursor-pointer mr-14 hidden dark:block" />
                 </a>
 

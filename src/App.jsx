@@ -33,8 +33,8 @@ export default function App() {
                 {/* Open Graph / Social Sharing */}
                 <meta property="og:title" content="Aswanth Portfolio Website" />
                 <meta property="og:description" content="Aswanth Portfolio Website – SEO-focused portfolio showcasing projects, skills, and achievements." />
-                <meta property="og:image" content="https://yourportfolio.com/assets/portfolio-preview.png" />
-                <meta property="og:url" content="https://yourportfolio.com" />
+                <meta property="og:image" content="https://aswanth-portfolio-eta.vercel.app/assets/portfolio-preview.png" />
+                <meta property="og:url" content="https://aswanth-portfolio-eta.vercel.app/" />
                 <meta property="og:type" content="website" />
 
                 {/* Structured Data */}
@@ -44,7 +44,7 @@ export default function App() {
                             "@context": "https://schema.org",
                             "@type": "Person",
                             "name": "Aswanth",
-                            "url": "https://yourportfolio.com",
+                            "url": "https://aswanth-portfolio-eta.vercel.app/",
                             "jobTitle": "SEO Specialist",
                             "description": "Aswanth Portfolio Website showcasing SEO projects, strategies, and skills.",
                             "sameAs": [

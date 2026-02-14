@@ -18,21 +18,21 @@ export default function App() {
 
             <Helmet>
                 {/* Page Title */}
-                <title>Aswanth Portfolio Website</title>
+                <title>Aswanth Portfolio Website | SEO Specialist Portfolio Online</title>
 
                 {/* Meta Description & Keywords */}
                 <meta
                     name="description"
-                    content="Aswanth Portfolio Website – SEO-focused portfolio showcasing projects, skills, and achievements."
+                    content="Aswanth Portfolio Website – Explore SEO projects, skills, strategies, and achievements by SEO Specialist Aswanth. View portfolio, case studies, and SEO results."
                 />
                 <meta
                     name="keywords"
-                    content="Aswanth Portfolio Website, SEO Portfolio, SEO Projects, SEO Skills"
+                    content="Aswanth Portfolio Website, SEO Portfolio, SEO Projects, SEO Skills, SEO Results, SEO Case Studies"
                 />
 
                 {/* Open Graph / Social Sharing */}
                 <meta property="og:title" content="Aswanth Portfolio Website" />
-                <meta property="og:description" content="Aswanth Portfolio Website – SEO-focused portfolio showcasing projects, skills, and achievements." />
+                <meta property="og:description" content="Aswanth Portfolio Website – Explore SEO projects, skills, strategies, and achievements by SEO Specialist Aswanth. View portfolio, case studies, and SEO results." />
                 <meta property="og:image" content="https://aswanth-portfolio-eta.vercel.app/assets/portfolio-preview.png" />
                 <meta property="og:url" content="https://aswanth-portfolio-eta.vercel.app/" />
                 <meta property="og:type" content="website" />
@@ -48,8 +48,8 @@ export default function App() {
                             "jobTitle": "SEO Specialist",
                             "description": "Aswanth Portfolio Website showcasing SEO projects, strategies, and skills.",
                             "sameAs": [
-                                "https://www.linkedin.com/in/yourprofile",
-                                "https://github.com/yourusername"
+                                "https://www.linkedin.com/in/aswanth-clt",
+                                "https://github.com/aswanth7356"
                             ]
                         }
                     `}

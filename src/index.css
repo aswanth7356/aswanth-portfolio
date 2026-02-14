@@ -1,3 +1,139 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+/* ===== Premium Background ===== */
+.premium-preloader {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+  background-size: 300% 300%;
+  animation: gradientMove 6s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* ===== Glass Box ===== */
+.glass-box {
+  width: 320px;
+  padding: 40px 25px;
+  border-radius: 25px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  animation: popUp 0.8s ease;
+}
+
+/* ===== Neon Ring Loader ===== */
+.neon-ring {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.15);
+  border-top: 6px solid #38bdf8;
+  border-right: 6px solid #a78bfa;
+  animation: spinGlow 1s linear infinite;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
+}
+
+/* ===== Title Animation ===== */
+.premium-title {
+  margin-top: 25px;
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 1px;
+  animation: pulseText 1.5s infinite;
+}
+
+/* ===== Subtitle ===== */
+.premium-subtitle {
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ===== Progress Bar ===== */
+.premium-progress {
+  margin: 25px auto 0;
+  width: 260px;
+  height: 10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+}
+
+.premium-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6);
+  animation: loadBar 3.5s linear forwards;
+}
+
+/* ===== Animations ===== */
+@keyframes spinGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadBar {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes pulseText {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

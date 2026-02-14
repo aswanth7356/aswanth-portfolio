@@ -6,10 +6,13 @@ import About from './components/About'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
 import LenisScroll from './components/LenisScroll'
+import Preloader from './components/Preloader'
 
 export default function App() {
     return (
         <>
+            <Preloader />
+
             <LenisScroll />
             <Navbar />
             <Header />

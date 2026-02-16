@@ -22,7 +22,7 @@ export default function Preloader() {
                 }
                 return prev + 1;
             });
-        }, 40); // speed (40ms × 100 = 4 sec)
+        }, 30); // speed (40ms × 100 = 4 sec)
 
         return () => clearInterval(interval);
     }, []);

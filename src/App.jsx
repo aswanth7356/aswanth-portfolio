@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet'
+import { Routes, Route } from 'react-router-dom'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Work from './components/Work'
@@ -8,6 +9,8 @@ import Header from './components/Header'
 import Navbar from './components/Navbar'
 import LenisScroll from './components/LenisScroll'
 import Preloader from './components/Preloader'
+import Allwok from './components/Allwok'
+
 
 export default function App() {
     return (
@@ -60,16 +63,28 @@ export default function App() {
 
             {/* ========================================================== */}
 
-            <Preloader />
+            <Routes>
+                {/* Home page route */}
+                <Route
+                    path="/"
+                    element={
+                        <>
+                            <Preloader />
+                            <LenisScroll />
+                            <Navbar />
+                            <Header />
+                            <About />
+                            <Services />
+                            <Work />
+                            <Contact />
+                            <Footer />
+                        </>
+                    }
+                />
 
-            <LenisScroll />
-            <Navbar />
-            <Header />
-            <About />
-            <Services />
-            <Work />
-            <Contact />
-            <Footer />
+                {/* All work page */}
+                <Route path="/all-work" element={<Allwok />} />
+            </Routes>
         </>
     )
 }

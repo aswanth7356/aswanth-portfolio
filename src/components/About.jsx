@@ -9,6 +9,7 @@ export default function About() {
         { name: 'google search console', icon: './assets/google search console.png', },
         { name: 'google tag manager', icon: './assets/google tag manager.png', },
         { name: 'moz', icon: './assets/moz.png', },
+        { name: 'page speed insight', icon: './assets/page-speed-insight.png', },
         { name: 'seo optimer', icon: './assets/seo optimer.png', },
     ];
 

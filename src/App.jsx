@@ -24,8 +24,9 @@ export default function App() {
 
                 <meta
                     name="description"
-                    content="Aswanth Portfolio Website – Explore SEO projects, skills, strategies, and achievements by SEO Specialist Aswanth. View portfolio, case studies, and SEO results."
+                    content="Aswanth P – SEO Specialist Portfolio showcasing SEO projects, case studies, strategies, skills, results, and digital marketing success."
                 />
+
 
                 <meta
                     name="keywords"

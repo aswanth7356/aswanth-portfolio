@@ -1,70 +1,104 @@
 import { useEffect, useState } from "react";
 
-export default function Preloader() {
-    const [loading, setLoading] = useState(true);
-    const [fadeOut, setFadeOut] = useState(false);
-    const [progress, setProgress] = useState(0);
+export default function PortfolioLoader() {
+  const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        let interval;
+  useEffect(() => {
+    // Check if the loader has already been shown in this session
+    const loaderShown = sessionStorage.getItem("portfolioLoaderShown");
 
-        interval = setInterval(() => {
-            setProgress((prev) => {
-                if (prev >= 100) {
-                    clearInterval(interval);
-                    setFadeOut(true);
+    if (!loaderShown) {
+      setLoading(true); // show loader
+      sessionStorage.setItem("portfolioLoaderShown", "true"); // mark as shown
 
-                    setTimeout(() => {
-                        setLoading(false);
-                    }, 800);
+      const timer = setTimeout(() => setLoading(false), 2000); // loader duration
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
-                    return 100;
-                }
-                return prev + 1;
-            });
-        }, 25); // speed (40ms × 100 = 4 sec)
+  if (!loading) return null;
 
-        return () => clearInterval(interval);
-    }, []);
+  const orbitItems = [...Array(6)];
 
-    if (!loading) return null;
+  return (
+    <div style={{
+      position: 'fixed',
+      inset: 0,
+      background: 'linear-gradient(135deg, #0f172a, #1e293b)',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexDirection: 'column',
+      overflow: 'hidden',
+      zIndex: 9999
+    }}>
+      {/* Orbit Container */}
+      <div style={{
+        position: 'relative',
+        width: '200px',
+        height: '200px',
+      }}>
+        {/* Central 3D Rotating Orb */}
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          width: '80px',
+          height: '80px',
+          marginTop: '-40px',
+          marginLeft: '-40px',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, #38bdf8, #a78bfa)',
+          boxShadow: '0 0 40px rgba(56,189,248,0.7), 0 0 80px rgba(167,139,250,0.5)',
+          animation: 'orbRotate 2s linear infinite'
+        }}></div>
 
-    return (
-        <div className={`premium-loader ${fadeOut ? "fade-out" : ""}`}>
-            {/* Floating Particles */}
-            <div className="particles">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        {/* Orbiting Dots */}
+        {orbitItems.map((_, i) => (
+          <div key={i} style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '12px',
+            height: '12px',
+            borderRadius: '50%',
+            background: `linear-gradient(90deg, #38bdf8, #f472b6)`,
+            transform: `rotate(${i*60}deg) translateX(90px)`,
+            transformOrigin: '0 0',
+            animation: `dotOrbit ${2 + i*0.2}s linear infinite`,
+            animationDelay: `${i*0.05}s`,
+            boxShadow: '0 0 12px rgba(56,189,248,0.7)'
+          }}></div>
+        ))}
+      </div>
 
-            {/* Main Loader */}
-            <div className="loader-box">
-                <div className="glow-ring">
-                    <div className="inner-ring"></div>
-                </div>
+      {/* Portfolio Text */}
+      <h1 style={{
+        marginTop: '30px',
+        fontSize: '28px',
+        fontWeight: 800,
+        background: 'linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        animation: 'hueRotate 3s linear infinite'
+      }}>Aswanth Portfolio</h1>
 
-                <h1 className="loader-title">Aswanth Portfolio</h1>
-                <p className="loader-subtitle">Optimizing your experience...</p>
+      <style>{`
+        @keyframes orbRotate {
+          0% { transform: rotateY(0deg) rotateX(0deg); }
+          100% { transform: rotateY(360deg) rotateX(360deg); }
+        }
 
-                {/* Progress Bar */}
-                <div className="progress-wrapper">
-                    <div className="progress-bar">
-                        <div
-                            className="progress-fill"
-                            style={{ width: `${progress}%` }}
-                        ></div>
-                    </div>
-                    <span className="progress-text">{progress}%</span>
-                </div>
-            </div>
-        </div>
-    );
+        @keyframes dotOrbit {
+          0% { transform: rotate(0deg) translateX(90px); }
+          100% { transform: rotate(360deg) translateX(90px); }
+        }
+
+        @keyframes hueRotate {
+          0% { filter: hue-rotate(0deg); }
+          100% { filter: hue-rotate(360deg); }
+        }
+      `}</style>
+    </div>
+  );
 }

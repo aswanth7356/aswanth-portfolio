@@ -1,19 +1,12 @@
 import { useEffect, useState } from "react";
 
 export default function PortfolioLoader() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check if the loader has already been shown in this session
-    const loaderShown = sessionStorage.getItem("portfolioLoaderShown");
-
-    if (!loaderShown) {
-      setLoading(true); // show loader
-      sessionStorage.setItem("portfolioLoaderShown", "true"); // mark as shown
-
-      const timer = setTimeout(() => setLoading(false), 2000); // loader duration
-      return () => clearTimeout(timer);
-    }
+    // Show loader for 2 seconds
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
   }, []);
 
   if (!loading) return null;

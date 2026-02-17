@@ -37,7 +37,7 @@ export default function App() {
                 <meta property="og:title" content="Aswanth Portfolio Website" />
                 <meta property="og:site_name" content="Aswanth Portfolio Website" />
                 <meta property="og:description" content="Aswanth Portfolio Website – Explore SEO projects, skills, strategies, and achievements by SEO Specialist Aswanth. View portfolio, case studies, and SEO results." />
-                <meta property="og:image" content="https://aswanth-portfolio-eta.vercel.app/assets/portfolio-preview.png" />
+                <meta property="og:image" content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png" />
                 <meta property="og:url" content="https://aswanth-portfolio-eta.vercel.app/" />
                 <meta property="og:type" content="website" />
 

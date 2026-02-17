@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aswanth-portfolio-eta.vercel.app/sitemap.xml

@@ -17,11 +17,6 @@ function Allwok() {
                     content="Explore all SEO works, case studies, and projects by Aswanth. Includes on-page SEO, keyword research, backlink strategies, and website optimization results."
                 />
 
-                <meta
-                    name="keywords"
-                    content="Aswanth SEO Portfolio, All Work, SEO Case Studies, SEO Projects, On Page SEO, Backlink Building, Keyword Research"
-                />
-
                 <link
                     rel="canonical"
                     href="https://aswanth-portfolio-eta.vercel.app/all-work"
@@ -29,6 +24,7 @@ function Allwok() {
 
                 {/* Open Graph */}
                 <meta property="og:title" content="All Work | Aswanth SEO Portfolio" />
+                <meta property="og:site_name" content="Aswanth Portfolio Website" />
                 <meta
                     property="og:description"
                     content="Explore all SEO works, case studies, and projects by Aswanth. Includes on-page SEO, keyword research, backlink strategies, and website optimization results."
@@ -36,6 +32,10 @@ function Allwok() {
                 <meta
                     property="og:image"
                     content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png"
+                />
+                <meta
+                    property="og:image:alt"
+                    content="Aswanth SEO Portfolio All Work Preview"
                 />
                 <meta
                     property="og:url"
@@ -54,20 +54,23 @@ function Allwok() {
                     name="twitter:image"
                     content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png"
                 />
+                <meta name="twitter:image:alt" content="Aswanth SEO Portfolio All Work Preview" />
+
 
                 {/* Structured Data */}
                 <script type="application/ld+json">
                     {`
-                      {
-                        "@context": "https://schema.org",
-                        "@type": "WebPage",
-                        "name": "All Work | Aswanth SEO Portfolio",
-                        "url": "https://aswanth-portfolio-eta.vercel.app/all-work",
-                        "description": "Explore all SEO works, case studies, and projects by Aswanth."
-                      }
-                    `}
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "All Work | Aswanth SEO Portfolio",
+        "url": "https://aswanth-portfolio-eta.vercel.app/all-work",
+        "description": "Explore all SEO works, case studies, and projects by Aswanth. Includes on-page SEO, keyword research, backlink strategies, and website optimization results."
+      }
+    `}
                 </script>
             </Helmet>
+
 
             {/* Page Header */}
             <div className="text-center mb-12">

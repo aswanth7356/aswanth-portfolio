@@ -1,16 +1,13 @@
 export default function About() {
     const tools = [
-        // { name: 'vscode', icon: './assets/vscode.png', },
-        // { name: 'firebase', icon: './assets/firebase.png', },
-        // { name: 'mongodb', icon: './assets/mongodb.png', },
-        // { name: 'figma', icon: './assets/figma.png', },
-        // { name: 'git', icon: './assets/git.png', },
         { name: 'google analytics', icon: './assets/google analytics.png', },
         { name: 'google search console', icon: './assets/google search console.png', },
         { name: 'google tag manager', icon: './assets/google tag manager.png', },
         { name: 'moz', icon: './assets/moz.png', },
         { name: 'page speed insight', icon: './assets/page-speed-insight.png', },
         { name: 'seo optimer', icon: './assets/seo optimer.png', },
+        { name: 'google ad', icon: './assets/google ad.png', },
+        { name: 'screaming frog', icon: './assets/screaming frog.png', },
     ];
 
     const data = [

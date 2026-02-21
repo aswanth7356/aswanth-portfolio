@@ -203,7 +203,7 @@ const Blog = () => {
                     </h2>
                     <p className="fade-in">
                         Through my{" "}
-                        <span className="highlight">portfolio website</span>, I present
+                        portfolio website, I present
                         detailed case studies highlighting keyword ranking improvements,
                         traffic growth, and on-page SEO enhancements. As a{" "}
                         <span className="highlight">link building specialist</span>, I focus
@@ -217,7 +217,7 @@ const Blog = () => {
                     </h2>
                     <p className="fade-in">
                         Businesses searching for the{" "}
-                        <span className="highlight">best SEO expert</span> evaluate
+                        best SEO expert evaluate
                         experience, transparency, and results. My approach combines
                         technical SEO, content optimization, analytics tracking, and
                         performance monitoring to create sustainable ranking improvements.

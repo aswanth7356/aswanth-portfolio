@@ -118,13 +118,6 @@ const Blog = () => {
             </div>
 
 
-            {/* CENTERED BUTTON */}
-            <div className="top-nav fade-in">
-                <button className="back-btn" onClick={() => navigate(-1)}>
-                    ← Back to Previous Page
-                </button>
-            </div>
-
 
 
             {/* BLOG CONTENT */}
@@ -178,6 +171,13 @@ const Blog = () => {
                         businesses in Kerala and beyond achieve consistent organic success.
                     </p>
                 </article>
+            </div>
+
+              {/* CENTERED BUTTON */}
+            <div className="top-nav fade-in">
+                <button className="back-btn" onClick={() => navigate(-1)}>
+                    ← Back to Previous Page
+                </button>
             </div>
 
         </div>

@@ -85,62 +85,6 @@ const Blog = () => {
                     content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png"
                 />
 
-                {/* Article Schema */}
-                <script type="application/ld+json">
-                    {`
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Freelance SEO Specialist in Kerala | Aswanth’s Portfolio & Case Studies",
-      "description": "Discover how I work as a freelance SEO specialist in Kerala with proven strategies and measurable results.",
-      "author": {
-        "@type": "Person",
-        "name": "Aswanth P"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Aswanth Portfolio",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png"
-        }
-      },
-      "datePublished": "2026-02-21",
-      "dateModified": "2026-02-21",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://aswanth-portfolio-eta.vercel.app/blog/seo-specialist-kerala-portfolio-website"
-      },
-      "image": "https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png",
-      "inLanguage": "en-IN"
-    }
-    `}
-                </script>
-
-                {/* Breadcrumb Schema */}
-                <script type="application/ld+json">
-                    {`
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://aswanth-portfolio-eta.vercel.app/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://aswanth-portfolio-eta.vercel.app/blog/seo-specialist-kerala-portfolio-website"
-        }
-      ]
-    }
-    `}
-                </script>
-
             </Helmet>
 
             {/* ==================================================== */}

@@ -9,7 +9,8 @@ import Header from './components/Header'
 import Navbar from './components/Navbar'
 import LenisScroll from './components/LenisScroll'
 import Preloader from './components/Preloader'
-import Allwok from './components/Allwok'
+import Blog from './pages/Blog'
+import AllWork from './pages/AllWork'
 
 
 export default function App() {
@@ -88,6 +89,7 @@ export default function App() {
   `}
                 </script>
 
+
             </Helmet>
 
 
@@ -113,8 +115,9 @@ export default function App() {
                     }
                 />
 
-                {/* All work page */}
-                <Route path="/all-work" element={<Allwok />} />
+                {/* Routing pages */}
+                <Route path="/all-work" element={<AllWork />} />
+                <Route path="/blog" element={<Blog />} />
             </Routes>
         </>
     )

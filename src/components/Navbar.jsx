@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom';
+
 
 export default function Navbar() {
     const sideMenuRef = useRef();
@@ -75,6 +77,7 @@ export default function Navbar() {
                     <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#about">About me</a></li>
                     <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#services">Services</a></li>
                     <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#work">My Work</a></li>
+                    <li><Link to="/blog" className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#work">Blog</Link></li>
                     <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#contact">Contact me</a></li>
                 </ul>
 

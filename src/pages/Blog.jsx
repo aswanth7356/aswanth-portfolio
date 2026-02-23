@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Blog.css";
 
@@ -169,11 +170,11 @@ const Blog = () => {
                 </article>
             </div>
 
-              {/* CENTERED BUTTON */}
+            {/* CENTERED BUTTON */}
             <div className="top-nav fade-in">
-                <button className="back-btn" onClick={() => navigate(-1)}>
-                    ← Back to Previous Page
-                </button>
+                <Link to="/" className="back-btn">
+                    ← Back to Home
+                </Link>
             </div>
 
         </div>

@@ -1,6 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import { Link } from "react-router-dom";
+
 
 function Allwok() {
     const navigate = useNavigate()
@@ -98,12 +100,12 @@ function Allwok() {
 
             {/* Back Button */}
             <div className="text-center mt-10">
-                <button
-                    onClick={() => navigate(-1)}
+                <Link
+                    to="/"
                     className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300"
                 >
-                    ← Previous
-                </button>
+                    ← Back to Home
+                </Link>
             </div>
 
         </div>

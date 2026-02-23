@@ -11,6 +11,7 @@ import LenisScroll from './components/LenisScroll'
 import Preloader from './components/Preloader'
 import Blog from './pages/Blog'
 import AllWork from './pages/AllWork'
+import NotFound from './pages/NotFound'
 
 
 export default function App() {
@@ -118,6 +119,9 @@ export default function App() {
                 {/* Routing pages */}
                 <Route path="/all-work" element={<AllWork />} />
                 <Route path="/blog" element={<Blog />} />
+
+                {/* Catch all invalid routes */}
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </>
     )

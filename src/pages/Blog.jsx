@@ -38,11 +38,11 @@ const Blog = () => {
 
                 <link
                     rel="canonical"
-                    href="https://aswanth-portfolio-eta.vercel.app/blog/seo-specialist-kerala-portfolio-website"
+                    href="https://aswanth-portfolio-eta.vercel.app/blog"
                 />
 
                 {/* Open Graph */}
-                <meta property="og:type" content="article" />
+                <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
                     content="Freelance SEO Specialist in Kerala | Aswanth’s Portfolio & Case Studies"
@@ -53,7 +53,7 @@ const Blog = () => {
                 />
                 <meta
                     property="og:url"
-                    content="https://aswanth-portfolio-eta.vercel.app/blog/seo-specialist-kerala-portfolio-website"
+                    content="https://aswanth-portfolio-eta.vercel.app/blog"
                 />
                 <meta
                     property="og:image"
@@ -65,10 +65,6 @@ const Blog = () => {
                 />
                 <meta property="og:site_name" content="Aswanth Portfolio" />
                 <meta property="og:locale" content="en_IN" />
-
-                {/* Article OG Extra */}
-                <meta property="article:author" content="Aswanth P" />
-                <meta property="article:published_time" content="2026-02-21" />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />

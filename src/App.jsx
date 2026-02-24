@@ -32,7 +32,6 @@ export default function App() {
                 {/* Robots */}
                 <meta name="robots" content="index, follow" /> {/* ✅ (EDITED) added */}
 
-                <link rel="canonical" href="https://aswanth-portfolio-eta.vercel.app/" />
 
                 {/* Open Graph */}
                 <meta property="og:title" content="Aswanth Portfolio | SEO Specialist in Kerala" />

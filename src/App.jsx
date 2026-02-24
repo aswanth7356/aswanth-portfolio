@@ -12,6 +12,7 @@ import Preloader from './components/Preloader'
 import Blog from './pages/Blog'
 import AllWork from './pages/AllWork'
 import NotFound from './pages/NotFound'
+import AllServices from './pages/AllServices'
 
 
 export default function App() {
@@ -22,51 +23,49 @@ export default function App() {
             {/* ============== SEO Metadata ================ */}
 
             <Helmet>
-                <title>Aswanth Portfolio | SEO Specialist in Kerala</title>
-
+                {/* ===== Title & Description ===== */}
+                <title>Freelance SEO Specialist & Expert in Calicut | Aswanth P</title>
                 <meta
                     name="description"
-                    content="Aswanth P is an SEO Specialist in Kerala helping websites improve rankings using technical SEO, on-page SEO, off-page SEO, keyword research, GA4, and GSC."
+                    content="Hire a freelance SEO specialist in Calicut. Aswanth P provides expert SEO services including on-page SEO, technical SEO, local SEO, and link building to boost rankings and grow your business."
                 />
+                <link rel="canonical" href="https://aswanth-portfolio-eta.vercel.app/" />
+                <meta name="robots" content="index, follow" />
 
-                {/* Robots */}
-                <meta name="robots" content="index, follow" /> {/* ✅ (EDITED) added */}
-
-
-                {/* Open Graph */}
-                <meta property="og:title" content="Aswanth Portfolio | SEO Specialist in Kerala" />
-                <meta property="og:site_name" content="Aswanth Portfolio Website" />
-                <meta property="og:description" content="Aswanth P is an SEO Specialist in Kerala helping websites improve rankings using technical SEO, on-page SEO, off-page SEO, keyword research, GA4, and GSC." />
+                {/* ===== Open Graph ===== */}
+                <meta property="og:title" content="Freelance SEO Specialist & Expert in Calicut | Aswanth P" />
+                <meta property="og:description" content="Aswanth P is a professional freelance SEO specialist in Calicut helping businesses rank higher on Google with technical SEO, on-page SEO, and local SEO strategies." />
                 <meta property="og:image" content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png" />
-                <meta property="og:image:alt" content="Aswanth P SEO Specialist Portfolio Preview" />
+                <meta property="og:image:alt" content="Aswanth P SEO Portfolio Preview" />
                 <meta property="og:url" content="https://aswanth-portfolio-eta.vercel.app/" />
                 <meta property="og:type" content="website" />
-                <meta property="og:locale" content="en_IN" /> {/* ✅ (EDITED) added */}
+                <meta property="og:site_name" content="Aswanth Portfolio" />
+                <meta property="og:locale" content="en_IN" />
 
-
-                {/* Twitter */}
+                {/* ===== Twitter Card ===== */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Aswanth Portfolio | SEO Specialist in Kerala" />
-                <meta name="twitter:description" content="Aswanth P is an SEO Specialist in Kerala helping websites improve rankings using technical SEO, on-page SEO, off-page SEO, keyword research, GA4, and GSC." />
+                <meta name="twitter:title" content="Freelance SEO Specialist & Expert in Calicut | Aswanth P" />
+                <meta name="twitter:description" content="Expert freelance SEO services in Calicut by Aswanth P. Improve Google rankings, boost traffic, and grow your business with proven SEO strategies." />
                 <meta name="twitter:image" content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png" />
 
-                {/* Schema */}
+                {/* ===== Website Schema ===== */}
                 <script type="application/ld+json">
                     {`
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Aswanth Portfolio Website",
-        "url": "https://aswanth-portfolio-eta.vercel.app/",
- "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://aswanth-portfolio-eta.vercel.app/?s={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Aswanth Portfolio Website",
+      "url": "https://aswanth-portfolio-eta.vercel.app/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://aswanth-portfolio-eta.vercel.app/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
+    }
     `}
                 </script>
 
+                {/* ===== Person Schema ===== */}
                 <script type="application/ld+json">
                     {`
     {
@@ -74,22 +73,22 @@ export default function App() {
       "@type": "Person",
       "name": "Aswanth P",
       "url": "https://aswanth-portfolio-eta.vercel.app/",
-      "jobTitle": "SEO Specialist",
-      "description": "Aswanth Portfolio Website showcasing SEO projects, strategies, and skills.",
+      "jobTitle": "Freelance SEO Specialist",
+      "description": "Freelance SEO specialist & expert in Calicut providing local SEO, technical SEO, on-page optimization, and link building services for businesses.",
       "image": "https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png",
       "address": {
-        "@type": "Place",
-        "name": "Kerala, India"
+        "@type": "PostalAddress",
+        "addressLocality": "Calicut",
+        "addressRegion": "Kerala",
+        "addressCountry": "India"
       },
       "sameAs": [
         "https://www.linkedin.com/in/aswanth-clt",
         "https://github.com/aswanth7356"
       ]
     }
-  `}
+    `}
                 </script>
-
-
             </Helmet>
 
 
@@ -118,6 +117,7 @@ export default function App() {
                 {/* Routing pages */}
                 <Route path="/all-work" element={<AllWork />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/services" element={<AllServices />} />
 
                 {/* Catch all invalid routes */}
                 <Route path="*" element={<NotFound />} />

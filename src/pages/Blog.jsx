@@ -21,67 +21,52 @@ const Blog = () => {
 
             {/* ============ Meta Datas ============ */}
             <Helmet>
-
                 {/* Basic Meta */}
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-                <title>
-                    Freelance SEO Specialist in Kerala | Aswanth’s Portfolio & Case Studies
-                </title>
-
+                {/* Title & Description */}
+                <title>Freelance SEO Specialist in Calicut | Case Studies – Aswanth P</title>
                 <meta
                     name="description"
-                    content="Discover how I work as a freelance SEO specialist in Kerala. Explore real SEO case studies, technical strategies, link building methods, and proven organic growth techniques."
+                    content="Freelance SEO specialist in Calicut sharing case studies and proven strategies to boost rankings, traffic, and online growth – Aswanth P."
                 />
-
                 <meta name="robots" content="index, follow" />
-
-                <link
-                    rel="canonical"
-                    href="https://aswanth-portfolio-eta.vercel.app/blog"
-                />
+                <link rel="canonical" href="https://aswanth-portfolio-eta.vercel.app/blog" />
 
                 {/* Open Graph */}
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
-                    content="Freelance SEO Specialist in Kerala | Aswanth’s Portfolio & Case Studies"
+                    content="Freelance SEO Specialist in Calicut | Case Studies – Aswanth P"
                 />
                 <meta
                     property="og:description"
-                    content="Explore real SEO case studies, technical optimization strategies, and proven organic growth methods."
+                    content="Freelance SEO specialist in Calicut sharing case studies and proven strategies to boost rankings, traffic, and online growth – Aswanth P."
                 />
-                <meta
-                    property="og:url"
-                    content="https://aswanth-portfolio-eta.vercel.app/blog"
-                />
+                <meta property="og:url" content="https://aswanth-portfolio-eta.vercel.app/blog" />
                 <meta
                     property="og:image"
                     content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png"
                 />
-                <meta
-                    property="og:image:alt"
-                    content="SEO Specialist in Kerala Portfolio Blog"
-                />
+                <meta property="og:image:alt" content="SEO Specialist in Calicut Portfolio Blog" />
                 <meta property="og:site_name" content="Aswanth Portfolio" />
                 <meta property="og:locale" content="en_IN" />
 
-                {/* Twitter */}
+                {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta
                     name="twitter:title"
-                    content="Freelance SEO Specialist in Kerala | Portfolio & Case Studies"
+                    content="Freelance SEO Specialist in Calicut | Case Studies – Aswanth P"
                 />
                 <meta
                     name="twitter:description"
-                    content="SEO portfolio showcasing technical expertise, case studies and organic growth strategies."
+                    content="Freelance SEO specialist in Calicut sharing case studies and proven strategies to boost rankings, traffic, and online growth – Aswanth P."
                 />
                 <meta
                     name="twitter:image"
                     content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png"
                 />
-
             </Helmet>
 
             {/* ==================================================== */}

@@ -1,28 +1,31 @@
+// LenisScroll.jsx
 import { useEffect } from "react";
 import Lenis from "lenis";
 
+// We'll store the instance here
+let lenisInstance = null;
+
+// Export a getter to use in ScrollToTop
+export const getLenisInstance = () => lenisInstance;
+
 export default function LenisScroll() {
-    useEffect(() => {
-        const lenis = new Lenis({
-            duration: 1.2,
-            smoothWheel: true,
-            smoothTouch: false,
-            anchors: {
-                offset: -100,
-            },
-        });
+  useEffect(() => {
+    lenisInstance = new Lenis({
+      duration: 1.2,
+      smoothWheel: true,
+      smoothTouch: false,
+      anchors: { offset: -100 },
+    });
 
-        const raf = (time) => {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        };
+    const raf = (time) => {
+      lenisInstance.raf(time);
+      requestAnimationFrame(raf);
+    };
 
-        requestAnimationFrame(raf);
+    requestAnimationFrame(raf);
 
-        return () => {
-            lenis.destroy();
-        };
-    }, []);
+    return () => lenisInstance.destroy();
+  }, []);
 
-    return null;
+  return null;
 }

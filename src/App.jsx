@@ -13,6 +13,7 @@ import Blog from './pages/Blog'
 import AllWork from './pages/AllWork'
 import NotFound from './pages/NotFound'
 import AllServices from './pages/AllServices'
+import ScrollToTop from './components/ScrollToTop'
 
 
 export default function App() {
@@ -94,6 +95,8 @@ export default function App() {
 
 
             {/* ========================================================== */}
+            <LenisScroll />
+            <ScrollToTop />
 
             <Routes>
                 {/* Home page route */}

@@ -3,6 +3,7 @@ export default function About() {
         { name: 'google analytics', icon: './assets/google analytics.png', },
         { name: 'google search console', icon: './assets/google search console.png', },
         { name: 'google tag manager', icon: './assets/google tag manager.png', },
+        { name: 'semrush', icon: './assets/semrush.png', },
         { name: 'moz', icon: './assets/moz.png', },
         { name: 'page speed insight', icon: './assets/page-speed-insight.png', },
         { name: 'seo optimer', icon: './assets/seo optimer.png', },
@@ -41,7 +42,6 @@ export default function About() {
 
                     <div className="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
                         <img src="./assets/cropped_circle_image2.png" alt="" className="w-full animate-spin_slow" />
-                        {/* <img src="./assets/dev-icon.png" alt="" className="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" /> */}
                     </div>
                 </div>
                 <div className="flex-1">
@@ -61,8 +61,26 @@ export default function About() {
 
                     <ul className="flex items-center gap-3 sm:gap-5">
                         {tools.map((tool) => (
-                            <li key={tool.name} className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 dark:border-white/30 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
-                                <img src={tool.icon} alt={tool.name} className="w-10 sm:w-12" />
+                            <li
+                                key={tool.name}
+                                className="
+      flex items-center justify-center 
+      w-12 sm:w-14 aspect-square
+      border border-gray-300 dark:border-white/30
+      rounded-lg cursor-pointer
+      transition-all duration-300 ease-in-out
+      
+      hover:scale-125
+      hover:bg-gray-100 dark:hover:bg-white/10
+      hover:border-black dark:hover:border-white
+      hover:shadow-xl
+      "
+                            >
+                                <img
+                                    src={tool.icon}
+                                    alt={tool.name}
+                                    className="w-10 sm:w-12"
+                                />
                             </li>
                         ))}
                     </ul>

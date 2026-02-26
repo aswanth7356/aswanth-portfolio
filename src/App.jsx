@@ -106,8 +106,8 @@ export default function App() {
                             <Navbar />
                             <Header />
                             <About />
-                            <Services />
                             <Work />
+                            <Services />
                             <Contact />
                             <Footer />
                         </>

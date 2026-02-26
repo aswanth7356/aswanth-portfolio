@@ -9,6 +9,7 @@ export default function About() {
         { name: 'seo optimer', icon: './assets/seo optimer.png', },
         { name: 'google ad', icon: './assets/google ad.png', },
         { name: 'screaming frog', icon: './assets/screaming frog.png', },
+        { name: 'react', icon: './assets/react.png', },
     ];
 
     const data = [
@@ -57,25 +58,38 @@ export default function About() {
                             </li>
                         ))}
                     </ul>
-                    <h4 className="my-6 text-gray-700 font-Ovo dark:text-white/80">Tools i use</h4>
+                    <h4 className="my-6 text-gray-700 font-Ovo dark:text-white/80">Tools i used</h4>
 
-                    <ul className="flex items-center gap-3 sm:gap-5">
+                    <ul className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-5">
                         {tools.map((tool) => (
                             <li
                                 key={tool.name}
-                                className="
-      flex items-center justify-center 
-      w-12 sm:w-14 aspect-square
-      border border-gray-300 dark:border-white/30
-      rounded-lg cursor-pointer
-      transition-all duration-300 ease-in-out
-      
-      hover:scale-125
-      hover:bg-gray-100 dark:hover:bg-white/10
-      hover:border-black dark:hover:border-white
-      hover:shadow-xl
-      "
+                                className="relative group flex items-center justify-center
+  aspect-square
+  border border-gray-300 dark:border-white/30
+  rounded-lg cursor-pointer
+  transition-all duration-300 ease-in-out
+  hover:scale-110
+  hover:bg-gray-100 dark:hover:bg-white/10
+  hover:border-black dark:hover:border-white
+  hover:shadow-xl"
                             >
+                                {/* Tooltip */}
+                                <span
+                                    className="
+      absolute -top-8
+      opacity-0 group-hover:opacity-100
+      scale-90 group-hover:scale-100
+      transition-all duration-300
+      bg-black text-white text-xs px-2 py-1
+      rounded-md whitespace-nowrap
+      pointer-events-none
+      dark:bg-white dark:text-black
+    "
+                                >
+                                    {tool.name}
+                                </span>
+
                                 <img
                                     src={tool.icon}
                                     alt={tool.name}

@@ -13,16 +13,7 @@ export default function Navbar() {
     const closeMenu = () => {
         sideMenuRef.current.style.transform = 'translateX(16rem)';
     }
-    // const toggleTheme = () => {
 
-    //     document.documentElement.classList.toggle('dark');
-
-    //     if (document.documentElement.classList.contains('dark')) {
-    //         localStorage.theme = 'dark';
-    //     } else {
-    //         localStorage.theme = 'light';
-    //     }
-    // }
     const toggleTheme = () => {
         document.documentElement.classList.toggle('dark');
 
@@ -111,6 +102,7 @@ export default function Navbar() {
                     <li><a href="#about" onClick={closeMenu}>About me</a></li>
                     <li><a href="#services" onClick={closeMenu}>Services</a></li>
                     <li><a href="#work" onClick={closeMenu}>My Work</a></li>
+                    <li><Link to="/blog" onClick={closeMenu}>Blog</Link></li>
                     <li><a href="#contact" onClick={closeMenu}>Contact me</a></li>
                 </ul>
             </nav>

@@ -15,6 +15,7 @@ import NotFound from './pages/NotFound'
 import AllServices from './pages/AllServices'
 import Skills from './components/Skills'
 import ScrollToTop from './components/ScrollToTop'
+import ScrollTopButton from './components/ScrollTopButton'
 
 
 export default function App() {
@@ -99,6 +100,7 @@ export default function App() {
 
 
             <ScrollToTop />
+            <ScrollTopButton />
 
             <Routes>
                 {/* Home page route */}

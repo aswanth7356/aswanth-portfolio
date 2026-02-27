@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Work from './components/Work'
-import Services from './components/Services'
+// import Services from './components/Services'
 import About from './components/About'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
@@ -13,6 +13,7 @@ import Blog from './pages/Blog'
 import AllWork from './pages/AllWork'
 import NotFound from './pages/NotFound'
 import AllServices from './pages/AllServices'
+import Skills from './components/Skills'
 
 
 export default function App() {
@@ -106,8 +107,9 @@ export default function App() {
                             <Navbar />
                             <Header />
                             <About />
+                            <Skills />
                             <Work />
-                            <Services />
+                            {/* <Services /> */}
                             <Contact />
                             <Footer />
                         </>

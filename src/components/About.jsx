@@ -1,16 +1,16 @@
 export default function About() {
+
     const tools = [
-        { name: 'Google Analytics', icon: './assets/google analytics.png' },
-        { name: 'Google Search Console', icon: './assets/google search console.png' },
-        { name: 'Google Tag Manager', icon: './assets/google tag manager.png' },
-        { name: 'Semrush', icon: './assets/semrush.png' },
-        { name: 'Moz', icon: './assets/moz.png' },
+        { name: 'Google Analytics', icon: './assets/google analytics.png', size: 'large' },
+        { name: 'Google Search Console', icon: './assets/google search console.png', size: 'large' },
+        { name: 'Google Tag Manager', icon: './assets/google tag manager.png', size: 'large' },
+        { name: 'Semrush', icon: './assets/semrush.png', size: 'large' },
+        { name: 'Moz', icon: './assets/moz.png', size: 'large' },
         { name: 'Page Speed Insight', icon: './assets/page-speed-insight.png' },
-        { name: 'Seo Optimer', icon: './assets/seo optimer.png' },
-        { name: 'Google Keyword Planner', icon: './assets/keyword planner.png' },
+        { name: 'Seo Optimer', icon: './assets/seo optimer.png', size: 'large' },
         { name: 'Screaming Frog', icon: './assets/screaming frog.png' },
         { name: 'Google Ads', icon: './assets/google ads.png' },
-        { name: 'Meta Ads', icon: './assets/meta ads.png' },
+        { name: 'Meta Ads', icon: './assets/meta ads.png', size: 'large' },
         { name: 'React', icon: './assets/react.png' },
     ];
 
@@ -26,8 +26,7 @@ export default function About() {
                 { title: 'Conversion Tracking' },
             ],
         },
-
-         {
+        {
             name: 'Experience',
             icon1: './assets/project-icon.png',
             icon2: './assets/project-icon-dark.png',
@@ -42,8 +41,6 @@ export default function About() {
                 },
             ],
         },
-
-        
         {
             name: 'Education',
             icon1: './assets/edu-icon.png',
@@ -51,7 +48,6 @@ export default function About() {
             description: `Bachelor of Computer Application (BCA)
 2020 – 2023`,
         },
-       
     ];
 
     return (
@@ -109,7 +105,6 @@ export default function About() {
                                     {item.name}
                                 </h3>
 
-                                {/* Conditional Rendering */}
                                 {Array.isArray(item.description) ? (
                                     <ul className="text-gray-600 text-sm dark:text-white/80 space-y-2">
                                         {item.description.map((entry, index) => (
@@ -164,7 +159,10 @@ export default function About() {
                                 <img
                                     src={tool.icon}
                                     alt={tool.name}
-                                    className="w-10 sm:w-12"
+                                    className={`object-contain transition-all duration-300 
+                                    ${tool.size === "large" 
+                                        ? "w-14 sm:w-16" 
+                                        : "w-10 sm:w-12"}`}
                                 />
                             </li>
                         ))}

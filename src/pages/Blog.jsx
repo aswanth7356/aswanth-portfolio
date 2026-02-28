@@ -42,10 +42,10 @@ const Blog = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
                 {/* Title & Description */}
-                <title>Freelance SEO Specialist in Calicut | Case Studies – Aswanth P</title>
+                <title>SEO Blog | SEO Tips & Strategies by Aswanth P</title>
                 <meta
                     name="description"
-                    content="Freelance SEO specialist in Calicut sharing case studies and proven strategies to boost rankings, traffic, and online growth – Aswanth P."
+                    content="Explore SEO tips, strategies, and digital marketing insights by Aswanth P, SEO Expert in Calicut. Learn how to rank higher and grow your business online."
                 />
                 <meta name="robots" content="index, follow" />
                 <link rel="canonical" href="https://aswanth-portfolio-eta.vercel.app/blog" />
@@ -54,11 +54,11 @@ const Blog = () => {
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
-                    content="Freelance SEO Specialist in Calicut | Case Studies – Aswanth P"
+                    content="SEO Blog | SEO Tips & Strategies by Aswanth P"
                 />
                 <meta
                     property="og:description"
-                    content="Freelance SEO specialist in Calicut sharing case studies and proven strategies to boost rankings, traffic, and online growth – Aswanth P."
+                    content="Explore SEO tips, strategies, and digital marketing insights by Aswanth P, SEO Expert in Calicut. Learn how to rank higher and grow your business online."
                 />
                 <meta property="og:url" content="https://aswanth-portfolio-eta.vercel.app/blog" />
                 <meta
@@ -73,11 +73,11 @@ const Blog = () => {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta
                     name="twitter:title"
-                    content="Freelance SEO Specialist in Calicut | Case Studies – Aswanth P"
+                    content="SEO Blog | SEO Tips & Strategies by Aswanth P"
                 />
                 <meta
                     name="twitter:description"
-                    content="Freelance SEO specialist in Calicut sharing case studies and proven strategies to boost rankings, traffic, and online growth – Aswanth P."
+                    content="Explore SEO tips, strategies, and digital marketing insights by Aswanth P, SEO Expert in Calicut. Learn how to rank higher and grow your business online."
                 />
                 <meta
                     name="twitter:image"

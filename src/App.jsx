@@ -27,18 +27,18 @@ export default function App() {
 
             <Helmet>
                 {/* ===== Title & Description ===== */}
-                <title>Freelance SEO Specialist & Expert in Calicut | Aswanth P</title>
-                
+                <title>SEO Expert in Calicut – Freelance SEO Specialist | Aswanth P</title>
+
                 <meta
                     name="description"
-                    content="Looking for a freelance SEO specialist in Calicut? Aswanth P provides expert SEO services to boost rankings, increase traffic, and grow your online business."
+                    content="Looking for an SEO expert in Calicut? Aswanth P provides expert SEO services to boost rankings, increase traffic, and grow your online business."
                 />
                 <link rel="canonical" href="https://aswanth-portfolio-eta.vercel.app/" />
                 <meta name="robots" content="index, follow" />
 
                 {/* ===== Open Graph ===== */}
-                <meta property="og:title" content="Freelance SEO Specialist & Expert in Calicut | Aswanth P" />
-                <meta property="og:description" content="Aswanth P is a professional freelance SEO specialist in Calicut helping businesses rank higher on Google with technical SEO, on-page SEO, and local SEO strategies." />
+                <meta property="og:title" content="SEO Expert in Calicut – Freelance SEO Specialist | Aswanth P" />
+                <meta property="og:description" content="Aswanth P is a professional SEO expert in Calicut helping businesses rank higher on Google with technical SEO, on-page SEO, and local SEO strategies." />
                 <meta property="og:image" content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png" />
                 <meta property="og:image:alt" content="Aswanth P SEO Portfolio Preview" />
                 <meta property="og:url" content="https://aswanth-portfolio-eta.vercel.app/" />
@@ -48,7 +48,7 @@ export default function App() {
 
                 {/* ===== Twitter Card ===== */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Freelance SEO Specialist & Expert in Calicut | Aswanth P" />
+                <meta name="twitter:title" content="SEO Expert in Calicut – Freelance SEO Specialist | Aswanth P" />
                 <meta name="twitter:description" content="Expert freelance SEO services in Calicut by Aswanth P. Improve Google rankings, boost traffic, and grow your business with proven SEO strategies." />
                 <meta name="twitter:image" content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png" />
 
@@ -77,8 +77,8 @@ export default function App() {
       "@type": "Person",
       "name": "Aswanth P",
       "url": "https://aswanth-portfolio-eta.vercel.app/",
-      "jobTitle": "Freelance SEO Specialist",
-      "description": "Freelance SEO specialist & expert in Calicut providing local SEO, technical SEO, on-page optimization, and link building services for businesses.",
+      "jobTitle": "SEO Expert",
+      "description": "SEO expert in Calicut providing local SEO, technical SEO, on-page optimization, and link building services for businesses.",
       "image": "https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png",
       "address": {
         "@type": "PostalAddress",

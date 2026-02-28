@@ -12,12 +12,14 @@ function Allwok() {
 
             {/* ============== SEO Metadata ================ */}
             <Helmet>
-                <title>All Work | Aswanth SEO Portfolio</title>
+                <title>SEO Portfolio & Case Studies | Calicut SEO Expert – Aswanth P</title>
 
                 <meta
                     name="description"
-                    content="Explore all SEO works, case studies, and projects by Aswanth. Includes on-page SEO, keyword research, backlink strategies, and website optimization results."
+                    content="Explore real SEO case studies by Aswanth P, Calicut SEO Expert. See ranking improvements, traffic growth, and proven strategies that deliver results."
                 />
+
+                  <meta name="robots" content="index, follow" />
 
                 <link
                     rel="canonical"
@@ -25,11 +27,11 @@ function Allwok() {
                 />
 
                 {/* Open Graph */}
-                <meta property="og:title" content="All Work | Aswanth SEO Portfolio" />
+                <meta property="og:title" content="SEO Portfolio & Case Studies | Calicut SEO Expert – Aswanth P" />
                 <meta property="og:site_name" content="Aswanth Portfolio Website" />
                 <meta
                     property="og:description"
-                    content="Explore all SEO works, case studies, and projects by Aswanth. Includes on-page SEO, keyword research, backlink strategies, and website optimization results."
+                    content="Explore real SEO case studies by Aswanth P, Calicut SEO Expert. See ranking improvements, traffic growth, and proven strategies that deliver results."
                 />
                 <meta
                     property="og:image"
@@ -44,13 +46,14 @@ function Allwok() {
                     content="https://aswanth-portfolio-eta.vercel.app/all-work"
                 />
                 <meta property="og:type" content="website" />
+                <meta property="og:locale" content="en_IN" />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="All Work | Aswanth SEO Portfolio" />
+                <meta name="twitter:title" content="SEO Portfolio & Case Studies | Calicut SEO Expert – Aswanth P" />
                 <meta
                     name="twitter:description"
-                    content="Explore all SEO works, case studies, and projects by Aswanth. Includes on-page SEO, keyword research, backlink strategies, and website optimization results."
+                    content="Explore real SEO case studies by Aswanth P, Calicut SEO Expert. See ranking improvements, traffic growth, and proven strategies that deliver results."
                 />
                 <meta
                     name="twitter:image"
@@ -65,9 +68,9 @@ function Allwok() {
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "All Work | Aswanth SEO Portfolio",
+        "name": "SEO Portfolio & Case Studies | Calicut SEO Expert – Aswanth P",
         "url": "https://aswanth-portfolio-eta.vercel.app/all-work",
-        "description": "Explore all SEO works, case studies, and projects by Aswanth. Includes on-page SEO, keyword research, backlink strategies, and website optimization results."
+        "description": "Explore real SEO case studies by Aswanth P, Calicut SEO Expert. See ranking improvements, traffic growth, and proven strategies that deliver results."
       }
     `}
                 </script>
@@ -76,7 +79,7 @@ function Allwok() {
 
             {/* Page Header */}
             <div className="text-center mb-12">
-                <h1 className="text-5xl font-bold mb-4">All My Work</h1>
+                <h1 className="text-5xl font-bold mb-4">All My Works</h1>
                 <p className="text-lg max-w-2xl mx-auto">
                     Welcome to my extended portfolio! Here you can see more projects, case studies, and details of the work I have done in SEO, web development, and design.
                 </p>

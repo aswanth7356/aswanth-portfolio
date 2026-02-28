@@ -1,12 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 import "./Blog.css";
 
 const Blog = () => {
     const navigate = useNavigate();
+    const [showBackBtn, setShowBackBtn] = useState(false);
 
+    /* Fade-in Animation */
     useEffect(() => {
         const elements = document.querySelectorAll(".fade-in");
         elements.forEach((el, index) => {
@@ -14,6 +16,20 @@ const Blog = () => {
                 el.classList.add("show");
             }, index * 200);
         });
+    }, []);
+
+    /* Scroll Detection for Back Button */
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 200) {
+                setShowBackBtn(true);
+            } else {
+                setShowBackBtn(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
@@ -72,7 +88,6 @@ const Blog = () => {
             {/* ==================================================== */}
 
 
-
             {/* HERO SECTION */}
             <div className="blog-hero">
                 <img
@@ -99,12 +114,10 @@ const Blog = () => {
                 </div>
             </div>
 
-
-
-
             {/* BLOG CONTENT */}
             <div className="blog-container">
                 <article className="blog-article">
+
                     <p className="intro fade-in">
                         As an{" "}
                         <span className="highlight">
@@ -121,10 +134,9 @@ const Blog = () => {
                         Showcasing My SEO Expertise and Real Results
                     </h2>
                     <p className="fade-in">
-                        Through my{" "}
-                        portfolio website, I present
-                        detailed case studies highlighting keyword ranking improvements,
-                        traffic growth, and on-page SEO enhancements. As a{" "}
+                        Through my portfolio website, I present detailed case studies
+                        highlighting keyword ranking improvements, traffic growth, and
+                        on-page SEO enhancements. As a{" "}
                         <span className="highlight">link building specialist</span>, I focus
                         on ethical backlink acquisition strategies that improve domain
                         authority and search visibility. Every project reflects structured
@@ -135,8 +147,7 @@ const Blog = () => {
                         Building Authority as an SEO Expert in Kerala
                     </h2>
                     <p className="fade-in">
-                        Businesses searching for the{" "}
-                        best SEO expert evaluate
+                        Businesses searching for the best SEO expert evaluate
                         experience, transparency, and results. My approach combines
                         technical SEO, content optimization, analytics tracking, and
                         performance monitoring to create sustainable ranking improvements.
@@ -152,15 +163,36 @@ const Blog = () => {
                         strategies and focusing on data-driven decisions, I aim to help
                         businesses in Kerala and beyond achieve consistent organic success.
                     </p>
+
                 </article>
             </div>
 
             {/* CENTERED BUTTON */}
-            <div className="top-nav fade-in">
+            {/* <div className="top-nav fade-in">
                 <Link to="/" className="back-btn">
                     ← Back to Home
                 </Link>
-            </div>
+            </div> */}
+
+
+            {/* FIXED SCROLL BACK BUTTON */}
+            {showBackBtn && (
+                <button
+                    onClick={() => navigate(-1)}
+                    className="fixed top-6 left-6 z-50
+                        w-12 h-12 rounded-full
+                        bg-gray-200/80 dark:bg-white/10
+                        backdrop-blur-md
+                        border-2 border-gray-500 dark:border-blue-400
+                        shadow-lg dark:shadow-none
+                        flex items-center justify-center
+                        hover:scale-110
+                        hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.6)]
+                        transition-all duration-300"
+                >
+                    <FaArrowLeft size={18} className="text-blue-600 dark:text-blue-400" />
+                </button>
+            )}
 
         </div>
     );

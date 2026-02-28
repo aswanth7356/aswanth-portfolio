@@ -1,25 +1,136 @@
+import { FaLinkedin, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
 export default function Header() {
     return (
         <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
-            <img src="./assets/cv-profile-img.webp" alt="" className="rounded-full w-32" />
+
+            <img
+                src="./assets/cv-profile-img.webp"
+                alt="Aswanth Profile"
+                className="rounded-full w-32"
+            />
+
             <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
-                Hi! I&apos;m Aswanth 
+                Hi! I&apos;m Aswanth
                 <img src="./assets/hand-icon.png" alt="" className="w-6 mb-1" />
             </h3>
-            <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Boosting organic traffic with smart SEO</h1>
-            <p className="max-w-2xl mx-auto font-Ovo">I am an SEO Executive with experience in SEO audits, competitor analysis, on-page and off-page optimization, and driving organic traffic growth.</p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
-                <a href="#contact"
-                    className="px-10 py-2.5 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent">
-                    contact me <img src="./assets/right-arrow-white.png" alt="" className="w-4" />
-                </a>
+            <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
+                Boosting organic traffic with smart SEO
+            </h1>
 
-                <a href="./assets/dev-icon.png" download
-                    className="px-10 py-2.5 rounded-full border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover flex items-center gap-2 bg-white dark:bg-transparent dark:text-white">
-                    my resume <img src="./assets/download-icon.png" alt="" className="w-4 dark:invert" />
-                </a>
-            </div>
+            <p className="max-w-2xl mx-auto font-Ovo">
+                I am an SEO Executive with experience in SEO audits, competitor analysis, on-page and off-page optimization, and driving organic traffic growth.
+            </p>
+
+            {/* Premium Social Icons */}
+            <ul className="flex items-center justify-center gap-6 mt-8">
+
+                {/* LinkedIn */}
+                <li className="relative group">
+                    <a
+                        href="https://www.linkedin.com/in/aswanth-clt/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-12 h-12 flex items-center justify-center rounded-full 
+                        backdrop-blur-md 
+                        bg-gray-200/60 dark:bg-white/10
+                        border border-gray-300 dark:border-white/30
+                        shadow-md dark:shadow-none
+                        text-[#0A66C2]
+                        hover:scale-110
+                        hover:drop-shadow-[0_0_12px_rgba(10,102,194,0.8)]
+                        transition-all duration-300"
+                    >
+                        <FaLinkedin size={22} />
+                    </a>
+                    <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 
+                    opacity-0 group-hover:opacity-100 
+                    text-xs bg-black text-white px-2 py-1 rounded 
+                    transition duration-300">
+                        LinkedIn
+                    </span>
+                </li>
+
+                {/* WhatsApp */}
+                <li className="relative group">
+                    <a
+                        href="https://wa.me/+917356644734"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-12 h-12 flex items-center justify-center rounded-full 
+                        backdrop-blur-md 
+                        bg-gray-200/60 dark:bg-white/10
+                        border border-gray-300 dark:border-white/30
+                        shadow-md dark:shadow-none
+                        text-[#25D366]
+                        hover:scale-110
+                        hover:drop-shadow-[0_0_12px_rgba(37,211,102,0.8)]
+                        transition-all duration-300"
+                    >
+                        <FaWhatsapp size={22} />
+                    </a>
+                    <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 
+                    opacity-0 group-hover:opacity-100 
+                    text-xs bg-black text-white px-2 py-1 rounded 
+                    transition duration-300">
+                        WhatsApp
+                    </span>
+                </li>
+
+                {/* Instagram */}
+                <li className="relative group">
+                    <a
+                        href="https://instagram.com/azw4nth"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-12 h-12 flex items-center justify-center rounded-full 
+                        backdrop-blur-md 
+                        bg-gray-200/60 dark:bg-white/10
+                        border border-gray-300 dark:border-white/30
+                        shadow-md dark:shadow-none
+                        text-pink-500
+                        hover:scale-110
+                        hover:drop-shadow-[0_0_12px_rgba(236,72,153,0.8)]
+                        transition-all duration-300"
+                    >
+                        <FaInstagram size={22} />
+                    </a>
+                    <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 
+                    opacity-0 group-hover:opacity-100 
+                    text-xs bg-black text-white px-2 py-1 rounded 
+                    transition duration-300">
+                        Instagram
+                    </span>
+                </li>
+
+                {/* Email */}
+                <li className="relative group">
+                    <a
+                        href="mailto:aswanth1392@gmail.com"
+                        className="w-12 h-12 flex items-center justify-center rounded-full 
+                        backdrop-blur-md 
+                        bg-gray-200/60 dark:bg-white/10
+                        border border-gray-300 dark:border-white/30
+                        shadow-md dark:shadow-none
+                        text-red-500
+                        hover:scale-110
+                        hover:drop-shadow-[0_0_12px_rgba(239,68,68,0.8)]
+                        transition-all duration-300"
+                    >
+                        <MdEmail size={22} />
+                    </a>
+                    <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 
+                    opacity-0 group-hover:opacity-100 
+                    text-xs bg-black text-white px-2 py-1 rounded 
+                    transition duration-300">
+                        Email
+                    </span>
+                </li>
+
+            </ul>
+
         </div>
     )
 }

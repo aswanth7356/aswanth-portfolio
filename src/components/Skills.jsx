@@ -70,9 +70,9 @@ export default function Skills() {
     {
       title: "Off-Page SEO & Link Building",
       points: [
-        `Built ${count}+ high-quality backlinks including guest posts, social bookmarking & directory submissions.`,
-        "Performed backlink analysis and link gap research.",
-        "Executed outreach strategies to improve domain authority.",
+        `Built and managed ${count}+ high-quality backlinks through guest posting, social bookmarking, and directory submissions.`,
+        "Secured backlinks from high Domain Authority (DA) websites with low Spam Score (SS) to maintain strong link profile health.",
+        "Conducted comprehensive backlink audits and link gap analysis using SEO tools.",
       ],
     },
     {
@@ -94,9 +94,9 @@ export default function Skills() {
     {
       title: "Technical SEO & Event Tracking",
       points: [
-        "Implemented Google Tag Manager event tracking.",
-        "Tracked WhatsApp clicks, form submissions & CTA buttons.",
-        "Assisted in technical SEO audits and performance improvements.",
+        "Implemented Google Tag Manager (GTM) for event tracking and conversion monitoring.",
+        "Conducted technical SEO audits to identify crawl errors, indexing issues, and on-page improvements.",
+        "Analyzed website performance using Google PageSpeed Insights and optimized Core Web Vitals to improve loading speed and overall performance.",
       ],
     },
   ];
@@ -160,9 +160,11 @@ export default function Skills() {
                   {exp.points.map((point, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-3 text-sm sm:text-base text-gray-700 dark:text-white/80"
+                      className="flex items-center gap-3 text-sm sm:text-base text-gray-700 dark:text-white/80"
                     >
-                      <span className="w-2 h-2 mt-2 bg-black dark:bg-white rounded-full"></span>
+                      {/* ✅ Checkmark */}
+                      <span className="flex-shrink-0 text-green-500 text-lg">✔</span>
+
                       {point}
                     </li>
                   ))}

@@ -28,9 +28,10 @@ export default function App() {
             <Helmet>
                 {/* ===== Title & Description ===== */}
                 <title>Freelance SEO Specialist & Expert in Calicut | Aswanth P</title>
+                
                 <meta
                     name="description"
-                    content="Hire a freelance SEO specialist in Calicut. Aswanth P provides expert SEO services including on-page SEO, technical SEO, local SEO, and link building to boost rankings and grow your business."
+                    content="Looking for a freelance SEO specialist in Calicut? Aswanth P provides expert SEO services to boost rankings, increase traffic, and grow your online business."
                 />
                 <link rel="canonical" href="https://aswanth-portfolio-eta.vercel.app/" />
                 <meta name="robots" content="index, follow" />

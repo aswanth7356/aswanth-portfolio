@@ -180,17 +180,20 @@ const Blog = () => {
                 <button
                     onClick={() => navigate(-1)}
                     className="fixed top-6 left-6 z-50
-                        w-12 h-12 rounded-full
-                        bg-gray-200/80 dark:bg-white/10
-                        backdrop-blur-md
-                        border-2 border-gray-500 dark:border-blue-400
-                        shadow-lg dark:shadow-none
-                        flex items-center justify-center
-                        hover:scale-110
-                        hover:drop-shadow-[0_0_12px_rgba(59,130,246,0.6)]
-                        transition-all duration-300"
+                            w-12 h-12 rounded-full
+                            bg-white/80 dark:bg-gray-800/60
+                            backdrop-blur-md
+                            border-2 border-orange-500 dark:border-orange-400
+                            shadow-md
+                            flex items-center justify-center
+                            hover:scale-110
+                            hover:drop-shadow-[0_0_12px_rgba(168,85,247,0.6)]
+                            transition-all duration-300"
                 >
-                    <FaArrowLeft size={18} className="text-blue-600 dark:text-blue-400" />
+                    <FaArrowLeft
+                        size={18}
+                        className="text-purple-600 dark:text-purple-300 transition-colors duration-300"
+                    />
                 </button>
             )}
 

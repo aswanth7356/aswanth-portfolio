@@ -5,6 +5,7 @@ export default function About() {
         { name: 'Google Search Console', icon: './assets/google search console.png', size: 'large' },
         { name: 'Google Tag Manager', icon: './assets/google tag manager.png', size: 'large' },
         { name: 'Semrush', icon: './assets/semrush.png', size: 'large' },
+        { name: 'Uber Suggest', icon: './assets/uber suggest.png', size: 'large' },
         { name: 'Moz', icon: './assets/moz.png', size: 'large' },
         { name: 'Page Speed Insight', icon: './assets/page-speed-insight.png' },
         { name: 'Seo Optimer', icon: './assets/seo optimer.png', size: 'large' },

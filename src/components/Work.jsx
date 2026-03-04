@@ -4,60 +4,115 @@ export default function Work() {
     const work = [
 
         {
-            name: 'Backlink Building',
-            icon: './assets/backlink-img.jpg',
-            description: 'Off-Page SEO',
-            link: '',
-        },
-        {
             name: 'On-Page SEO',
             icon: './assets/on-page.jpg',
-            description: 'Website Optimization',
-            link: '',
+            description: 'Technical Fixes, Meta Tags & Content Structuring',
+            link: '/all-work',
         },
         {
-            name: 'Poster Designs',
+            name: 'Off-Page SEO',
+            icon: './assets/backlink-img.jpg',
+            description: 'Authority Building & High-Quality Backlinks',
+            link: '/all-work',
+        },
+        {
+            name: 'Local SEO & GBP',
+            icon: './assets/work-2.png',
+            description: 'Profile Setup, Optimization & Ranking',
+            link: '/all-work',
+        },
+        {
+            name: 'Frontend Dev..',
             icon: './assets/work-3.png',
-            description: 'Canva Poster Designing',
-            link: '',
-        },
-        {
-            name: 'Web Development',
-            icon: './assets/work-1.png',
-            description: 'Web Design',
-            link: '',
+            description: 'Responsive & SEO-Friendly Websites',
+            link: '/all-work',
         }
     ];
+
     return (
         <div id="work" className="w-full px-[12%] py-10 scroll-mt-20">
-            <h4 className="text-center mb-2 text-lg font-Ovo">My portfolio</h4>
-            <h2 className="text-center text-5xl font-Ovo">My latest work</h2>
-            <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">Welcome to my SEO portfolio! Explore my work showcasing on-page SEO, keyword research, backlink strategies, and organic growth improvements.</p>
+            <h4 className="text-center mb-2 text-lg font-Ovo">My Portfolio</h4>
+            <h2 className="text-center text-5xl font-Ovo">My Latest Work</h2>
+            <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+                Welcome to my SEO portfolio! Explore my work showcasing on-page SEO, keyword research, backlink strategies, and organic growth improvements.
+            </p>
 
             <div className="grid grid-cols-auto my-10 gap-5 dark:text-black">
-                {work.map((work) => (
-                    <div key={work.name} className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group" style={{ backgroundImage: `url(${work.icon})` }}>
-                        <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-                            <div>
-                                <h2 className="font-semibold">{work.name}</h2>
-                                <p className="text-sm text-gray-700">{work.description}</p>
-                            </div>
-                            <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                                <img src="./assets/send-icon.png" alt="" className="w-5" />
+                {work.map((item) => (
+                    <Link to={item.link} key={item.name}>
+                        <div
+                            className="aspect-square bg-no-repeat bg-cover bg-center 
+               rounded-lg relative cursor-pointer group overflow-hidden"
+                            style={{ backgroundImage: `url(${item.icon})` }}
+                        >
+
+                            {/* Blur Overlay */}
+                            <div className="absolute inset-0 backdrop-blur-0 
+                    group-hover:backdrop-blur-md 
+                    transition-all duration-500"></div>
+
+                            {/* Content Box */}
+                            <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 
+                    py-3 px-5 flex items-center justify-between 
+                    duration-500 group-hover:bottom-7 z-10">
+                                <div>
+                                    <h2 className="font-semibold">{item.name}</h2>
+                                    <p className="text-sm text-gray-700">{item.description}</p>
+                                </div>
+
+                                <div className="border rounded-full border-black w-9 aspect-square 
+                        flex items-center justify-center 
+                        shadow-[2px_2px_0_#000] 
+                        group-hover:bg-lime-300 transition">
+                                    <img src="./assets/send-icon.png" alt="arrow icon" className="w-5" />
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
+
             <Link
                 to="/all-work"
-                className="w-max flex items-center justify-center gap-2 text-gray-700 border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full py-2 px-8 mx-auto my-20 duration-300 dark:text-white"
+                className="group relative w-max mx-auto my-20
+                            px-10 py-3
+                            rounded-full
+                            flex items-center gap-3
+                            font-semibold tracking-wide
+                            backdrop-blur-md
+                            bg-white/10 dark:bg-white/5
+                            border border-black/30 dark:border-white/30
+                            text-gray-800 dark:text-white
+                            overflow-hidden
+                            transition-all duration-300
+                            hover:-translate-y-1
+                            hover:shadow-[0_0_25px_rgba(59,130,246,0.6)]"
             >
-                Show more
-                <img src="./assets/right-arrow-bold.png" alt="" className="w-4 dark:hidden" />
-                <img src="./assets/right-arrow-bold-dark.png" alt="" className="w-4 hidden dark:block" />
-            </Link>
 
+                {/* Neon Glow Background */}
+                <span className="absolute inset-0 
+                   bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-500
+                   opacity-0 group-hover:opacity-20
+                   transition duration-500">
+                </span>
+
+                {/* Shine Sweep Effect */}
+                <span className="absolute -left-20 top-0 h-full w-20 
+                   bg-white/30 blur-md skew-x-[-20deg]
+                   opacity-0 group-hover:opacity-100
+                   group-hover:translate-x-[300%]
+                   transition-all duration-700">
+                </span>
+
+                {/* Content */}
+                <span className="relative z-10 flex items-center gap-2">
+                    Show More
+                    <span className="transition-transform duration-300 group-hover:translate-x-1">
+                        →
+                    </span>
+                </span>
+
+            </Link>
         </div>
-    )
+    );
 }

@@ -23,14 +23,12 @@
 .blog-hero-overlay {
   position: absolute;
   inset: 0;
-background: linear-gradient(
-  270deg,
-  rgba(15, 23, 42, 0.92),
-  rgba(59, 130, 246, 0.6),
-  rgba(0, 0, 0, 0.6)
-);
-background-size: 400% 400%;
-animation: gradientMove 8s ease infinite;
+  background: linear-gradient(270deg,
+      rgba(15, 23, 42, 0.92),
+      rgba(59, 130, 246, 0.6),
+      rgba(0, 0, 0, 0.6));
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,11 +37,12 @@ animation: gradientMove 8s ease infinite;
   text-align: center;
   padding: 20px;
 }
-@keyframes gradientMove {
+
+/* @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
+} */
 
 /* Badge */
 .hero-badge {
@@ -95,100 +94,11 @@ animation: gradientMove 8s ease infinite;
     width: 0;
     opacity: 0;
   }
+
   to {
     width: 120px;
     opacity: 1;
   }
 }
 
-/* CENTER BUTTON */
-.top-nav {
-  display: flex;
-  justify-content: center;
-  margin: 3px 0 20px 0;
-}
 
-.back-btn {
-  background: #0f172a;
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.back-btn:hover {
-  background: #2563eb;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
-}
-
-/* CONTENT */
-.blog-container {
-  display: flex;
-  justify-content: center;
-  padding: 40px 20px 80px 20px;
-}
-
-.blog-article {
-  background: white;
-  max-width: 900px;
-  width: 100%;
-  padding: 60px;
-  border-radius: 18px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
-}
-
-.blog-article h2 {
-  margin-top: 40px;
-  font-size: 24px;
-  font-weight: 600;
-  color: #1e293b;
-}
-
-.blog-article p {
-  margin-top: 16px;
-  line-height: 1.9;
-  color: #475569;
-  font-size: 17px;
-}
-
-.intro {
-  font-size: 19px;
-  font-weight: 500;
-  color: #334155;
-}
-
-.highlight {
-  color: #2563eb;
-  font-weight: 600;
-}
-
-/* Fade Animation */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .blog-hero {
-    height: 350px;
-  }
-
-  .hero-title {
-    font-size: 28px;
-  }
-
-  .blog-article {
-    padding: 30px;
-  }
-}

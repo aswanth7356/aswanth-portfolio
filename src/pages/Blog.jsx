@@ -7,6 +7,7 @@ import "./Blog.css";
 const Blog = () => {
     const navigate = useNavigate();
     const [showBackBtn, setShowBackBtn] = useState(false);
+    const [isDarkBg, setIsDarkBg] = useState(true);
 
     /* Fade-in Animation */
     useEffect(() => {
@@ -21,16 +22,24 @@ const Blog = () => {
     /* Scroll Detection for Back Button */
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 200) {
+            if (window.scrollY > 10) {
                 setShowBackBtn(true);
             } else {
                 setShowBackBtn(false);
+            }
+
+            // Change icon color after scrolling past hero section
+            if (window.scrollY > 300) {
+                setIsDarkBg(false); // light section
+            } else {
+                setIsDarkBg(true); // hero (dark background)
             }
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
 
     return (
         <div className="blog-wrapper">
@@ -98,12 +107,12 @@ const Blog = () => {
                         SEO • Strategy • Growth
                     </div>
 
-                    <h1 className="hero-title">
+                    <h1 className="hero-title text-2xl sm:text-2xl md:text-5xl lg:text-6xl leading-tight">
                         Helping Businesses Grow with
                         <span className="gradient-text"> Strategic SEO</span> in Kerala
                     </h1>
 
-                    <p className="hero-subtitle">
+                    <p className="hero-subtitle text-base sm:text-lg md:text-xl mt-4">
                         Portfolio, Case Studies & Proven SEO Expertise
                     </p>
 
@@ -112,86 +121,142 @@ const Blog = () => {
             </div>
 
             {/* BLOG CONTENT */}
-            <div className="blog-container">
-                <article className="blog-article">
+            <div className="blog-container px-[8%] py-16">
 
-                    <p className="intro fade-in">
-                        As an{" "}
-                        <span className="highlight">
-                            SEO specialist in Kerala
-                        </span>
-                        , my portfolio website reflects strategic execution, measurable
-                        improvements, and consistent organic growth. In today’s competitive
-                        digital environment, businesses require more than surface-level
-                        optimization — they need technical precision, structured keyword
-                        research, and authority-driven content strategies.
-                    </p>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 leading-snug sm:leading-tight">
+                    Latest SEO Insights & Strategies
+                </h2>
 
-                    <h2 className="fade-in">
-                        Showcasing My SEO Expertise and Real Results
-                    </h2>
-                    <p className="fade-in">
-                        Through my portfolio website, I present detailed case studies
-                        highlighting keyword ranking improvements, traffic growth, and
-                        on-page SEO enhancements. As a{" "}
-                        <span className="highlight">link building specialist</span>, I focus
-                        on ethical backlink acquisition strategies that improve domain
-                        authority and search visibility. Every project reflects structured
-                        planning and long-term growth rather than short-term tactics.
-                    </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                    <h2 className="fade-in">
-                        Building Authority as an SEO Expert in Kerala
-                    </h2>
-                    <p className="fade-in">
-                        Businesses searching for the best SEO expert evaluate
-                        experience, transparency, and results. My approach combines
-                        technical SEO, content optimization, analytics tracking, and
-                        performance monitoring to create sustainable ranking improvements.
-                        My portfolio demonstrates not just what I do, but how I achieve
-                        measurable business impact.
-                    </p>
+                    {[
+                        {
+                            title: "Technical SEO Fundamentals",
+                            desc: "Learn how site structure, crawlability, indexing, and Core Web Vitals impact your search rankings.",
+                            img: "./assets/Blogs/Technical SEO Fundamentals.jpg"
+                        },
+                        {
+                            title: "On-Page SEO Optimization",
+                            desc: "Master title tags, meta descriptions, heading structure, and keyword placement for better visibility.",
+                            img: "./assets/Blogs/On-Page SEO Optimization.jpg"
+                        },
+                        {
+                            title: "Advanced Link Building Strategies",
+                            desc: "Discover ethical backlink techniques that improve authority and long-term domain strength.",
+                            img: "./assets/Blogs/Advanced Link Building Strategies.jpg"
+                        },
+                        {
+                            title: "Keyword Research & Search Intent",
+                            desc: "Understand how to find high-impact keywords aligned with user search behavior.",
+                            img: "./assets/Blogs/Keyword Research & Search Intent.jpg"
+                        },
+                        {
+                            title: "Local SEO & Google Business Profile",
+                            desc: "Optimize your local presence and dominate Google Maps with structured GBP strategies.",
+                            img: "./assets/Blogs/Local SEO & Google Business Profile.jpg"
+                        },
+                        {
+                            title: "Content Marketing for SEO",
+                            desc: "Create authority-driven blog content that ranks and converts organically.",
+                            img: "./assets/Blogs/Content Marketing for SEO.jpg"
+                        },
+                        {
+                            title: "Core Web Vitals Optimization",
+                            desc: "Improve page speed, responsiveness, and visual stability for better rankings.",
+                            img: "./assets/Blogs/Core Web Vitals Optimization.jpg"
+                        },
+                        {
+                            title: "SEO Auditing Process",
+                            desc: "Conduct full technical and content audits to uncover ranking opportunities.",
+                            img: "./assets/Blogs/SEO Auditing Process.jpg"
+                        },
+                        {
+                            title: "E-Commerce SEO Strategies",
+                            desc: "Optimize product pages, categories, and structured data for higher conversions.",
+                            img: "./assets/Blogs/E-Commerce SEO Strategies.avif"
+                        },
+                        {
+                            title: "Schema Markup & Structured Data",
+                            desc: "Enhance search visibility using rich snippets and structured data implementation.",
+                            img: "./assets/Blogs/Schema Markup & Structured-Data.jpg"
+                        },
+                        {
+                            title: "Mobile-First SEO",
+                            desc: "Ensure your website performs flawlessly across all devices for ranking success.",
+                            img: "./assets/Blogs/Mobile First SEO.webp"
+                        },
+                        {
+                            title: "Analytics & Performance Tracking",
+                            desc: "Measure traffic, conversions, and ranking improvements with SEO analytics tools.",
+                            img: "./assets/Blogs/Analytics & Performance Tracking.jpg"
+                        }
+                    ].map((blog, index) => (
 
-                    <h2 className="fade-in">Conclusion</h2>
-                    <p className="fade-in">
-                        My portfolio represents my journey as an{" "}
-                        <span className="highlight">SEO specialist</span> committed to
-                        delivering long-term digital growth. By continuously refining
-                        strategies and focusing on data-driven decisions, I aim to help
-                        businesses in Kerala and beyond achieve consistent organic success.
-                    </p>
+                        <div
+                            key={index}
+                            className="group relative rounded-2xl overflow-hidden cursor-pointer transform transition-all duration-500 hover:-translate-y-3"
+                        >
+                            {/* Image */}
+                            <div className="relative h-64 overflow-hidden">
+                                <img
+                                    src={blog.img}
+                                    alt={blog.title}
+                                    loading="lazy"
+                                    className="w-full h-full object-cover transition duration-200 group-hover:blur-md group-hover:scale-110"
+                                />
 
-                </article>
+                                {/* Gradient Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-90"></div>
+                            </div>
+
+                            {/* Content */}
+                            <div className="absolute bottom-0 p-6 text-white transition-all duration-500">
+                                <h3 className="text-xl font-bold mb-2 group-hover:text-yellow-200 transition">
+                                    {blog.title}
+                                </h3>
+
+                                <p className="text-sm text-white-100 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                                    {blog.desc}
+                                </p>
+
+                                <button className="mt-4 px-4 py-2 bg-blue-600 rounded-full text-sm font-medium opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 hover:bg-blue-700">
+                                    Read Article →
+                                </button>
+                            </div>
+                        </div>
+
+                    ))}
+
+                </div>
+
             </div>
 
-            {/* CENTERED BUTTON */}
-            {/* <div className="top-nav fade-in">
-                <Link to="/" className="back-btn">
-                    ← Back to Home
-                </Link>
-            </div> */}
 
 
             {/* FIXED SCROLL BACK BUTTON */}
             {showBackBtn && (
-                <button
-                    onClick={() => navigate(-1)}
-                    className="fixed top-6 left-6 z-50
-                            w-12 h-12 rounded-full
-                            bg-white/80 dark:bg-gray-800/60
-                            backdrop-blur-md
-                            border-2 border-orange-500 dark:border-orange-400
-                            shadow-md
-                            flex items-center justify-center
-                            hover:scale-110
-                            hover:drop-shadow-[0_0_12px_rgba(168,85,247,0.6)]
-                            transition-all duration-300"
+                <Link
+                    to="/"
+                    className={`hidden sm:flex fixed top-6 left-6 z-50
+                                    group
+                                     items-center justify-center
+                                    w-12 h-12
+                                    rounded-full
+                                    bg-white/20
+                                    backdrop-blur-2xl
+                                    border border-black/30
+                                    ${isDarkBg ? "text-white" : "text-black"}
+                                    shadow-[0_8px_30px_rgba(0,0,0,0.15)]
+                                    hover:shadow-[0_8px_40px_rgba(59,130,246,0.35)]
+                                    hover:scale-110
+                                    active:scale-95
+                                    transition-all duration-300`}
                 >
                     <FaArrowLeft
-                        size={18}
-                        className="text-purple-600 dark:text-purple-300 transition-colors duration-300"
+                        size={16}
+                        className="transition-transform duration-300 group-hover:-translate-x-1"
                     />
-                </button>
+                </Link>
             )}
 
         </div>

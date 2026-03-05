@@ -17,13 +17,13 @@ export default function Work() {
         },
         {
             name: 'Local SEO & GBP',
-            icon: './assets/work-2.png',
+            icon: './assets/work-2.webp',
             description: 'Profile Setup, Optimization & Ranking',
             link: '/all-work',
         },
         {
             name: 'Frontend Dev..',
-            icon: './assets/work-3.png',
+            icon: './assets/work-3.webp',
             description: 'Responsive & SEO-Friendly Websites',
             link: '/all-work',
         }

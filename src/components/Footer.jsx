@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <div className="mt-20">
             <div className="text-center">
-                <a href="#!">
+                <a href="#top">
                     <img src="/assets/A Logo2.png" alt="" className="w-36 mx-auto mb-2" />
                 </a>
 

@@ -57,11 +57,19 @@ export default function Navbar() {
 
             <nav ref={navRef} className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
 
-                <a href="#!">
-                    {/*============= Logo ==============*/}
-                    <img src="./assets/A Logo2.png" alt="Logo" className="w-28 cursor-pointer mr-14 dark:hidden" />
-                    <img src="./assets/A Logo2.png" alt="Logo" className="w-28 cursor-pointer mr-14 hidden dark:block" />
+                <a href="#top" aria-label="Go to homepage">
+                    <img
+                        src="./assets/A Logo2.png"
+                        alt="Aswanth Portfolio Logo"
+                        className="w-28 cursor-pointer mr-14 dark:hidden"
+                    />
+                    <img
+                        src="./assets/A Logo2.png"
+                        alt="Aswanth Portfolio Logo"
+                        className="w-28 cursor-pointer mr-14 hidden dark:block"
+                    />
                 </a>
+
 
                 <ul ref={navLinkRef} className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/30 dark:bg-transparent ">
                     <li><a className='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#top">Home</a></li>
@@ -74,7 +82,7 @@ export default function Navbar() {
                 </ul>
 
                 <div className="flex items-center gap-4">
-                    <button onClick={toggleTheme}>
+                    <button onClick={toggleTheme} aria-label="Toggle dark mode">
                         <img src="./assets/moon_icon.png" alt="" className="w-5 dark:hidden" />
                         <img src="./assets/sun_icon.png" alt="" className="w-5 hidden dark:block" />
                     </button>
@@ -88,7 +96,7 @@ export default function Navbar() {
                         <img src="./assets/download-icon.png" alt="Download" className="w-4 dark:invert" />
                     </a>
 
-                    <button className="block md:hidden ml-3" onClick={openMenu}>
+                    <button className="block md:hidden ml-3" onClick={openMenu} aria-label="Open navigation menu">
                         <img src="./assets/menu-black.png" alt="" className="w-6 dark:hidden" />
                         <img src="./assets/menu-white.png" alt="" className="w-6 hidden dark:block" />
                     </button>

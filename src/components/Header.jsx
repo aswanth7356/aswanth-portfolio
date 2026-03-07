@@ -60,6 +60,7 @@ export default function Header() {
                         href="https://wa.me/+917356644734"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Chat with me on WhatsApp"
                         className="w-12 h-12 flex items-center justify-center rounded-full 
                         backdrop-blur-md 
                         bg-gray-200/60 dark:bg-white/10
@@ -86,6 +87,7 @@ export default function Header() {
                         href="https://instagram.com/azw4nth"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Visit my Instagram profile"
                         className="w-12 h-12 flex items-center justify-center rounded-full 
                         backdrop-blur-md 
                         bg-gray-200/60 dark:bg-white/10
@@ -110,6 +112,7 @@ export default function Header() {
                 <li className="relative group">
                     <a
                         href="mailto:aswanth1392@gmail.com"
+                        aria-label="Send me an email"
                         className="w-12 h-12 flex items-center justify-center rounded-full 
                         backdrop-blur-md 
                         bg-gray-200/60 dark:bg-white/10

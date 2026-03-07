@@ -13,7 +13,7 @@ export default function Header() {
 
             <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
                 Hi! I&apos;m Aswanth
-                <img src="./assets/hand-icon.png" alt="" className="w-6 mb-1" />
+                <img src="./assets/hand-icon.png" alt="Waving hand icon" className="w-6 mb-1" />
             </h3>
 
             <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
@@ -33,6 +33,7 @@ export default function Header() {
                         href="https://www.linkedin.com/in/aswanth-clt/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Visit my LinkedIn profile"
                         className="w-12 h-12 flex items-center justify-center rounded-full 
                         backdrop-blur-md 
                         bg-gray-200/60 dark:bg-white/10

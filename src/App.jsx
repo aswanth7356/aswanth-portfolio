@@ -112,12 +112,15 @@ export default function App() {
                             <Preloader />
                             {/* <LenisScroll /> */}
                             <Navbar />
-                            <Header />
-                            <About />
-                            <Skills />
-                            <Work />
-                            {/* <Services /> */}
-                            <Contact />
+
+                            <main>
+                                <Header />
+                                <About />
+                                <Skills />
+                                <Work />
+                                {/* <Services /> */}
+                                <Contact />
+                            </main>
                             <Footer />
                         </>
                     }

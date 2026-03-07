@@ -31,6 +31,7 @@ export default function Footer() {
                         <a
                             href="https://www.linkedin.com/in/aswanth-clt/"
                             target="_blank"
+                            aria-label="Visit my LinkedIn profile"
                             className="text-blue-700 hover:text-blue-400 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.7)] transition-all duration-300"
                         >
                             <FaLinkedin size={28} />
@@ -40,6 +41,7 @@ export default function Footer() {
                         <a
                             href="https://wa.me/+917356644734"
                             target="_blank"
+                            aria-label="Chat with me on WhatsApp"
                             className="text-green-500 hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.7)] transition-all duration-300"
                         >
                             <FaWhatsapp size={28} />
@@ -49,6 +51,7 @@ export default function Footer() {
                         <a
                             href="tel:+917356644734"
                             target="_blank"
+                            aria-label="Call Aswanth"
                             className="text-blue-500 hover:text-blue-400 hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.7)] transition-all duration-300"
                         >
                             <FaPhoneAlt size={24} />

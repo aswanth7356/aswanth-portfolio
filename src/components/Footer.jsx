@@ -4,8 +4,8 @@ export default function Footer() {
     return (
         <div className="mt-20">
             <div className="text-center">
-                <a href="#top">
-                    <img src="/assets/A Logo2.png" alt="" className="w-36 mx-auto mb-2" />
+                <a href="#top" aria-label="Go to homepage">
+                    <img src="/assets/A Logo2.png" alt="Aswanth Portfolio Logo" className="w-36 mx-auto mb-2" />
                 </a>
 
                 <div className="w-max flex items-center gap-2 mx-auto">

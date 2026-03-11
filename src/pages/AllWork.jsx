@@ -10,14 +10,15 @@ function Allwok() {
             description:
                 "Performed a complete SEO setup for my portfolio website including crawling, indexing verification using Google Search Console, and performance testing using PageSpeed Insights. The website was successfully indexed and optimized for better technical performance and search visibility. This case study highlights technical SEO implementation, indexing verification, and performance analysis.",
             images: [
-                "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-                "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+                './assets/All-works/portfolio3.webp',
+                './assets/All-works/portfolio2.webp',
+                './assets/All-works/portfolio1.webp',
                 "https://images.unsplash.com/photo-1556155092-8707de31f9c4",
-                "https://images.unsplash.com/photo-1504639725590-34d0984388bd"
             ],
             tools: ["Google Search Console", "PageSpeed Insights", "Technical SEO"]
         },
-        
+
+
     ];
 
     const [expanded, setExpanded] = useState(null);
@@ -117,31 +118,110 @@ function Allwok() {
                         {/* Image Grid */}
                         <div className="grid grid-cols-2 gap-3 mb-4">
 
-                            {work.images.map((img, i) => (
-                                <div key={i} className="relative group">
+                            {work.images.map((img, i) => {
+                                const previewPosition = index % 3 === 2 ? "right-full mr-4" : "left-full ml-4";
 
-                                    {/* Small Image */}
-                                    <img
-                                        src={img}
-                                        alt={work.title}
-                                        className="w-full h-28 object-cover rounded-lg cursor-pointer"
-                                    />
+                                return (
+                                    <div key={i} className="relative group">
 
-                                    {/* Hover Zoom Preview */}
-                                    <img
-                                        src={img}
-                                        alt={work.title}
-                                        className="
-                                        absolute z-50 w-80 rounded-xl shadow-2xl
-                                        top-[-30px] left-1/2 -translate-x-1/2
-                                        opacity-0 scale-90
-                                        transition-all duration-500 ease-out
-                                        group-hover:opacity-100 group-hover:scale-110
-                                        "
-                                    />
+                                        {/* Small Image */}
+                                        <img
+                                            src={img}
+                                            alt={work.title}
+                                            className="
+                                                w-full h-28 object-cover rounded-lg cursor-pointer
+                                                border border-gray-900 dark:border-gray-700
+                                                shadow-sm
+                                                group-hover:scale-105
+                                                group-hover:border-black dark:group-hover:border-white
+                                                group-hover:shadow-lg
+                                                transition-all duration-300
+                                            "
+                                        />
 
-                                </div>
-                            ))}
+                                        {/* Glass Overlay */}
+                                        <div
+                                            className="
+                                                absolute inset-0
+                                                bg-gradient-to-br
+                                                from-white/40 via-white/10 to-transparent
+                                                backdrop-blur-sm
+                                                rounded-lg
+                                                transition duration-300
+                                                group-hover:opacity-0
+
+                                                flex items-center justify-center
+                                            "
+                                        >
+
+                                            {/* Eye Icon */}
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="w-6 h-6 text-black opacity-80"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                strokeWidth="2"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                                />
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    d="M2.458 12C3.732 7.943 7.523 5 12 5
+                                                    c4.477 0 8.268 2.943 9.542 7
+                                                    -1.274 4.057-5.065 7-9.542 7
+                                                    -4.477 0-8.268-2.943-9.542-7z"
+                                                />
+                                            </svg>
+
+                                        </div>
+
+
+
+                                        {/* Preview */}
+                                        <div
+                                            className={`
+                                                    absolute ${previewPosition}
+                                                    top-1/2 -translate-y-1/2
+                                                    w-[400px] h-[320px]
+
+                                                    opacity-0 translate-x-6
+                                                    group-hover:opacity-100 group-hover:translate-x-0
+
+                                                    transition-all duration-300 ease-out
+                                                    pointer-events-none
+                                                    z-50
+                                                    hidden md:block
+                                                    `}
+                                        >
+
+                                            <div className="
+                                                    w-full h-full
+                                                    flex items-center justify-center
+                                                    bg-white dark:bg-gray-900
+                                                    rounded-xl
+                                                    border-4 border-black dark:border-white
+                                                    shadow-2xl
+                                                    p-2
+                                                    ">
+
+                                                <img
+                                                    src={img}
+                                                    alt={work.title}
+                                                    className="max-w-full max-h-full object-contain group-hover:scale-105 transition duration-300"
+                                                />
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                );
+                            })}
 
                         </div>
 

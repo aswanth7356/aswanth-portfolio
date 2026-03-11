@@ -79,32 +79,14 @@ export default function Work() {
                             rounded-full
                             flex items-center gap-3
                             font-semibold tracking-wide
-                            backdrop-blur-md
-                            bg-white/10 dark:bg-white/5
-                            border border-black/30 dark:border-white/30
+                            border border-gray-400
                             text-gray-800 dark:text-white
-                            overflow-hidden
-                            transition-all duration-300
-                            hover:-translate-y-1
-                            hover:shadow-[0_0_25px_rgba(59,130,246,0.6)]"
-            >
+                            overflow-hidden">
 
-                {/* Neon Glow Background */}
-                <span className="absolute inset-0 
-                   bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-500
-                   opacity-0 group-hover:opacity-20
-                   transition duration-500">
-                </span>
+                <span className="absolute inset-0 border-2 border-transparent
+                    group-hover:border-blue-500
+                    transition-all duration-300 rounded-full"></span>
 
-                {/* Shine Sweep Effect */}
-                <span className="absolute -left-20 top-0 h-full w-20 
-                   bg-white/30 blur-md skew-x-[-20deg]
-                   opacity-0 group-hover:opacity-100
-                   group-hover:translate-x-[300%]
-                   transition-all duration-700">
-                </span>
-
-                {/* Content */}
                 <span className="relative z-10 flex items-center gap-2">
                     Show More
                     <span className="transition-transform duration-300 group-hover:translate-x-1">

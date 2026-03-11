@@ -1,16 +1,34 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import { Helmet } from 'react-helmet'
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { Helmet } from "react-helmet";
 
 function Allwok() {
-    const navigate = useNavigate()
+
+    const works = [
+        {
+            title: "Portfolio Website SEO Optimization & Performance Analysis",
+            description:
+                "Performed a complete SEO setup for my portfolio website including crawling, indexing verification using Google Search Console, and performance testing using PageSpeed Insights. The website was successfully indexed and optimized for better technical performance and search visibility. This case study highlights technical SEO implementation, indexing verification, and performance analysis.",
+            images: [
+                "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+                "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+                "https://images.unsplash.com/photo-1556155092-8707de31f9c4",
+                "https://images.unsplash.com/photo-1504639725590-34d0984388bd"
+            ],
+            tools: ["Google Search Console", "PageSpeed Insights", "Technical SEO"]
+        },
+        
+    ];
+
+    const [expanded, setExpanded] = useState(null);
 
     return (
-        <div className="w-full min-h-screen px-[10%] py-16 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+        <div className="w-full min-h-screen px-[10%] py-16 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+
+
 
             {/* ============== SEO Metadata ================ */}
+
             <Helmet>
                 <title>SEO Portfolio & Case Studies | Calicut SEO Expert – Aswanth P</title>
 
@@ -19,7 +37,7 @@ function Allwok() {
                     content="Explore real SEO case studies by Aswanth P, Calicut SEO Expert. See ranking improvements, traffic growth, and proven strategies that deliver results."
                 />
 
-                  <meta name="robots" content="index, follow" />
+                <meta name="robots" content="index, follow" />
 
                 <link
                     rel="canonical"
@@ -77,42 +95,115 @@ function Allwok() {
             </Helmet>
 
 
+
             {/* Page Header */}
             <div className="text-center mb-12">
                 <h1 className="text-5xl font-bold mb-4">All My Works</h1>
                 <p className="text-lg max-w-2xl mx-auto">
-                    Welcome to my extended portfolio! Here you can see more projects, case studies, and details of the work I have done in SEO, web development, and design.
+                    Explore detailed SEO case studies, technical audits, and website
+                    optimization projects demonstrating practical SEO experience.
                 </p>
             </div>
 
-            {/* Current Projects */}
-            <div className="mb-12">
-                <h2 className="text-3xl font-semibold mb-6 text-center">Current Projects</h2>
+            {/* Works Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {/* Project Card Placeholder */}
-                    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 flex flex-col items-center justify-center text-center hover:shadow-lg transition-shadow duration-300">
-                        <div className="text-6xl mb-4">🚧</div>
-                        <h3 className="text-xl font-semibold mb-2">No Projects Yet</h3>
-                        <p className="text-gray-600 dark:text-gray-300">
-                            Future projects will be uploaded here. Stay tuned!
+                {works.map((work, index) => (
+                    <div
+                        key={index}
+                        className="relative bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300"
+                    >
+
+                        {/* Image Grid */}
+                        <div className="grid grid-cols-2 gap-3 mb-4">
+
+                            {work.images.map((img, i) => (
+                                <div key={i} className="relative group">
+
+                                    {/* Small Image */}
+                                    <img
+                                        src={img}
+                                        alt={work.title}
+                                        className="w-full h-28 object-cover rounded-lg cursor-pointer"
+                                    />
+
+                                    {/* Hover Zoom Preview */}
+                                    <img
+                                        src={img}
+                                        alt={work.title}
+                                        className="
+                                        absolute z-50 w-80 rounded-xl shadow-2xl
+                                        top-[-30px] left-1/2 -translate-x-1/2
+                                        opacity-0 scale-90
+                                        transition-all duration-500 ease-out
+                                        group-hover:opacity-100 group-hover:scale-110
+                                        "
+                                    />
+
+                                </div>
+                            ))}
+
+                        </div>
+
+                        {/* Title */}
+                        <h3 className="text-xl font-semibold mb-2">
+                            {work.title}
+                        </h3>
+
+                        {/* Description */}
+                        <p
+                            className={`text-gray-600 dark:text-gray-300 text-sm leading-relaxed ${expanded === index ? "" : "line-clamp-2"
+                                }`}
+                        >
+                            {work.description}
                         </p>
+
+                        {/* Show More / Less */}
+                        {expanded === index ? (
+                            <button
+                                onClick={() => setExpanded(null)}
+                                className="text-blue-600 text-sm mt-1 hover:underline"
+                            >
+                                Show less
+                            </button>
+                        ) : (
+                            <button
+                                onClick={() => setExpanded(index)}
+                                className="text-blue-600 text-sm mt-1 hover:underline"
+                            >
+                                Show more
+                            </button>
+                        )}
+
+                        {/* Tools */}
+                        <div className="flex flex-wrap gap-2 mt-4">
+                            {work.tools.map((tool, i) => (
+                                <span
+                                    key={i}
+                                    className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full"
+                                >
+                                    {tool}
+                                </span>
+                            ))}
+                        </div>
+
                     </div>
-                </div>
+                ))}
+
             </div>
 
             {/* Back Button */}
-            <div className="text-center mt-10">
+            <div className="text-center mt-12">
                 <Link
                     to="/"
-                    className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-300"
+                    className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition"
                 >
                     ← Back to Home
                 </Link>
             </div>
 
         </div>
-    )
+    );
 }
 
-export default Allwok
+export default Allwok;

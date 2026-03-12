@@ -6,16 +6,16 @@ function Allwok() {
 
     const works = [
         {
-            title: "Portfolio Website SEO Optimization & Performance Analysis",
+            title: "Portfolio Website Development & SEO Optimization",
             description:
-                "Performed a complete SEO setup for my portfolio website including crawling, indexing verification using Google Search Console, and performance testing using PageSpeed Insights. The website was successfully indexed and optimized for better technical performance and search visibility. This case study highlights technical SEO implementation, indexing verification, and performance analysis.",
+                "Designed and developed a personal portfolio website using React and optimized it for search engine visibility. Implemented technical SEO elements such as optimized meta tags, canonical URLs, structured data, and proper indexing setup. Verified crawling and indexing through Google Search Console and analyzed performance using PageSpeed Insights. This project demonstrates the integration of modern frontend development with practical SEO strategies.",
             images: [
                 './assets/All-works/portfolio3.webp',
                 './assets/All-works/portfolio2.webp',
                 './assets/All-works/portfolio1.webp',
-                "https://images.unsplash.com/photo-1556155092-8707de31f9c4",
+                './assets/All-works/portfolio4.webp',
             ],
-            tools: ["Google Search Console", "PageSpeed Insights", "Technical SEO"]
+            tools: ["React", "Google Search Console", "PageSpeed Insights", "Technical SEO"]
         },
 
 

@@ -17,9 +17,7 @@ function Allwok() {
                 './assets/All-works/portfolio1.webp',
                 './assets/All-works/portfolio4.webp',
             ],
-            tools: ["React", "Google Search Console", "PageSpeed Insights", "Technical SEO"]
         },
-
 
     ];
 
@@ -119,7 +117,7 @@ function Allwok() {
             </div>
 
             {/* Works Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
 
                 {works.map((work, index) => {
 
@@ -134,14 +132,19 @@ function Allwok() {
                         <div
                             key={index}
                             className="
+                                group
                                 rounded-2xl
                                 shadow-lg
-                                hover:shadow-xl
-                                hover:-translate-y-2
                                 transition-all duration-300
                                 overflow-hidden
-                                border border-gray-900 dark:border-white
-                                "
+                                border border-gray-300
+                                hover:shadow-2xl
+                                hover:scale-[1.02]
+                                hover:bg-gradient-to-r
+                                hover:from-orange-200
+                                hover:to-pink-200
+                                p-[1px]
+                            "
                         >
 
                             {/* ===== Cover Image ===== */}
@@ -162,61 +165,77 @@ function Allwok() {
                             </div>
 
 
+
                             {/* ===== Small Images (Under Cover) ===== */}
 
                             <div className="flex justify-center gap-4 px-6 mt-4">
 
-                                {work.images.slice(0, 4).map((img, i) => (
+                                {work.images.slice(0, 4).map((img, i) => {
 
-                                    <div
-                                        key={i}
-                                        className="relative group cursor-pointer"
-                                        onMouseEnter={() =>
-                                            setHoveredImage(prev => ({ ...prev, [index]: img }))
-                                        }
-                                        onMouseLeave={() =>
-                                            setHoveredImage(prev => ({ ...prev, [index]: null }))
-                                        }
-                                        onClick={() =>
-                                            setSelectedImage(prev => ({ ...prev, [index]: img }))
-                                        }
+                                    const isSelected = (selectedImage[index] || work.images[0]) === img;
 
-                                    >
-
-                                        <img
-                                            src={img}
-                                            alt={work.title}
-                                            className="
-                                            w-20 h-20
-                                            object-cover
-                                            rounded-xl
-                                            cursor-pointer
-                                            border border-gray-300 dark:border-gray-600
-                                            shadow-md
-                                            transition-all duration-300
-                                            group-hover:scale-110
-                                            group-hover:-translate-y-1
-                                            group-hover:shadow-lg
-                                            "
-                                        />
-
-                                        {/* Glass overlay */}
+                                    return (
 
                                         <div
-                                            className="
-                                            absolute inset-0
-                                            rounded-xl
-                                            bg-white/10 dark:bg-black/20
-                                            backdrop-blur-sm
-                                            opacity-70
-                                            group-hover:opacity-0
-                                            transition duration-300
-                                            "
-                                        />
+                                            key={i}
+                                            className="relative group/thumb cursor-pointer"
+                                            onMouseEnter={() =>
+                                                setHoveredImage(prev => ({ ...prev, [index]: img }))
+                                            }
+                                            onMouseLeave={() =>
+                                                setHoveredImage(prev => ({ ...prev, [index]: null }))
+                                            }
+                                            onClick={() =>
+                                                setSelectedImage(prev => ({ ...prev, [index]: img }))
+                                            }
+                                        >
 
-                                    </div>
+                                            <img
+                                                src={img}
+                                                alt={work.title}
+                                                className={`
+                                                    w-20 h-20
+                                                    object-cover
+                                                    p-1
+                                                    bg-white
+                                                    rounded-lg
+                                                    shadow-md
+                                                    transition-all duration-300
+                                                    group-hover:scale-110
+                                                    group-hover:rotate-0
+                                                    ${isSelected ? "ring-2 ring-sky-500 scale-105" : "rotate-3"}
+                                                `}
+                                            />
 
-                                ))}
+                                            {/* Color Gradient + Blur Overlay */}
+                                            {!isSelected && (
+                                                <div
+                                                    className="
+                                                    absolute inset-0
+                                                    rounded-xl
+                                                    bg-gradient-to-tr
+                                                    from-black/30
+                                                    via-white/10
+                                                    to-orange-400/30
+                                                    backdrop-blur-[2px]
+                                                    brightness-90
+                                                    opacity-80
+                                                    group-hover/thumb:opacity-0 
+                                                    transition-all duration-300
+                                                    "
+                                                />
+                                            )}
+
+                                            {/* Selected Green Dot */}
+                                            {isSelected && (
+                                                <div className="absolute -top-1 -right-1 w-4 h-4 bg-sky-500 rounded-full animate-pulse border-2 border-white shadow-md"></div>
+                                            )}
+
+                                        </div>
+
+                                    );
+
+                                })}
 
                             </div>
 
@@ -235,8 +254,13 @@ function Allwok() {
                                 {/* Description */}
 
                                 <p
-                                    className={`text-gray-600 dark:text-gray-300 text-sm leading-relaxed ${expanded === index ? "" : "line-clamp-2"
-                                        }`}
+                                    className={`
+                                        text-gray-600 dark:text-gray-300
+                                        text-sm leading-relaxed
+                                        transition-colors duration-300
+                                        group-hover:text-black
+                                        ${expanded === index ? "" : "line-clamp-2"}
+                                    `}
                                 >
                                     {work.description}
                                 </p>
@@ -260,21 +284,6 @@ function Allwok() {
                                     </button>
                                 )}
 
-
-                                {/* Tools */}
-
-                                <div className="flex flex-wrap gap-2 mt-4">
-
-                                    {work.tools.map((tool, i) => (
-                                        <span
-                                            key={i}
-                                            className="bg-blue-100 text-blue-700 text-xs px-3 py-1 rounded-full"
-                                        >
-                                            {tool}
-                                        </span>
-                                    ))}
-
-                                </div>
 
                             </div>
 

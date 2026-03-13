@@ -1,6 +1,19 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Work() {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 900,
+            once: true,
+            easing: "ease-out-cubic",
+        });
+    }, []);
+
+
     const work = [
 
         {
@@ -31,18 +44,18 @@ export default function Work() {
 
     return (
         <div id="work" className="w-full px-[12%] py-10 scroll-mt-20">
-            <h4 className="text-center mb-2 text-lg font-Ovo">My Portfolio</h4>
-            <h2 className="text-center text-5xl font-Ovo">My Latest Work</h2>
-            <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+            <h4 className="text-center mb-2 text-lg font-Ovo" data-aos="fade-up">My Portfolio</h4>
+            <h2 className="text-center text-5xl font-Ovo" data-aos="fade-up">My Latest Work</h2>
+            <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo" data-aos="fade-up">
                 Welcome to my SEO portfolio! Explore my work showcasing on-page SEO, keyword research, backlink strategies, and organic growth improvements.
             </p>
 
-            <div className="grid grid-cols-auto my-10 gap-5 dark:text-black">
+            <div className="grid grid-cols-auto my-10 gap-5 dark:text-black" >
                 {work.map((item) => (
                     <Link to={item.link} key={item.name}>
                         <div
                             className="aspect-square bg-no-repeat bg-cover bg-center 
-               rounded-lg relative cursor-pointer group overflow-hidden"
+               rounded-lg relative cursor-pointer group overflow-hidden" data-aos="fade-up"
                             style={{ backgroundImage: `url(${item.icon})` }}
                         >
 

@@ -1,4 +1,17 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function About() {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 900,
+            once: true,
+            easing: "ease-out-cubic",
+        });
+    }, []);
+
 
     const tools = [
         { name: 'Google Analytics', icon: './assets/google analytics.png', size: 'large' },
@@ -53,8 +66,8 @@ export default function About() {
 
     return (
         <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
-            <p className="text-center mb-2 text-lg font-Ovo">Introduction</p>
-            <h2 className="text-center text-5xl font-Ovo">About me</h2>
+            <p className="text-center mb-2 text-lg font-Ovo" data-aos="fade-up">Introduction</p>
+            <h2 className="text-center text-5xl font-Ovo" data-aos="fade-up">About me</h2>
 
             <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
 
@@ -78,7 +91,7 @@ export default function About() {
 
                 {/* Right Content */}
                 <div className="flex-1">
-                    <p className="mb-10 max-w-2xl font-Ovo">
+                    <p className="mb-10 max-w-2xl font-Ovo" data-aos="fade-up">
                         As an SEO Executive, I specialize in boosting website performance
                         through on-page and off-page SEO, content optimization, and backlink
                         strategies. I focus on driving organic traffic, improving rankings,
@@ -86,7 +99,7 @@ export default function About() {
                     </p>
 
                     {/* Info Cards */}
-                    <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                    <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl" data-aos="fade-up">
                         {data.map((item) => (
                             <li
                                 key={item.name}
@@ -112,7 +125,7 @@ export default function About() {
                                 {Array.isArray(item.description) ? (
                                     <ul className="text-gray-600 text-sm dark:text-white/80 space-y-2">
                                         {item.description.map((entry, index) => (
-                                            <li key={index} className="flex gap-2">
+                                            <li key={index}  className="flex gap-2" >
                                                 <span className="w-2 h-2 mt-2 bg-black dark:bg-white rounded-full"></span>
                                                 <div>
                                                     <p className="font-medium">
@@ -141,7 +154,7 @@ export default function About() {
                         Tools I Used
                     </h3>
 
-                    <ul className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-5">
+                    <ul className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-5" data-aos="fade-up">
                         {tools.map((tool) => (
                             <li
                                 key={tool.name}

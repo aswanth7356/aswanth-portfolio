@@ -7,15 +7,15 @@ import Work from './components/Work'
 import About from './components/About'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
-// import LenisScroll from './components/LenisScroll'
+import LenisScroll from './components/LenisScroll'
 import Preloader from './components/Preloader'
 import Blog from './pages/Blog'
 import AllWork from './pages/AllWork'
 import NotFound from './pages/NotFound'
 import AllServices from './pages/AllServices'
 import Skills from './components/Skills'
-import ScrollToTop from './components/ScrollToTop'
 import ScrollTopButton from './components/ScrollTopButton'
+import "aos/dist/aos.css";
 
 
 export default function App() {
@@ -100,8 +100,9 @@ export default function App() {
             {/* ========================================================== */}
 
 
-            <ScrollToTop />
+            <LenisScroll />
             <ScrollTopButton />
+
 
             <Routes>
                 {/* Home page route */}

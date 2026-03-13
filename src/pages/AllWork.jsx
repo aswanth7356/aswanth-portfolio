@@ -1,10 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Allwok() {
     const [hoveredImage, setHoveredImage] = useState({});
     const [selectedImage, setSelectedImage] = useState({});
+
+    useEffect(() => {
+        AOS.init({
+            duration: 900,
+            once: true,
+            easing: "ease-out-cubic",
+        });
+    }, []);
 
     const works = [
         {
@@ -98,7 +109,7 @@ function Allwok() {
 
 
             {/* Page Header */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-12" data-aos="fade-up">
                 <h1 className="text-5xl font-bold mb-4">All My Works</h1>
                 <p className="text-lg max-w-2xl mx-auto">
                     Explore detailed SEO case studies, technical audits, and website
@@ -107,7 +118,7 @@ function Allwok() {
             </div>
 
             {/* Back Button */}
-            <div className="text-center mt-12 mb-12">
+            <div className="text-center mt-12 mb-12" data-aos="fade-up" data-aos-delay="100">
                 <Link
                     to="/"
                     className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition"
@@ -131,6 +142,8 @@ function Allwok() {
 
                         <div
                             key={index}
+                            data-aos="fade-up"
+                            data-aos-delay={index * 100}
                             className="
                                 group
                                 rounded-2xl

@@ -102,6 +102,7 @@ export default function App() {
 
             <LenisScroll />
             <ScrollTopButton />
+             <Navbar />
 
 
             <Routes>
@@ -111,8 +112,7 @@ export default function App() {
                     element={
                         <>
                             <Preloader />
-                            {/* <LenisScroll /> */}
-                            <Navbar />
+                            {/* <Navbar /> */}
 
                             <main>
                                 <Header />

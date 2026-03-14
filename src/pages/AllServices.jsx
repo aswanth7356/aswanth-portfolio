@@ -1,9 +1,19 @@
-import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const AllServices = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 900,
+            once: true,
+            easing: "ease-out-cubic",
+        });
+    }, []);
+
     return (
         <>
 
@@ -81,7 +91,7 @@ const AllServices = () => {
 
 
 
-            <div className="relative overflow-hidden px-6 md:px-16 lg:px-24">
+            <div className="relative overflow-hidden px-6 md:px-16 lg:px-24 pt-14">
 
                 {/* Background Gradient */}
                 <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-black dark:via-gray-900 dark:to-black"></div>
@@ -90,22 +100,15 @@ const AllServices = () => {
                 <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl -z-10"></div>
                 <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-400/20 rounded-full blur-3xl -z-10"></div>
 
-                {/* 🔥 Premium Home Button */}
-                <div className="pt-10">
-                    <Link
-                        to="/"
-                        className="inline-flex items-center gap-2 px-6 py-2.5 bg-white/70 dark:bg-white/10 backdrop-blur-lg border border-white/30 dark:border-white/20 text-gray-800 dark:text-white rounded-full shadow-md hover:scale-105 hover:shadow-xl transition-all duration-300"
-                    >
-                        ← Back to Home
-                    </Link>
-                </div>
+
 
                 {/* HERO SECTION */}
                 <section className="text-center py-24">
-                    <h1 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    <h1 data-aos="fade-up" className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" >
                         SEO Services in Calicut
                     </h1>
-                    <p className="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-300">
+                    <p data-aos="fade-up"
+                        data-aos-delay="100" className="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-300">
                         Looking for the best SEO specialist in Calicut? I provide result-driven
                         SEO strategies that improve rankings, increase organic traffic, and help
                         businesses in Kozhikode grow consistently.
@@ -143,6 +146,8 @@ const AllServices = () => {
                     ].map((service, index) => (
                         <div
                             key={index}
+                            data-aos="fade-up"
+                            data-aos-delay={index * 100}
                             className="p-8 rounded-3xl bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white/30 dark:border-white/10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
                         >
                             <h2 className="text-xl font-semibold mb-4 dark:text-white">
@@ -157,7 +162,7 @@ const AllServices = () => {
                 </section>
 
                 {/* CTA SECTION */}
-                <section className="text-center pb-24">
+                <section className="text-center pb-24" data-aos="fade-up">
                     <h2 className="text-3xl font-semibold mb-6 dark:text-white">
                         Ready to Dominate Google Rankings?
                     </h2>

@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { FaArrowLeft } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -98,7 +96,14 @@ const Blog = () => {
     ];
 
     return (
-        <div className="bg-white text-gray-900 min-h-screen">
+        <div className="relative overflow-hidden min-h-screen text-gray-900 dark:text-gray-100">
+
+            {/* Background Gradient */}
+            <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-black dark:via-gray-900 dark:to-black"></div>
+
+            {/* Soft Glow Effects */}
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-400/20 rounded-full blur-3xl -z-10"></div>
 
             {/* ============ Meta Datas ============ */}
             <Helmet>
@@ -148,31 +153,19 @@ const Blog = () => {
             </Helmet>
 
 
-
             {/* HERO */}
-            <div className="blog-hero relative h-[70vh] flex items-center justify-center text-center overflow-hidden">
+            <div className="h-[55vh] flex items-center justify-center text-center px-6 pt-24">
 
-                {/* Image */}
-                <img
-                    src="./assets/blog-banner.webp"
-                    alt="SEO Specialist in Kerala Portfolio Blog"
-                    className="absolute w-full h-full object-cover"
-                />
+                <div data-aos="fade-up" className="max-w-3xl">
 
-                {/* Black Gradient Shade */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
-
-                {/* Content */}
-                <div className="relative z-10 text-white px-6">
-
-
-                    <h1 className="text-3xl md:text-6xl font-bold leading-tight">
-                        Helping Businesses Grow with
-                        <span className="text-blue-400"> Strategic SEO</span> in Kerala
+                    <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900 dark:text-white">
+                        SEO Insights & Digital Marketing Strategies
                     </h1>
 
-                    <p className="mt-4 text-lg text-gray-200">
-                        Portfolio, Case Studies & Proven SEO Expertise
+                    <p className="mt-5 text-gray-600 dark:text-gray-300 text-lg">
+                        Explore practical SEO tips, keyword research strategies, and digital
+                        marketing insights to improve search rankings and grow your online
+                        presence.
                     </p>
 
                 </div>
@@ -182,13 +175,6 @@ const Blog = () => {
             {/* BLOG SECTION */}
             <div className="max-w-7xl mx-auto px-6 py-20">
 
-                <h2
-                    data-aos="fade-up"
-                    className="text-3xl md:text-4xl font-bold text-center mb-16"
-                >
-                    Latest SEO Insights & Strategies
-                </h2>
-
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
                     {blogs.map((blog, index) => (
@@ -197,7 +183,7 @@ const Blog = () => {
                             key={index}
                             data-aos="fade-up"
                             data-aos-delay={index * 80}
-                            className="group rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+                            className="group rounded-2xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-md     hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
                         >
 
                             {/* IMAGE */}
@@ -213,11 +199,11 @@ const Blog = () => {
                             {/* CONTENT */}
                             <div className="p-6">
 
-                                <h3 className="text-xl font-semibold mb-3 group-hover:text-blue-600 transition">
+                                <h3 className="text-xl font-semibold mb-3 transition">
                                     {blog.title}
                                 </h3>
 
-                                <p className="text-gray-600 text-sm leading-relaxed">
+                                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                                     {blog.desc}
                                 </p>
 
@@ -234,25 +220,6 @@ const Blog = () => {
                 </div>
 
             </div>
-
-            {/* BACK BUTTON */}
-            {showBackBtn && (
-                <Link
-                    to="/"
-                    className={`hidden sm:flex fixed top-6 left-6 z-50
-          items-center justify-center
-          w-12 h-12
-          rounded-full
-          bg-white
-          border border-gray-300
-          shadow-md
-          ${isDarkBg ? "text-black" : "text-black"}
-          hover:scale-110
-          transition-all duration-300`}
-                >
-                    <FaArrowLeft size={16} />
-                </Link>
-            )}
 
         </div>
     );

@@ -20,25 +20,21 @@ export default function Work() {
             name: 'On-Page SEO',
             icon: './assets/on-page.jpg',
             description: 'Technical Fixes, Meta Tags & Content Structuring',
-            link: '/all-work',
         },
         {
             name: 'Off-Page SEO',
             icon: './assets/backlink-img.jpg',
             description: 'Authority Building & High-Quality Backlinks',
-            link: '/all-work',
         },
         {
             name: 'Local SEO & GBP',
             icon: './assets/work-2.webp',
             description: 'Profile Setup, Optimization & Ranking',
-            link: '/all-work',
         },
         {
             name: 'Frontend Dev..',
             icon: './assets/work-3.webp',
             description: 'Responsive & SEO-Friendly Websites',
-            link: '/all-work',
         }
     ];
 
@@ -52,36 +48,36 @@ export default function Work() {
 
             <div className="grid grid-cols-auto my-10 gap-5 dark:text-black" >
                 {work.map((item) => (
-                    <Link to={item.link} key={item.name}>
-                        <div
-                            className="aspect-square bg-no-repeat bg-cover bg-center 
-               rounded-lg relative cursor-pointer group overflow-hidden" data-aos="fade-up"
-                            style={{ backgroundImage: `url(${item.icon})` }}
-                        >
+                    <div
+                        className="aspect-square bg-no-repeat bg-cover bg-center 
+               rounded-lg relative group overflow-hidden" data-aos="fade-up"
+                        style={{ backgroundImage: `url(${item.icon})` }}
+                    >
 
-                            {/* Blur Overlay */}
-                            <div className="absolute inset-0 backdrop-blur-0 
-                    group-hover:backdrop-blur-md 
-                    transition-all duration-500"></div>
+                        {/* Blur Overlay */}
+                        <div className="absolute inset-0 backdrop-blur-md 
+                            group-hover:backdrop-blur-0 
+                            transition-all duration-500">
+                        </div>
 
-                            {/* Content Box */}
-                            <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 
+                        {/* Content Box */}
+                        <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 
                     py-3 px-5 flex items-center justify-between 
                     duration-500 group-hover:bottom-7 z-10">
-                                <div>
-                                    <h2 className="font-semibold">{item.name}</h2>
-                                    <p className="text-sm text-gray-700">{item.description}</p>
-                                </div>
+                            <div>
+                                <h2 className="font-semibold">{item.name}</h2>
+                                <p className="text-sm text-gray-700">{item.description}</p>
+                            </div>
 
-                                <div className="border rounded-full border-black w-9 aspect-square 
+                            <div className="border rounded-full border-black w-9 aspect-square 
                         flex items-center justify-center 
                         shadow-[2px_2px_0_#000] 
                         group-hover:bg-lime-300 transition">
-                                    <img src="./assets/send-icon.png" alt="arrow icon" className="w-5" />
-                                </div>
+                                <img src="./assets/send-icon.png" alt="arrow icon" className="w-5" />
                             </div>
                         </div>
-                    </Link>
+                    </div>
+
                 ))}
             </div>
 

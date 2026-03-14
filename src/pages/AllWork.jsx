@@ -6,15 +6,15 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Allwok() {
-    const [hoveredImage, setHoveredImage] = useState({});
-    const [selectedImage, setSelectedImage] = useState({});
+
+    const [currentSlide, setCurrentSlide] = useState({});
 
     useEffect(() => {
         AOS.init({
             duration: 900,
             once: true,
             easing: "ease-out-cubic",
-        });
+        });;
     }, []);
 
     const works = [
@@ -35,9 +35,14 @@ function Allwok() {
     const [expanded, setExpanded] = useState(null);
 
     return (
-        <div className="w-full min-h-screen px-[10%] py-16 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+        <div className="relative overflow-hidden w-full min-h-screen px-[10%] pt-32 pb-16 text-gray-900 dark:text-gray-100">
 
+            {/* Background Gradient */}
+            <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-black dark:via-gray-900 dark:to-black"></div>
 
+            {/* Soft Glow Effects */}
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-400/20 rounded-full blur-3xl -z-10"></div>
 
             {/* ============== SEO Metadata ================ */}
 
@@ -117,140 +122,85 @@ function Allwok() {
                 </p>
             </div>
 
-            {/* Back Button */}
-            <div className="text-center mt-12 mb-12" data-aos="fade-up" data-aos-delay="100">
-                <Link
-                    to="/"
-                    className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition"
-                >
-                    ← Back to Home
-                </Link>
-            </div>
 
             {/* Works Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 pt-12">
 
                 {works.map((work, index) => {
 
-                    const coverImage =
-                        hoveredImage[index] ||
-                        selectedImage[index] ||
-                        work.images[0];
-
-
                     return (
+
+                        // Card 
 
                         <div
                             key={index}
                             data-aos="fade-up"
                             data-aos-delay={index * 100}
                             className="
-                                group
-                                rounded-2xl
-                                shadow-lg
-                                transition-all duration-300
-                                overflow-hidden
-                                border border-gray-300
-                                hover:shadow-2xl
-                                hover:scale-[1.02]
-                                hover:bg-gradient-to-r
-                                hover:from-orange-200
-                                hover:to-pink-200
-                                p-[1px]
+                            group
+                            rounded-2xl
+                            overflow-hidden
+                            border border-gray-200 dark:border-gray-700
+                            bg-white dark:bg-gray-800
+                            shadow-md
+                            transition-transform duration-300 ease-out
+                            hover:scale-110
+                            hover:-translate-y-2
+                            hover:shadow-2xl
                             "
                         >
 
                             {/* ===== Cover Image ===== */}
 
-                            <div className="relative w-full h-64">
+                            <div className="relative w-full h-64 overflow-hidden">
 
+                                {/* Carousel Image */}
                                 <img
-                                    src={coverImage}
+                                    src={work.images[currentSlide[index] || 0]}
                                     alt={work.title}
+                                    loading="lazy"
                                     className="
                                     w-full h-full
                                     object-cover
-                                    transition-transform duration-500
-                                    hover:scale-105
-                                    "
+                                    transition-all duration-500"
                                 />
 
-                            </div>
+                                {/* Hover Overlay */}
+                                <div className="
+                                    absolute inset-0
+                                    opacity-0
+                                    group-hover:opacity-100
+                                    transition duration-500">
+                                </div>
 
+                                {/* Carousel Dots */}
+                                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full">
 
+                                    {work.images.map((_, i) => {
 
-                            {/* ===== Small Images (Under Cover) ===== */}
+                                        const active = (currentSlide[index] || 0) === i;
 
-                            <div className="flex justify-center gap-4 px-6 mt-4">
-
-                                {work.images.slice(0, 4).map((img, i) => {
-
-                                    const isSelected = (selectedImage[index] || work.images[0]) === img;
-
-                                    return (
-
-                                        <div
-                                            key={i}
-                                            className="relative group/thumb cursor-pointer"
-                                            onMouseEnter={() =>
-                                                setHoveredImage(prev => ({ ...prev, [index]: img }))
-                                            }
-                                            onMouseLeave={() =>
-                                                setHoveredImage(prev => ({ ...prev, [index]: null }))
-                                            }
-                                            onClick={() =>
-                                                setSelectedImage(prev => ({ ...prev, [index]: img }))
-                                            }
-                                        >
-
-                                            <img
-                                                src={img}
-                                                alt={work.title}
+                                        return (
+                                            <button
+                                                key={i}
+                                                onClick={() =>
+                                                    setCurrentSlide(prev => ({ ...prev, [index]: i }))
+                                                }
                                                 className={`
-                                                    w-20 h-20
-                                                    object-cover
-                                                    p-1
-                                                    bg-white
-                                                    rounded-lg
-                                                    shadow-md
-                                                    transition-all duration-300
-                                                    group-hover:scale-110
-                                                    group-hover:rotate-0
-                                                    ${isSelected ? "ring-2 ring-sky-500 scale-105" : "rotate-3"}
+                                                        h-2.5 rounded-full transition-all duration-300
+                                                        ${active
+                                                        ? "w-6 bg-orange-500 shadow-lg shadow-orange-500/40 animate-pulse"
+                                                        : "w-2.5 bg-gray-300 hover:bg-orange-400"}
                                                 `}
                                             />
+                                        );
 
-                                            {/* Color Gradient + Blur Overlay */}
-                                            {!isSelected && (
-                                                <div
-                                                    className="
-                                                    absolute inset-0
-                                                    rounded-xl
-                                                    bg-gradient-to-tr
-                                                    from-black/30
-                                                    via-white/10
-                                                    to-orange-400/30
-                                                    backdrop-blur-[2px]
-                                                    brightness-90
-                                                    opacity-80
-                                                    group-hover/thumb:opacity-0 
-                                                    transition-all duration-300
-                                                    "
-                                                />
-                                            )}
+                                    })}
 
-                                            {/* Selected Green Dot */}
-                                            {isSelected && (
-                                                <div className="absolute -top-1 -right-1 w-4 h-4 bg-sky-500 rounded-full animate-pulse border-2 border-white shadow-md"></div>
-                                            )}
-
-                                        </div>
-
-                                    );
-
-                                })}
+                                </div>
 
                             </div>
+
 
 
                             {/* ===== Card Content ===== */}
@@ -259,7 +209,7 @@ function Allwok() {
 
                                 {/* Title */}
 
-                                <h3 className="text-xl font-semibold mb-2">
+                                <h3 className="text-xl font-semibold mb-2 transition-colors duration-300">
                                     {work.title}
                                 </h3>
 
@@ -269,10 +219,9 @@ function Allwok() {
                                 <p
                                     className={`
                                         text-gray-600 dark:text-gray-300
-                                        text-sm leading-relaxed
+                                        text-sm leading-7
                                         transition-colors duration-300
-                                        group-hover:text-black
-                                        ${expanded === index ? "" : "line-clamp-2"}
+                                        ${expanded === index ? "" : "line-clamp-3"}
                                     `}
                                 >
                                     {work.description}

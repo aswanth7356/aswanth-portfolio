@@ -81,7 +81,7 @@ export default function Navbar() {
   return (
     <>
       <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
-        <img src="./assets/header-bg-color.png" alt="" className="w-full" />
+        <img src="./assets/header-bg-color.webp" alt="" className="w-full" />
       </div>
 
       <nav

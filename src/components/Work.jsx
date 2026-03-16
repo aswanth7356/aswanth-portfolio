@@ -23,7 +23,7 @@ export default function Work() {
         },
         {
             name: 'Off-Page SEO',
-            icon: './assets/backlink-img.jpg',
+            icon: './assets/backlink-img.webp',
             description: 'Authority Building & High-Quality Backlinks',
         },
         {

@@ -14,17 +14,17 @@ export default function About() {
 
 
     const tools = [
-        { name: 'Google Analytics', icon: './assets/google analytics.png', size: 'large' },
-        { name: 'Google Search Console', icon: './assets/google search console.png', size: 'large' },
-        { name: 'Google Tag Manager', icon: './assets/google tag manager.png', size: 'large' },
+        { name: 'Google Analytics', icon: './assets/google analytics.webp', size: 'large' },
+        { name: 'Google Search Console', icon: './assets/google search console.webp', size: 'large' },
+        { name: 'Google Tag Manager', icon: './assets/google tag manager.webp', size: 'large' },
         { name: 'Semrush', icon: './assets/semrush.png', size: 'large' },
         { name: 'Uber Suggest', icon: './assets/uber suggest.png', size: 'large' },
         { name: 'Moz', icon: './assets/moz.png', size: 'large' },
-        { name: 'Page Speed Insight', icon: './assets/page-speed-insight.png' },
+        { name: 'Page Speed Insight', icon: './assets/page-speed-insight.webp' },
         { name: 'Seo Optimer', icon: './assets/seo optimer.png', size: 'large' },
-        { name: 'Screaming Frog', icon: './assets/screaming frog.png' },
-        { name: 'Google Ads', icon: './assets/google ads.png' },
-        { name: 'Meta Ads', icon: './assets/meta ads.png', size: 'large' },
+        { name: 'Screaming Frog', icon: './assets/screaming-frog.webp' },
+        { name: 'Google Ads', icon: './assets/google ads.webp' },
+        { name: 'Meta Ads', icon: './assets/meta ads.webp', size: 'large' },
         { name: 'React', icon: './assets/react.png' },
     ];
 
@@ -81,7 +81,7 @@ export default function About() {
 
                     <div className="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
                         <img
-                            src="./assets/cropped_circle_image2.png"
+                            src="./assets/cropped_circle_image2.webp"
                             alt=""
                             aria-hidden="true"
                             className="w-full animate-spin_slow"

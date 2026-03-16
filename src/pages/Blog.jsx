@@ -36,52 +36,52 @@ const Blog = () => {
         {
             title: "Technical SEO Fundamentals",
             desc: "Learn how site structure, crawlability, indexing, and Core Web Vitals impact your search rankings.",
-            img: "./assets/Blogs/Technical SEO Fundamentals.jpg",
+            img: "./assets/Blogs/Technical SEO Fundamentals.webp",
         },
         {
             title: "On-Page SEO Optimization",
             desc: "Master title tags, meta descriptions, heading structure, and keyword placement for better visibility.",
-            img: "./assets/Blogs/On-Page SEO Optimization.jpg",
+            img: "./assets/Blogs/On-Page SEO Optimization.webp",
         },
         {
             title: "Advanced Link Building Strategies",
             desc: "Discover ethical backlink techniques that improve authority and long-term domain strength.",
-            img: "./assets/Blogs/Advanced Link Building Strategies.jpg",
+            img: "./assets/Blogs/Advanced Link Building Strategies.webp",
         },
         {
             title: "Keyword Research & Search Intent",
             desc: "Understand how to find high-impact keywords aligned with user search behavior.",
-            img: "./assets/Blogs/Keyword Research & Search Intent.jpg",
+            img: "./assets/Blogs/Keyword Research & Search Intent.webp",
         },
         {
             title: "Local SEO & Google Business Profile",
             desc: "Optimize your local presence and dominate Google Maps with structured GBP strategies.",
-            img: "./assets/Blogs/Local SEO & Google Business Profile.jpg",
+            img: "./assets/Blogs/Local SEO & Google Business Profile.webp",
         },
         {
             title: "Content Marketing for SEO",
             desc: "Create authority-driven blog content that ranks and converts organically.",
-            img: "./assets/Blogs/Content Marketing for SEO.jpg",
+            img: "./assets/Blogs/Content Marketing for SEO.webp",
         },
         {
             title: "Core Web Vitals Optimization",
             desc: "Improve page speed, responsiveness, and visual stability for better rankings.",
-            img: "./assets/Blogs/Core Web Vitals Optimization.jpg",
+            img: "./assets/Blogs/Core Web Vitals Optimization.webp",
         },
         {
             title: "SEO Auditing Process",
             desc: "Conduct full technical and content audits to uncover ranking opportunities.",
-            img: "./assets/Blogs/SEO Auditing Process.jpg",
+            img: "./assets/Blogs/SEO Auditing Process.webp",
         },
         {
             title: "E-Commerce SEO Strategies",
             desc: "Optimize product pages, categories, and structured data for higher conversions.",
-            img: "./assets/Blogs/E-Commerce SEO Strategies.avif",
+            img: "./assets/Blogs/E-Commerce SEO Strategies.webp",
         },
         {
             title: "Schema Markup & Structured Data",
             desc: "Enhance search visibility using rich snippets and structured data implementation.",
-            img: "./assets/Blogs/Schema Markup & Structured-Data.jpg",
+            img: "./assets/Blogs/Schema Markup & Structured-Data.webp",
         },
         {
             title: "Mobile-First SEO",
@@ -91,7 +91,7 @@ const Blog = () => {
         {
             title: "Analytics & Performance Tracking",
             desc: "Measure traffic, conversions, and ranking improvements with SEO analytics tools.",
-            img: "./assets/Blogs/Analytics & Performance Tracking.jpg",
+            img: "./assets/Blogs/Analytics & Performance Tracking.webp",
         },
     ];
 

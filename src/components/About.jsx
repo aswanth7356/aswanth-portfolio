@@ -69,10 +69,10 @@ export default function About() {
             <p className="text-center mb-2 text-lg font-Ovo" data-aos="fade-up">Introduction</p>
             <h2 className="text-center text-5xl font-Ovo" data-aos="fade-up">About me</h2>
 
-            <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+            <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-8">
 
                 {/* Profile Image */}
-                <div className="max-w-max mx-auto relative">
+                <div className="max-w-max mx-auto relative" data-aos="fade-up">
                     <img
                         src="./assets/cv-profile-img.webp"
                         alt="Aswanth SEO Executive profile photo"
@@ -102,8 +102,11 @@ export default function About() {
                     <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl" data-aos="fade-up">
                         {data.map((item) => (
                             <li
+                                data-aos="flip-left"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000"
                                 key={item.name}
-                                className="border border-gray-300 dark:border-white/30 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:shadow-white/80 dark:hover:bg-darkHover/50"
+                                className="border border-gray-300 dark:border-white/30 rounded-xl p-6 hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:shadow-white/80 dark:hover:bg-darkHover/50"
                             >
                                 <img
                                     src={item.icon1}
@@ -125,7 +128,7 @@ export default function About() {
                                 {Array.isArray(item.description) ? (
                                     <ul className="text-gray-600 text-sm dark:text-white/80 space-y-2">
                                         {item.description.map((entry, index) => (
-                                            <li key={index}  className="flex gap-2" >
+                                            <li key={index} className="flex gap-2" >
                                                 <span className="w-2 h-2 mt-2 bg-black dark:bg-white rounded-full"></span>
                                                 <div>
                                                     <p className="font-medium">
@@ -160,7 +163,7 @@ export default function About() {
                                 key={tool.name}
                                 className="relative group flex items-center justify-center
                                     aspect-square border border-gray-300 dark:border-white/30
-                                    rounded-lg cursor-pointer transition-all duration-300 ease-in-out
+                                    rounded-lg transition-all duration-300 ease-in-out
                                     hover:scale-110 hover:bg-gray-100 dark:hover:bg-white/10
                                     hover:border-black dark:hover:border-white hover:shadow-xl"
                             >

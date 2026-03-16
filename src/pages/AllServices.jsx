@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { FaSearch, FaTools, FaKey, FaFileAlt, FaChartLine, FaLink } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -24,7 +25,7 @@ const AllServices = () => {
                 <title>SEO Services in Calicut | Freelance SEO Specialist – Aswanth P</title>
                 <meta
                     name="description"
-                    content="Hire a freelance SEO specialist in Calicut. Aswanth P provides professional SEO services including on-page SEO, technical SEO, local SEO, and link building to boost rankings and grow your business."
+                    content="Professional SEO services to boost search rankings, increase organic traffic, and grow your business with on-page SEO, technical SEO, and link building."
                 />
                 <link
                     rel="canonical"
@@ -104,14 +105,12 @@ const AllServices = () => {
 
                 {/* HERO SECTION */}
                 <section className="text-center py-24">
-                    <h1 data-aos="fade-up" className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent" >
-                        SEO Services in Calicut
+                    <h1 data-aos="fade-up" className="text-3xl md:text-5xl font-bold leading-tight text-gray-900 dark:text-white mb-6" >
+                        SEO Services for Business Growth
                     </h1>
                     <p data-aos="fade-up"
                         data-aos-delay="100" className="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-300">
-                        Looking for the best SEO specialist in Calicut? I provide result-driven
-                        SEO strategies that improve rankings, increase organic traffic, and help
-                        businesses in Kozhikode grow consistently.
+                        Helping businesses grow online by improving rankings, increasing organic traffic, and implementing effective SEO strategies.
                     </p>
                 </section>
 
@@ -120,28 +119,34 @@ const AllServices = () => {
 
                     {[
                         {
-                            title: "Local SEO in Calicut",
-                            desc: "Rank higher in local searches and attract nearby customers with optimized Google Business strategies.",
+                            title: "Technical SEO Optimization",
+                            icon: <FaTools />,
+                            desc: "Ensure your website is search-engine friendly with proper indexing, faster loading speeds, and optimized site architecture. I analyze technical issues that affect rankings and implement solutions that improve performance and crawlability.",
                         },
                         {
                             title: "On-Page SEO Optimization",
-                            desc: "Enhance your website structure and content to improve search visibility.",
-                        },
-                        {
-                            title: "Technical SEO",
-                            desc: "Fix crawl issues, boost site speed, and ensure proper indexing.",
+                            icon: <FaSearch />,
+                            desc: "Improve your website’s relevance and search visibility by optimizing meta tags, headings, internal linking, and content structure. Every page is optimized based on search intent to help it rank for the right keywords.",
                         },
                         {
                             title: "Keyword Research & Strategy",
-                            desc: "Target high-converting keywords that bring real business results.",
+                            icon: <FaKey />,
+                            desc: "Identify high-value keywords that align with your audience's search behavior. I conduct in-depth keyword analysis to uncover ranking opportunities and create a strategic plan to target keywords that bring meaningful traffic.",
                         },
                         {
                             title: "Content Optimization",
-                            desc: "SEO-focused content tailored for Calicut and Kozhikode markets.",
+                            icon: <FaFileAlt />,
+                            desc: "Enhance existing content with SEO best practices to improve search visibility and user engagement. Content is optimized to match search intent while maintaining readability and value for visitors.",
                         },
                         {
-                            title: "SEO Consultation",
-                            desc: "Strategic SEO guidance to build long-term growth and authority.",
+                            title: "Link Building & Off-Page SEO",
+                            icon: <FaLink />,
+                            desc: "Build a strong backlink profile through high-quality, relevant links that increase website authority. Strategic link building helps improve domain credibility and boosts search engine rankings over time.",
+                        },
+                        {
+                            title: "SEO Strategy & Consultation",
+                            icon: <FaChartLine />,
+                            desc: "Get expert guidance on improving your website’s organic growth. I provide detailed SEO insights, performance analysis, and actionable recommendations to help businesses scale their online presence effectively.",
                         },
                     ].map((service, index) => (
                         <div
@@ -150,10 +155,16 @@ const AllServices = () => {
                             data-aos-delay={index * 100}
                             className="p-8 rounded-3xl bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white/30 dark:border-white/10 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
                         >
-                            <h2 className="text-xl font-semibold mb-4 dark:text-white">
-                                {service.title}
-                            </h2>
-                            <p className="text-gray-600 dark:text-gray-300">
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="text-white p-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600">
+                                    {service.icon}
+                                </div>
+
+                                <h2 className="text-xl font-semibold dark:text-white">
+                                    {service.title}
+                                </h2>
+                            </div>
+                            <p className="text-gray-600 dark:text-gray-300 leading-7">
                                 {service.desc}
                             </p>
                         </div>

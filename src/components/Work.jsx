@@ -50,7 +50,9 @@ export default function Work() {
                 {work.map((item) => (
                     <div
                         className="aspect-square bg-no-repeat bg-cover bg-center 
-               rounded-lg relative group overflow-hidden" data-aos="fade-up"
+               rounded-lg relative group overflow-hidden"  data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000"
                         style={{ backgroundImage: `url(${item.icon})` }}
                     >
 
@@ -96,7 +98,7 @@ export default function Work() {
                     group-hover:border-blue-500
                     transition-all duration-300 rounded-full"></span>
 
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="relative z-10 flex items-center gap-1 text-sm">
                     Show More
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
                         →

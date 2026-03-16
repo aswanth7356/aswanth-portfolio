@@ -17,23 +17,28 @@ export default function ContactPage() {
     const onSubmit = (event) => {
         event.preventDefault();
 
-        setResult("Sending...");
-
         const formData = new FormData(event.target);
 
-        const data = {
-            name: formData.get("name"),
-            email: formData.get("email"),
-            message: formData.get("message"),
-            subject: formData.get("subject"),
-        };
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const message = formData.get("message");
 
-        console.log("Form submitted:", data);
+        if (!name || !email || !message) {
+            setResult("Please fill in all fields.");
+            return;
+        }
 
-        setTimeout(() => {
-            setResult("Message sent successfully!");
-            event.target.reset();
-        }, 1000);
+        setResult("Opening WhatsApp...");
+
+        const phone = "919876543210"; // Replace with your WhatsApp number in international format
+        const text = `Hello! My name is ${name}. Email: ${email}. Message: ${message}`;
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+        // Open WhatsApp in a new tab
+        window.open(url, "_blank");
+
+        setResult("WhatsApp chat opened! Please send your message.");
+        event.target.reset();
     };
 
     return (

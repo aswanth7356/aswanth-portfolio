@@ -1,90 +1,93 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-export default function Contact() {
-    const [result, setResult] = useState("");
+export default function GamifiedSEO() {
+    const [selected, setSelected] = useState(null);
+    const [tip, setTip] = useState("");
 
-    const onSubmit = (event) => {
-        event.preventDefault();
-        
-        setResult("Sending...");
+    const challenges = [
+        { id: 1, text: "Low website traffic", tip: "Focus on keyword research and content optimization to attract more visitors." },
+        { id: 2, text: "Poor Google rankings", tip: "Optimize on-page SEO and build quality backlinks to improve rankings." },
+        { id: 3, text: "Slow website", tip: "Improve site speed by compressing images, reducing scripts, and using caching." },
+        { id: 4, text: "Low engagement", tip: "Create interactive content, clear CTAs, and engaging visuals for better user experience." },
+    ];
 
-        const formData = new FormData(event.target);
-        const data = {
-            name: formData.get("name"),
-            email: formData.get("email"),
-            message: formData.get("message"),
-            subject: formData.get("subject"),
-        };
-
-        // Just log it to console (no backend)
-        console.log("Form submitted:", data);
-
-        // Show success message and reset form
-        setResult("Message sent successfully!");
-        event.target.reset();
+    const handleSelect = (challenge) => {
+        setSelected(challenge.id);
+        setTip(challenge.tip);
     };
 
-    // Keep your hCaptcha loader if needed later
-    function CaptchaLoader() {
-        const captchadiv = document.querySelectorAll('[data-captcha="true"]');
-        if (captchadiv.length) {
-            let lang = null, onload = null, render = null;
-
-            captchadiv.forEach((item) => {
-                const sitekey = item.dataset.sitekey;
-                lang = item.dataset.lang;
-                onload = item.dataset.onload;
-                render = item.dataset.render;
-
-                if (!sitekey) item.dataset.sitekey = "50b2fe65-b00b-4b9e-ad62-3ba471098be2";
-            });
-
-            let scriptSrc = "https://js.hcaptcha.com/1/api.js?recaptchacompat=off";
-            if (lang) scriptSrc += `&hl=${lang}`;
-            if (onload) scriptSrc += `&onload=${onload}`;
-            if (render) scriptSrc += `&render=${render}`;
-
-            const script = document.createElement("script");
-            script.type = "text/javascript";
-            script.async = true;
-            script.defer = true;
-            script.src = scriptSrc;
-            document.body.appendChild(script);
-        }
-    }
-
     useEffect(() => {
-        CaptchaLoader();
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: "ease-out-cubic",
+        });
     }, []);
 
     return (
-        <div id="contact" className="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./assets/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
-
-            <h4 className="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
-            <h2 className="text-center text-5xl font-Ovo">Get in touch</h2>
-            <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-                I&apos;d love to hear from you! If you have any questions, comments or feedback, please use the form below.
+        <div
+            className="w-full px-[12%] py-16 bg-[url('./assets/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none rounded-2xl"
+            data-aos="fade-up"
+        >
+            <h2
+                className="text-center text-5xl font-Ovo mb-6"
+                data-aos="fade-down"
+                data-aos-delay="100"
+            >
+                Pick Your Biggest SEO Challenge
+            </h2>
+            <p
+                className="text-center max-w-2xl mx-auto mb-12 font-Ovo text-gray-700 dark:text-gray-300"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+                Select the challenge you face the most and get a quick tip on how to solve it!
             </p>
 
-            <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
-                <input type="hidden" name="subject" value="Eliana Jade - New form Submission" />
+            <div
+                className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto"
+                data-aos="fade-up"
+                data-aos-delay="300"
+            >
+                {challenges.map((challenge) => (
+                    <button
+                        key={challenge.id}
+                        onClick={() => handleSelect(challenge)}
+                        className={`
+                            px-6 py-4 rounded-xl font-medium shadow-md transition-all duration-300
+                            transform
+                            ${selected === challenge.id
+                                ? "bg-blue-600 text-white scale-105 shadow-2xl"
+                                : "bg-white dark:bg-darkHover/30 text-black dark:text-white hover:scale-105 hover:shadow-xl hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-white"
+                            }
+                        `}
+                        data-aos="zoom-in"
+                        data-aos-delay={400 + challenge.id * 100}
+                    >
+                        {challenge.text}
+                    </button>
+                ))}
+            </div>
 
-                <div className="grid grid-cols-auto gap-6 mt-10 mb-8">
-                    <input type="text" placeholder="Enter your name" required name="name" className="flex-1 px-3 py-2 focus:ring-1 outline-none border border-gray-300 dark:border-white/30 rounded-md bg-white dark:bg-darkHover/30" />
-                    <input type="email" placeholder="Enter your email" required name="email" className="flex-1 px-3 py-2 focus:ring-1 outline-none border border-gray-300 dark:border-white/30 rounded-md bg-white dark:bg-darkHover/30" />
+            {tip && (
+                <div
+                    className="mt-10 text-center"
+                    data-aos="fade-up"
+                    data-aos-delay="600"
+                >
+                    <p className="text-xl font-semibold text-gray-800 dark:text-white mb-6">{tip}</p>
+                    <a
+                        href="/contact"
+                        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
+                        data-aos="fade-up"
+                        data-aos-delay="700"
+                    >
+                        Want personalized help? Contact me
+                    </a>
                 </div>
-
-                <textarea rows="6" placeholder="Enter your message" required name="message" className="w-full px-4 py-2 focus:ring-1 outline-none border border-gray-300 dark:border-white/30 rounded-md bg-white mb-6 dark:bg-darkHover/30"></textarea>
-
-                {/* <div className="h-captcha mb-6 max-w-full" data-captcha="true"></div> */}
-
-                <button type='submit' className="py-2 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border dark:border-white/30 dark:hover:bg-darkHover">
-                    Submit now
-                    <img src="./assets/right-arrow-white.png" alt="" className="w-4" />
-                </button>
-
-                <p className='mt-4'>{result}</p>
-            </form>
+            )}
         </div>
-    )
+    );
 }

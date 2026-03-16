@@ -49,7 +49,7 @@ export default function ContactPage() {
 
                 <link
                     rel="canonical"
-                    href="https://yourdomain.com/contact"
+                    href="https://aswanth-portfolio-eta.vercel.app/contact"
                 />
             </Helmet>
 

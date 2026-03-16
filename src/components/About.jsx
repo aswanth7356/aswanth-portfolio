@@ -25,6 +25,7 @@ export default function About() {
         { name: 'Screaming Frog', icon: './assets/screaming-frog.webp' },
         { name: 'Google Ads', icon: './assets/google ads.webp' },
         { name: 'Meta Ads', icon: './assets/meta ads.webp', size: 'large' },
+        { name: 'Wordpress', icon: './assets/wordpress.webp' },
         { name: 'React', icon: './assets/react.png' },
     ];
 

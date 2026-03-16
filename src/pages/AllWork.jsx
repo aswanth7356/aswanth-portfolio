@@ -116,7 +116,7 @@ function Allwok() {
             {/* Page Header */}
             <div className="text-center mb-12" data-aos="fade-up">
                 <h1 className="text-5xl font-bold mb-4">All My Works</h1>
-                <p className="text-lg max-w-2xl mx-auto">
+                <p className="text-lg max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
                     Explore detailed SEO case studies, technical audits, and website
                     optimization projects demonstrating practical SEO experience.
                 </p>

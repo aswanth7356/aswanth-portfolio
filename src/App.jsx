@@ -10,6 +10,7 @@ import Navbar from './components/Navbar'
 import LenisScroll from './components/LenisScroll'
 import Preloader from './components/Preloader'
 import Blog from './pages/Blog'
+import ContactPage from './pages/ContactPage'
 import AllWork from './pages/AllWork'
 import NotFound from './pages/NotFound'
 import AllServices from './pages/AllServices'
@@ -102,7 +103,7 @@ export default function App() {
 
             <LenisScroll />
             <ScrollTopButton />
-             <Navbar />
+            <Navbar />
 
 
             <Routes>
@@ -131,6 +132,7 @@ export default function App() {
                 <Route path="/all-work" element={<AllWork />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/services" element={<AllServices />} />
+                <Route path="/contact" element={<ContactPage />} />
 
                 {/* Catch all invalid routes */}
                 <Route path="*" element={<NotFound />} />

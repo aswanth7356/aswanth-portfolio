@@ -74,8 +74,7 @@ export default function Navbar() {
   }, []);
 
   const navStyle = ({ isActive }) =>
-    `transition duration-300 ${
-      isActive ? "text-blue-500" : "hover:text-blue-500"
+    `transition duration-300 ${isActive ? "text-blue-500" : "hover:text-blue-500"
     }`;
 
   return (
@@ -131,10 +130,11 @@ export default function Navbar() {
           </li>
 
           <li>
-            <a href="#contact" className="transition duration-300 hover:text-blue-500">
+            <NavLink to="/contact" className={navStyle}>
               Contact
-            </a>
+            </NavLink>
           </li>
+
         </ul>
 
         {/* Right Side */}

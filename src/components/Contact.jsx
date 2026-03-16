@@ -5,14 +5,7 @@ export default function Contact() {
 
     const onSubmit = (event) => {
         event.preventDefault();
-
-        // Optional: check for hCaptcha if you enable it later
-        // const hCaptcha = event.target.querySelector('textarea[name=h-captcha-response]')?.value;
-        // if (!hCaptcha) {
-        //   setResult("Please fill out captcha field");
-        //   return;
-        // }
-
+        
         setResult("Sending...");
 
         const formData = new FormData(event.target);

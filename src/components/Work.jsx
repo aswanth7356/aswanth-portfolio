@@ -32,7 +32,7 @@ export default function Work() {
             description: 'Profile Setup, Optimization & Ranking',
         },
         {
-            name: 'Frontend Dev..',
+            name: 'Web Development',
             icon: './assets/work-3.webp',
             description: 'Responsive & SEO-Friendly Websites',
         }

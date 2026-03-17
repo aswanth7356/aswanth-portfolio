@@ -80,7 +80,20 @@ export default function GamifiedSEO() {
                     <p className="text-xl font-semibold text-gray-800 dark:text-white mb-6">{tip}</p>
                     <a
                         href="/contact"
-                        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-300"
+                        className="
+                        inline-block
+                        bg-gradient-to-r from-blue-600 to-purple-600
+                        text-white
+                        px-5 py-3
+                        md:px-6 md:py-3
+                        text-sm md:text-base
+                        rounded-full
+                        shadow-lg
+                        hover:scale-105
+                        transition-transform duration-300
+                        text-center
+                        w-full sm:w-auto
+                        "
                         data-aos="fade-up"
                         data-aos-delay="700"
                     >

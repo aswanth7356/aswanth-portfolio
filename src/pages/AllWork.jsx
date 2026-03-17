@@ -23,10 +23,78 @@ function Allwok() {
             description:
                 "Designed and developed a personal portfolio website using React and optimized it for search engine visibility. Implemented technical SEO elements such as optimized meta tags, canonical URLs, structured data, and proper indexing setup. Verified crawling and indexing through Google Search Console and analyzed performance using PageSpeed Insights. This project demonstrates the integration of modern frontend development with practical SEO strategies.",
             images: [
-                './assets/All-works/portfolio3.webp',
-                './assets/All-works/portfolio2.webp',
-                './assets/All-works/portfolio1.webp',
-                './assets/All-works/portfolio4.webp',
+                './assets/All-works/home.webp',
+                './assets/All-works/code.webp',
+            ],
+        },
+        {
+            title: "On-Page SEO Optimization & Content Structure Improvement",
+            description:
+                "Conducted a complete on-page SEO optimization to improve search engine visibility. Implemented optimized title tags, meta descriptions, header hierarchy (H1–H3), image alt attributes, and internal linking strategies. Improved page structure, keyword placement, and content readability for better ranking potential. Also performed technical checks such as sitemap optimization, robots.txt validation, canonical tag implementation, and page speed improvements using Google PageSpeed Insights.",
+            images: [
+                './assets/All-works/on page.webp',
+                './assets/All-works/meta title.webp',
+            ],
+        },
+        {
+            title: "Off-Page SEO Strategy & High-Quality Backlink Building",
+            description:
+                "Executed off-page SEO strategies to increase domain authority and search engine rankings. Built high-quality backlinks through guest blogging, social bookmarking, and directory submissions on relevant platforms. Focused on acquiring do-follow links from authoritative websites to strengthen website credibility. Monitored backlink performance using SEO tools and ensured link quality, anchor text optimization, and proper indexing to improve overall organic visibility.",
+            images: [
+                './assets/All-works/off page.webp',
+                './assets/All-works/backlink.webp',
+            ],
+        },
+        {
+            title: "Technical SEO Audit & Website Performance Optimization",
+            description:
+                "Conducted a detailed technical SEO audit to identify issues affecting website crawlability, indexing, and performance. Fixed technical problems such as broken links, duplicate pages, improper redirects, and missing canonical tags. Optimized Core Web Vitals and improved page loading speed using Google PageSpeed Insights and performance optimization techniques. Implemented structured data markup, XML sitemap optimization, and robots.txt configuration to enhance search engine crawling and indexing efficiency.",
+            images: [
+                './assets/All-works/technical seo.webp',
+                './assets/All-works/page speed insight.webp',
+                './assets/All-works/screamingfrog.webp',
+            ],
+        },
+        {
+            title: "SEO Keyword Research & Search Opportunity Analysis",
+            description:
+                "Performed in-depth keyword research to identify high search volume and low competition keywords relevant to the target audience. Analyzed competitor websites to understand their keyword strategy, backlink profile, and content structure. Used professional SEO tools to identify ranking opportunities and develop a content strategy to improve organic visibility and search rankings.",
+            images: [
+                './assets/All-works/keyword.webp',
+            ],
+        },
+        {
+            title: "SEO Performance Monitoring with Google Search Console",
+            description:
+                "Monitored website search performance using Google Search Console for Viral Mafia Agency to analyze impressions, clicks, and keyword rankings. Reviewed performance reports to understand which pages and search queries were generating organic traffic. Identified indexing issues and ensured proper sitemap submission to improve search engine visibility. Analyzed page-level performance and search query data to identify opportunities for improving click-through rates (CTR) and overall organic reach. These insights helped in understanding user search behavior and supporting ongoing SEO optimization efforts.",
+            images: [
+                './assets/All-works/gsc.webp',
+                './assets/All-works/gsc2.webp',
+            ],
+        },
+        {
+            title: "Website Traffic Analysis with Google Analytics",
+            description:
+                "Analyzed website traffic data using Google Analytics for Viral Mafia Agency to understand user behavior, traffic sources, and engagement metrics. Reviewed reports such as user acquisition, traffic channels, and page performance to identify how visitors were reaching the website. Interpreted important metrics including sessions, users, bounce rate, and average engagement time to evaluate website performance. These insights helped in understanding audience behavior and supporting data-driven SEO and digital marketing strategies.",
+            images: [
+                './assets/All-works/ga.webp',
+            ],
+        },
+        {
+            title: "SEO Competitor Analysis using Semrush",
+            description:
+                "Conducted detailed SEO competitor analysis using Semrush to understand the competitive landscape and identify ranking opportunities. Analyzed competitor websites to evaluate their top-performing keywords, backlink profiles, and organic search traffic. Used keyword gap and domain comparison tools to discover valuable keyword opportunities and understand competitor ranking strategies. These insights helped in identifying areas for SEO improvement and developing more effective search engine optimization strategies.",
+            images: [
+                './assets/All-works/comb1.webp',
+                './assets/All-works/comp2.webp',
+            ],
+        },
+        {
+            title: "Local SEO Optimization for Local Business Visibility",
+            description:
+                "Implemented Local SEO strategies to improve business visibility in location-based searches. Optimized Google Business Profile with accurate business information, service details, images, and category targeting. Focused on local keyword optimization, citation building, and consistent NAP (Name, Address, Phone) details across directories. Analyzed local search performance and competitor listings to improve presence in Google Map results and increase local search visibility.",
+            images: [
+                '/assets/All-works/gmb.webp'
             ],
         },
 
@@ -162,7 +230,10 @@ function Allwok() {
                                     className="
                                     w-full h-full
                                     object-cover
-                                    transition-all duration-500"
+                                    scale-110
+                                    group-hover:scale-100
+                                    group-hover:brightness-105
+                                    transition-all duration-700 ease-out"
                                 />
 
                                 {/* Hover Overlay */}

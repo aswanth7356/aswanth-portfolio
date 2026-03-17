@@ -90,7 +90,7 @@ function Allwok() {
             ],
         },
         {
-            title: "Local SEO Optimization for Local Business Visibility",
+            title: "Local SEO Optimization & Google Business Profile Management",
             description:
                 "Implemented Local SEO strategies to improve business visibility in location-based searches. Optimized Google Business Profile with accurate business information, service details, images, and category targeting. Focused on local keyword optimization, citation building, and consistent NAP (Name, Address, Phone) details across directories. Analyzed local search performance and competitor listings to improve presence in Google Map results and increase local search visibility.",
             images: [

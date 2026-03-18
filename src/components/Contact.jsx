@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FaArrowRight } from "react-icons/fa";
+
 
 export default function GamifiedSEO() {
     const [selected, setSelected] = useState(null);
@@ -79,26 +81,33 @@ export default function GamifiedSEO() {
                 >
                     <p className="text-xl font-semibold text-gray-800 dark:text-white mb-6">{tip}</p>
                     <a
-                        href="/contact"
-                        className="
-                        inline-block
-                        bg-gradient-to-r from-blue-600 to-purple-600
-                        text-white
-                        px-5 py-3
-                        md:px-6 md:py-3
-                        text-sm md:text-base
-                        rounded-full
-                        shadow-lg
-                        hover:scale-105
-                        transition-transform duration-300
-                        text-center
-                        w-full sm:w-auto
-                        "
-                        data-aos="fade-up"
-                        data-aos-delay="700"
-                    >
-                        Want personalized help? Contact me
-                    </a>
+    href="/contact"
+    className="
+    group relative inline-flex items-center gap-2 justify-center
+    px-6 py-3
+    text-sm md:text-base
+    rounded-full
+    border border-blue-400/40
+    text-blue-600
+    backdrop-blur-md
+    bg-white/10
+
+    transition-all duration-300 ease-in-out
+    w-full sm:w-auto
+
+    hover:text-white
+    hover:bg-orange-500
+    hover:border-orange-500
+    hover:shadow-[0_8px_25px_rgba(255,115,0,0.4)]
+    hover:-translate-y-1
+    "
+    data-aos="fade-up"
+    data-aos-delay="700"
+>
+    Want personalized help? Contact me
+
+    <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+</a>
                 </div>
             )}
         </div>

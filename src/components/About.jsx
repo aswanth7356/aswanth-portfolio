@@ -73,7 +73,7 @@ export default function About() {
             <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-8">
 
                 {/* Profile Image */}
-                <div className="max-w-max mx-auto relative" data-aos="fade-up">
+                {/* <div className="max-w-max mx-auto relative" data-aos="fade-up">
                     <img
                         src="./assets/cv-profile-img.webp"
                         alt="Aswanth SEO Executive profile photo"
@@ -88,7 +88,31 @@ export default function About() {
                             className="w-full animate-spin_slow"
                         />
                     </div>
+                </div> */}
+
+
+
+                {/* Profile Image */}
+                <div className="relative w-64 sm:w-80 rounded-3xl overflow-hidden group" data-aos="fade-up">
+                    <img
+                        src="./assets/cv-profile-img2.webp"
+                        alt="Aswanth SEO Executive profile photo"
+                        className="w-full transition duration-500 group-hover:scale-110"
+                    />
+
+                    {/* Overlay */}
+                    <div className="
+                        absolute inset-0
+                        bg-black/40
+                        opacity-0 group-hover:opacity-100
+                        transition duration-500
+                        flex items-center justify-center
+                        text-white text-sm font-medium
+                    ">
+                        SEO & Growth Specialist 🚀
+                    </div>
                 </div>
+
 
                 {/* Right Content */}
                 <div className="flex-1">
@@ -136,8 +160,22 @@ export default function About() {
                                                         {entry.title}
                                                     </p>
                                                     {entry.duration && (
-                                                        <p className="text-xs opacity-80">
-                                                            {entry.duration}
+                                                        <p className="text-xs flex items-center gap-2 mt-1">
+                                                            {entry.duration.includes("Present") ? (
+                                                                <>
+                                                                    <span>{entry.duration.replace("Present", "")}</span>
+
+                                                                    <span className="
+                                                                            bg-green-100 text-green-700
+                                                                            px-2 py-0.5 rounded-full
+                                                                            text-[10px] font-semibold
+                                                                        ">
+                                                                        Present
+                                                                    </span>
+                                                                </>
+                                                            ) : (
+                                                                <span className="opacity-80">{entry.duration}</span>
+                                                            )}
                                                         </p>
                                                     )}
                                                 </div>

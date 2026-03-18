@@ -183,10 +183,9 @@ function Allwok() {
 
             {/* Page Header */}
             <div className="text-center mb-12" data-aos="fade-up">
-                <h1 className="text-5xl font-bold mb-4">All My Works</h1>
+                <h1 className="text-5xl font-bold mb-4">SEO Projects & Practical Case Studies</h1>
                 <p className="text-lg max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-                    Explore detailed SEO case studies, technical audits, and website
-                    optimization projects demonstrating practical SEO experience.
+                    Discover hands-on SEO work including audits, on-page and off-page optimization, keyword research, and performance tracking—focused on improving rankings, traffic, and search visibility.
                 </p>
             </div>
 

@@ -37,61 +37,73 @@ const Blog = () => {
             title: "Technical SEO Fundamentals",
             desc: "Learn how site structure, crawlability, indexing, and Core Web Vitals impact your search rankings.",
             img: "./assets/Blogs/Technical SEO Fundamentals.webp",
+            link: "https://en.wikipedia.org/wiki/Search_engine_optimization"
         },
         {
             title: "On-Page SEO Optimization",
             desc: "Master title tags, meta descriptions, heading structure, and keyword placement for better visibility.",
             img: "./assets/Blogs/On-Page SEO Optimization.webp",
+            link: "https://en.wikipedia.org/wiki/Search_engine_optimization"
         },
         {
             title: "Advanced Link Building Strategies",
             desc: "Discover ethical backlink techniques that improve authority and long-term domain strength.",
             img: "./assets/Blogs/Advanced Link Building Strategies.webp",
+            link: "https://en.wikipedia.org/wiki/Link_building"
         },
         {
             title: "Keyword Research & Search Intent",
             desc: "Understand how to find high-impact keywords aligned with user search behavior.",
             img: "./assets/Blogs/Keyword Research & Search Intent.webp",
+            link: "https://en.wikipedia.org/wiki/Keyword_research"
         },
         {
             title: "Local SEO & Google Business Profile",
             desc: "Optimize your local presence and dominate Google Maps with structured GBP strategies.",
             img: "./assets/Blogs/Local SEO & Google Business Profile.webp",
+            link: "https://en.wikipedia.org/wiki/Local_search_engine_optimisation"
         },
         {
             title: "Content Marketing for SEO",
             desc: "Create authority-driven blog content that ranks and converts organically.",
             img: "./assets/Blogs/Content Marketing for SEO.webp",
+            link: "https://en.wikipedia.org/wiki/Content_marketing"
         },
         {
             title: "Core Web Vitals Optimization",
             desc: "Improve page speed, responsiveness, and visual stability for better rankings.",
             img: "./assets/Blogs/Core Web Vitals Optimization.webp",
+            link: "https://en.wikipedia.org/wiki/Google_PageSpeed_Tools"
         },
         {
             title: "SEO Auditing Process",
             desc: "Conduct full technical and content audits to uncover ranking opportunities.",
             img: "./assets/Blogs/SEO Auditing Process.webp",
+            link: "https://en.wikipedia.org/wiki/Website_audit"
         },
         {
             title: "E-Commerce SEO Strategies",
             desc: "Optimize product pages, categories, and structured data for higher conversions.",
             img: "./assets/Blogs/E-Commerce SEO Strategies.webp",
+            link: "https://en.wikipedia.org/wiki/E-commerce"
         },
         {
             title: "Schema Markup & Structured Data",
             desc: "Enhance search visibility using rich snippets and structured data implementation.",
             img: "./assets/Blogs/Schema Markup & Structured-Data.webp",
+            link: "https://en.wikipedia.org/wiki/Schema.org"
         },
         {
             title: "Mobile-First SEO",
             desc: "Ensure your website performs flawlessly across all devices for ranking success.",
             img: "./assets/Blogs/Mobile First SEO.webp",
+            link: "https://en.wikipedia.org/wiki/Responsive_web_design"
         },
         {
             title: "Analytics & Performance Tracking",
             desc: "Measure traffic, conversions, and ranking improvements with SEO analytics tools.",
             img: "./assets/Blogs/Analytics & Performance Tracking.webp",
+            link: "https://en.wikipedia.org/wiki/Analytics"
         },
     ];
 
@@ -207,9 +219,14 @@ const Blog = () => {
                                     {blog.desc}
                                 </p>
 
-                                <button className="mt-5 text-blue-600 text-sm font-medium hover:text-blue-500 transition">
+                                <a
+                                    href={blog.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-5 inline-block text-blue-600 text-sm font-medium hover:text-blue-500 transition"
+                                >
                                     Read Article →
-                                </button>
+                                </a>
 
                             </div>
 

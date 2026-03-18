@@ -49,9 +49,7 @@ export default function Work() {
                 {work.map((item) => (
                     <div
                         className="aspect-square bg-no-repeat bg-cover bg-center 
-               rounded-lg relative group overflow-hidden"  data-aos="flip-left"
-                        data-aos-easing="ease-out-cubic"
-                        data-aos-duration="2000"
+               rounded-lg relative group overflow-hidden"  data-aos="fade-up"
                         style={{ backgroundImage: `url(${item.icon})` }}
                     >
 
@@ -67,7 +65,7 @@ export default function Work() {
                     duration-500 group-hover:bottom-7 z-10">
                             <div>
                                 <h2 className="font-semibold">{item.name}</h2>
-                                <p className="text-sm text-gray-700">{item.description}</p>
+                                {/* <p className="text-sm text-gray-700">{item.description}</p> */}
                             </div>
 
                             <div className="border rounded-full border-black w-9 aspect-square 

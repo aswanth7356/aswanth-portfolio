@@ -9,26 +9,27 @@ export default function Header() {
                 src="./assets/cv-profile-img.webp"
                 alt="Aswanth Profile"
                 className="rounded-full w-32"
+                data-aos="fade-down"
             />
 
-            <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
+            <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo" data-aos="fade-up">
                 Hi! I&apos;m Aswanth
                 <img src="./assets/hand-icon.png" alt="Waving hand icon" className="w-6 mb-1" />
             </h3>
 
-            <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
+            <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo" data-aos="fade-up">
                 Boosting organic traffic with smart SEO
             </h1>
 
-            <p className="max-w-2xl mx-auto font-Ovo">
+            <p className="max-w-2xl mx-auto font-Ovo" data-aos="fade-up">
                 I am an SEO Executive with experience in SEO audits, competitor analysis, on-page and off-page optimization, and driving organic traffic growth.
             </p>
 
             {/* Premium Social Icons */}
-            <ul className="flex items-center justify-center gap-6 mt-8">
+            <ul className="flex items-center justify-center gap-6 mt-8" data-aos="fade-up">
 
                 {/* LinkedIn */}
-                <li className="relative group">
+                <li className="relative group" >
                     <a
                         href="https://www.linkedin.com/in/aswanth-clt/"
                         target="_blank"

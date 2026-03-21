@@ -1,12 +1,21 @@
 import { useEffect, useState } from "react";
 
 export default function PortfolioLoader() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Show loader for 2 seconds
-    const timer = setTimeout(() => setLoading(false), 2000);
-    return () => clearTimeout(timer);
+    const hasLoaded = sessionStorage.getItem("portfolioLoaded");
+
+    if (!hasLoaded) {
+      setLoading(true);
+
+      const timer = setTimeout(() => {
+        setLoading(false);
+        sessionStorage.setItem("portfolioLoaded", "true");
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   if (!loading) return null;
@@ -31,7 +40,7 @@ export default function PortfolioLoader() {
         width: '200px',
         height: '200px',
       }}>
-        {/* Central 3D Rotating Orb */}
+        {/* Central Orb */}
         <div style={{
           position: 'absolute',
           top: '50%',
@@ -56,17 +65,17 @@ export default function PortfolioLoader() {
             height: '12px',
             borderRadius: '50%',
             background: `linear-gradient(90deg, #38bdf8, #f472b6)`,
-            transform: `rotate(${i*60}deg) translateX(90px)`,
+            transform: `rotate(${i * 60}deg) translateX(90px)`,
             transformOrigin: '0 0',
-            animation: `dotOrbit ${2 + i*0.2}s linear infinite`,
-            animationDelay: `${i*0.05}s`,
+            animation: `dotOrbit ${2 + i * 0.2}s linear infinite`,
+            animationDelay: `${i * 0.05}s`,
             boxShadow: '0 0 12px rgba(56,189,248,0.7)'
           }}></div>
         ))}
       </div>
 
-      {/* Portfolio Text */}
-      <h1 style={{
+      {/* Text */}
+      {/* <h1 style={{
         marginTop: '30px',
         fontSize: '28px',
         fontWeight: 800,
@@ -74,8 +83,11 @@ export default function PortfolioLoader() {
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
         animation: 'hueRotate 3s linear infinite'
-      }}>Aswanth Portfolio</h1>
+      }}>
+        Rank. Grow. Dominate
+      </h1> */}
 
+      {/* Animations */}
       <style>{`
         @keyframes orbRotate {
           0% { transform: rotateY(0deg) rotateX(0deg); }

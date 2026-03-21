@@ -18,6 +18,17 @@ const AllServices = () => {
     return (
         <>
 
+
+            <noscript>
+                <h1>SEO Services in Calicut</h1>
+                <h2>Freelance SEO Specialist</h2>
+                <p>
+                    I provide professional SEO services including technical SEO, on-page SEO,
+                    keyword research, and link building to improve search rankings and increase
+                    organic traffic.
+                </p>
+            </noscript>
+
             {/* ========== Meta data ========== */}
 
             <Helmet>

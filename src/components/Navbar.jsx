@@ -190,7 +190,7 @@ export default function Navbar() {
             <NavLink to="/blog" onClick={closeMenu}>Blog</NavLink>
           </li>
           <li>
-            <NavLink href="/contact" onClick={closeMenu}>Contact me</NavLink>
+            <NavLink to="/contact" onClick={closeMenu}>Contact me</NavLink>
           </li>
         </ul>
       </nav>

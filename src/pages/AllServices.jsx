@@ -33,10 +33,10 @@ const AllServices = () => {
 
             <Helmet>
                 {/* ===== Title & Description ===== */}
-                <title>SEO Services in Calicut | Freelance SEO Specialist – Aswanth P</title>
+                <title>SEO Services | Freelance SEO Specialist – Aswanth P</title>
                 <meta
                     name="description"
-                    content="Professional SEO services to boost search rankings, increase organic traffic, and grow your business with on-page SEO, technical SEO, and link building."
+                    content="Professional SEO services to improve rankings, drive organic traffic, and grow your business with on-page SEO, technical SEO, and link building."
                 />
                 <link
                     rel="canonical"

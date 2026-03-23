@@ -112,8 +112,7 @@ export default function App() {
                     element={
                         <>
                             <Preloader />
-                            {/* <Navbar /> */}
-
+                            
                             <main>
                                 <Header />
                                 <About />

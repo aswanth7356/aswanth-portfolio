@@ -7,7 +7,7 @@ import About from './components/About'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
 import LenisScroll from './components/LenisScroll'
-import Preloader from './components/Preloader'
+// import Preloader from './components/Preloader'
 import Blog from './pages/Blog'
 import ContactPage from './pages/ContactPage'
 import AllWork from './pages/AllWork'
@@ -111,7 +111,7 @@ export default function App() {
                     path="/"
                     element={
                         <>
-                            <Preloader />
+                            {/* <Preloader /> */}
                             
                             <main>
                                 <Header />

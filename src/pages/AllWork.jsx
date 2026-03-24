@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 function Allwok() {
 
     const [currentSlide, setCurrentSlide] = useState({});
+    const [selectedImage, setSelectedImage] = useState(null);
 
     useEffect(() => {
         AOS.init({
@@ -53,8 +54,28 @@ function Allwok() {
                 './assets/All-works/technical seo.webp',
                 './assets/All-works/page speed insight.webp',
                 './assets/All-works/screamingfrog.webp',
+                './assets/All-works/gsc2.webp',
             ],
         },
+
+        {
+            title: "Google AI Search Visibility – Personal Brand Result",
+            description:
+                "Achieved visibility in Google AI-powered search results for the query 'Aswanth SEO'. This demonstrates strong personal branding, effective SEO optimization, and authority building. The result highlights how search engines recognize structured content, relevance, and credibility. This milestone reflects successful implementation of SEO strategies including on-page optimization, content structuring, and search engine indexing.",
+            images: [
+                './assets/All-works/google-ai-result.webp'
+            ],
+        },
+
+        {
+            title: "Local SEO Optimization & Google Business Profile Management",
+            description:
+                "Implemented Local SEO strategies to improve business visibility in location-based searches. Optimized Google Business Profile with accurate business information, service details, images, and category targeting. Focused on local keyword optimization, citation building, and consistent NAP (Name, Address, Phone) details across directories. Analyzed local search performance and competitor listings to improve presence in Google Map results and increase local search visibility.",
+            images: [
+                '/assets/All-works/gmb.webp'
+            ],
+        },
+
         {
             title: "SEO Keyword Research & Search Opportunity Analysis",
             description:
@@ -69,7 +90,6 @@ function Allwok() {
                 "Monitored website search performance using Google Search Console for Viral Mafia Agency to analyze impressions, clicks, and keyword rankings. Reviewed performance reports to understand which pages and search queries were generating organic traffic. Identified indexing issues and ensured proper sitemap submission to improve search engine visibility. Analyzed page-level performance and search query data to identify opportunities for improving click-through rates (CTR) and overall organic reach. These insights helped in understanding user search behavior and supporting ongoing SEO optimization efforts.",
             images: [
                 './assets/All-works/gsc.webp',
-                './assets/All-works/gsc2.webp',
             ],
         },
         {
@@ -89,14 +109,7 @@ function Allwok() {
                 './assets/All-works/comp2.webp',
             ],
         },
-        {
-            title: "Local SEO Optimization & Google Business Profile Management",
-            description:
-                "Implemented Local SEO strategies to improve business visibility in location-based searches. Optimized Google Business Profile with accurate business information, service details, images, and category targeting. Focused on local keyword optimization, citation building, and consistent NAP (Name, Address, Phone) details across directories. Analyzed local search performance and competitor listings to improve presence in Google Map results and increase local search visibility.",
-            images: [
-                '/assets/All-works/gmb.webp'
-            ],
-        },
+
 
     ];
 
@@ -226,22 +239,28 @@ function Allwok() {
                                     src={work.images[currentSlide[index] || 0]}
                                     alt={work.title}
                                     loading="lazy"
+                                    onClick={() => {
+                                        console.log("Image clicked:", work.images[currentSlide[index] || 0]);
+                                        setSelectedImage(work.images[currentSlide[index] || 0]);
+                                    }}
                                     className="
                                     w-full h-full
                                     object-cover
                                     scale-110
+                                    cursor-pointer
                                     group-hover:scale-100
                                     group-hover:brightness-105
                                     transition-all duration-700 ease-out"
                                 />
 
+
                                 {/* Hover Overlay */}
-                                <div className="
+                                {/* <div className="
                                     absolute inset-0
                                     opacity-0
                                     group-hover:opacity-100
                                     transition duration-500">
-                                </div>
+                                </div> */}
 
                                 {/* Carousel Dots */}
                                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full">
@@ -326,6 +345,36 @@ function Allwok() {
                 })}
 
             </div>
+
+
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    {/* ✅ THIS is where stopPropagation should go */}
+                    <div
+                        className="relative max-w-5xl w-full"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+
+                        {/* Close Button */}
+                        <button
+                            onClick={() => setSelectedImage(null)}
+                            className="absolute -top-10 right-0 text-white text-3xl cursor-pointer"
+                        >
+                            ✕
+                        </button>
+
+                        {/* Full Image */}
+                        <img
+                            src={selectedImage}
+                            alt="Preview"
+                            className="w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+                        />
+                    </div>
+                </div>
+            )}
 
         </div>
     );

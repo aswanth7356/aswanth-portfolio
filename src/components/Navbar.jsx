@@ -168,31 +168,39 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        <ul
+        <div
           ref={sideMenuRef}
-          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white"
+          className="fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen transition-all duration-500"
         >
-          <div className="absolute right-6 top-6" onClick={closeMenu}>
+          {/* Close Button */}
+          <button
+            className="absolute right-6 top-6"
+            onClick={closeMenu}
+            aria-label="Close menu"
+          >
             <img src="./assets/close-black.png" alt="" className="w-5 dark:hidden" />
             <img src="./assets/close-white.png" alt="" className="w-5 hidden dark:block" />
-          </div>
+          </button>
 
-          <li>
-            <NavLink to="/" onClick={closeMenu}>Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/all-work" onClick={closeMenu}>Works</NavLink>
-          </li>
-          <li>
-            <NavLink to="/services" onClick={closeMenu}>Services</NavLink>
-          </li>
-          <li>
-            <NavLink to="/blog" onClick={closeMenu}>Blog</NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact" onClick={closeMenu}>Contact me</NavLink>
-          </li>
-        </ul>
+          {/* Menu Items */}
+          <ul className="flex md:hidden flex-col gap-4 py-20 px-10 h-full bg-rose-50 font-Ovo dark:bg-darkHover dark:text-white">
+            <li>
+              <NavLink to="/" onClick={closeMenu}>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/all-work" onClick={closeMenu}>Works</NavLink>
+            </li>
+            <li>
+              <NavLink to="/services" onClick={closeMenu}>Services</NavLink>
+            </li>
+            <li>
+              <NavLink to="/blog" onClick={closeMenu}>Blog</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" onClick={closeMenu}>Contact me</NavLink>
+            </li>
+          </ul>
+        </div>
       </nav>
     </>
   );

@@ -21,9 +21,9 @@ export default function Header() {
                 Boosting organic traffic with smart SEO
             </h1>
 
-            <p className="max-w-2xl mx-auto font-Ovo" data-aos="fade-up">
+            {/* <p className="max-w-2xl mx-auto font-Ovo" data-aos="fade-up">
                 I am an SEO Executive with experience in SEO audits, competitor analysis, on-page and off-page optimization, and driving organic traffic growth.
-            </p>
+            </p> */}
 
             {/* Premium Social Icons */}
             <ul className="flex items-center justify-center gap-6 mt-8" data-aos="fade-up">

@@ -15,6 +15,7 @@ import NotFound from './pages/NotFound'
 import AllServices from './pages/AllServices'
 import Skills from './components/Skills'
 import ScrollTopButton from './components/ScrollTopButton'
+import Faq from './components/Faq'
 import "aos/dist/aos.css";
 
 
@@ -112,12 +113,13 @@ export default function App() {
                     element={
                         <>
                             {/* <Preloader /> */}
-                            
+
                             <main>
                                 <Header />
                                 <About />
                                 <Skills />
                                 <Work />
+                                <Faq />
                                 <Contact />
                             </main>
                             <Footer />

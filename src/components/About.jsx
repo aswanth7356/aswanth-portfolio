@@ -93,7 +93,7 @@ export default function About() {
 
 
                 {/* Profile Image */}
-                <div className="relative w-64 sm:w-80 rounded-3xl overflow-hidden group" data-aos="fade-up">
+                <div className="relative w-64 sm:w-80 rounded-3xl overflow-hidden group">
                     <img
                         src="./assets/cv-profile-img2.webp"
                         alt="Aswanth SEO Executive profile photo"

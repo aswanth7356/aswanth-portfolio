@@ -77,7 +77,7 @@ function Allwok() {
         },
 
         {
-            title: "SEO Keyword Research & Search Opportunity Analysis",
+            title: "Keyword Research & Search Intent Analysis",
             description:
                 "Performed in-depth keyword research to identify high search volume and low competition keywords relevant to the target audience. Analyzed competitor websites to understand their keyword strategy, backlink profile, and content structure. Used professional SEO tools to identify ranking opportunities and develop a content strategy to improve organic visibility and search rankings.",
             images: [
@@ -93,7 +93,7 @@ function Allwok() {
             ],
         },
         {
-            title: "Website Traffic Analysis with Google Analytics",
+            title: "User Behavior Analysis & Traffic Insights using GA4",
             description:
                 "Analyzed website traffic data using Google Analytics for Viral Mafia Agency to understand user behavior, traffic sources, and engagement metrics. Reviewed reports such as user acquisition, traffic channels, and page performance to identify how visitors were reaching the website. Interpreted important metrics including sessions, users, bounce rate, and average engagement time to evaluate website performance. These insights helped in understanding audience behavior and supporting data-driven SEO and digital marketing strategies.",
             images: [
@@ -107,6 +107,15 @@ function Allwok() {
             images: [
                 './assets/All-works/comb1.webp',
                 './assets/All-works/comp2.webp',
+            ],
+        },
+        {
+            title: "Google Tag Manager Implementation & Event Tracking",
+            description:
+                "Implemented Google Tag Manager (GTM) on a portfolio website to manage and deploy tracking codes efficiently without modifying source code. Integrated GTM with Google Analytics (GA4) and Google Search Console to enable accurate tracking and data analysis. Configured custom event tracking such as button clicks, page views, and user interactions to understand visitor behavior. Verified tag firing using GTM Preview Mode and ensured proper data flow into GA4 reports. This implementation improved tracking accuracy and provided deeper insights into user engagement and website performance.",
+            images: [
+                './assets/All-works/gtm1.webp',
+                './assets/All-works/gtm2.webp'
             ],
         },
 

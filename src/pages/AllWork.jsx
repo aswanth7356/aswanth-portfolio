@@ -52,6 +52,7 @@ function Allwok() {
                 "Conducted a detailed technical SEO audit to identify issues affecting website crawlability, indexing, and performance. Fixed technical problems such as broken links, duplicate pages, improper redirects, and missing canonical tags. Optimized Core Web Vitals and improved page loading speed using Google PageSpeed Insights and performance optimization techniques. Implemented structured data markup, XML sitemap optimization, and robots.txt configuration to enhance search engine crawling and indexing efficiency.",
             images: [
                 './assets/All-works/technical seo.webp',
+                './assets/All-works/page speed insight2.webp',
                 './assets/All-works/page speed insight.webp',
                 './assets/All-works/screamingfrog.webp',
                 './assets/All-works/gsc2.webp',

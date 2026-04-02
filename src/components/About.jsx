@@ -76,7 +76,7 @@ export default function About() {
 
 
                 {/* Profile Image */}
-                <div className="relative w-64 sm:w-80 rounded-3xl overflow-hidden group" data-aos="zoom-in-right"  >
+                <div className="relative w-64 sm:w-80 rounded-3xl overflow-hidden group" data-aos="zoom-out">
                     <img
                         src="./assets/cv-profile-img2.webp"
                         alt="Aswanth SEO Executive profile photo"
@@ -99,7 +99,7 @@ export default function About() {
 
                 {/* Right Content */}
                 <div className="flex-1">
-                    <p className="mb-10 max-w-2xl font-Ovo" data-aos="fade-left" data-aos-delay="200">
+                    <p className="mb-10 max-w-2xl font-Ovo" data-aos="zoom-out">
                         As an SEO Executive, I specialize in boosting website performance
                         through on-page and off-page SEO, content optimization, and backlink
                         strategies. I focus on driving organic traffic, improving rankings,

@@ -68,15 +68,15 @@ export default function About() {
 
     return (
         <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
-            <p className="text-center mb-2 text-lg font-Ovo" data-aos="fade-up">Introduction</p>
-            <h2 className="text-center text-5xl font-Ovo" data-aos="fade-up">About me</h2>
+            <p className="text-center mb-2 text-lg font-Ovo" data-aos="fade-down">Introduction</p>
+            <h2 className="text-center text-5xl font-Ovo" data-aos="fade-down" data-aos-delay="100">About me</h2>
 
             <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-8">
 
 
 
                 {/* Profile Image */}
-                <div className="relative w-64 sm:w-80 rounded-3xl overflow-hidden group">
+                <div className="relative w-64 sm:w-80 rounded-3xl overflow-hidden group" data-aos="zoom-in-right"  >
                     <img
                         src="./assets/cv-profile-img2.webp"
                         alt="Aswanth SEO Executive profile photo"
@@ -99,7 +99,7 @@ export default function About() {
 
                 {/* Right Content */}
                 <div className="flex-1">
-                    <p className="mb-10 max-w-2xl font-Ovo" data-aos="fade-up">
+                    <p className="mb-10 max-w-2xl font-Ovo" data-aos="fade-left" data-aos-delay="200">
                         As an SEO Executive, I specialize in boosting website performance
                         through on-page and off-page SEO, content optimization, and backlink
                         strategies. I focus on driving organic traffic, improving rankings,
@@ -116,12 +116,12 @@ export default function About() {
                     </p>
 
                     {/* Info Cards */}
-                    <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl" data-aos="fade-up">
-                        {data.map((item) => (
+                    <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                        {data.map((item, index) => (
                             <li
-                                data-aos="flip-left"
-                                data-aos-easing="ease-out-cubic"
-                                data-aos-duration="2000"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 150}
+                                data-aos-duration="700"
                                 key={item.name}
                                 className="border border-gray-300 dark:border-white/30 rounded-xl p-6 hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:shadow-white/80 dark:hover:bg-darkHover/50"
                             >
@@ -184,14 +184,16 @@ export default function About() {
                     </ul>
 
                     {/* Tools Section */}
-                    <h3 className="my-6 text-gray-700 font-Ovo dark:text-white/80">
+                    <h3 className="my-6 text-gray-700 font-Ovo dark:text-white/80" data-aos="fade-up">
                         Tools I Used
                     </h3>
 
-                    <ul className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-5" data-aos="fade-up">
-                        {tools.map((tool) => (
+                    <ul className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-5">
+                        {tools.map((tool, index) => (
                             <li
                                 key={tool.name}
+                                data-aos="zoom-in"
+                                data-aos-delay={index * 80}
                                 className="relative group flex items-center justify-center
                                     aspect-square border border-gray-300 dark:border-white/30
                                     rounded-lg transition-all duration-300 ease-in-out

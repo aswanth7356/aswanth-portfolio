@@ -7,9 +7,11 @@ export default function Work() {
 
     useEffect(() => {
         AOS.init({
-            duration: 900,
+            duration: 1000,
             once: true,
-            easing: "ease-out-cubic",
+            easing: "ease-in-out-cubic",
+            offset: 80,
+            delay: 100,
         });
     }, []);
 
@@ -42,7 +44,7 @@ export default function Work() {
             {/* Heading */}
             <h2
                 className="text-center text-4xl sm:text-5xl font-Ovo"
-                data-aos="fade-down"
+                data-aos="zoom-in"
             >
                 SEO Work That Drives Results 🚀
             </h2>
@@ -50,6 +52,7 @@ export default function Work() {
             <p
                 className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo text-gray-600 dark:text-gray-300"
                 data-aos="fade-up"
+                data-aos-delay="200"
             >
                 Explore my work including SEO strategies, keyword research, backlink building,
                 and high-performance website development.
@@ -63,6 +66,8 @@ export default function Work() {
                         key={index}
                         to="/all-work" // ✅ same link for all cards
                         data-aos="fade-up"
+                        data-aos-delay={index * 150}   // 🔥 stagger effect
+                        data-aos-duration="1000"
                         className="relative rounded-2xl overflow-hidden group cursor-pointer shadow-lg block"
                     >
 
@@ -71,7 +76,7 @@ export default function Work() {
                             src={item.icon}
                             alt={item.name}
                             className="w-full h-[280px] object-cover 
-                group-hover:scale-110 transition duration-500"
+                group-hover:scale-110 transition duration-700 ease-out"
                         />
 
                         {/* Gradient Overlay */}
@@ -105,7 +110,8 @@ export default function Work() {
 
             </div>
             {/* Show More Button */}
-            <div className="flex justify-center mt-24">
+            <div className="flex justify-center mt-24" data-aos="fade-up"
+                data-aos-delay="300">
 
                 <Link
                     to="/all-work"

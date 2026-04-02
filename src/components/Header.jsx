@@ -9,27 +9,29 @@ export default function Header() {
                 src="./assets/cv-profile-img.webp"
                 alt="Aswanth Profile"
                 className="rounded-full w-32"
-                data-aos="fade-down"
+                data-aos="zoom-in"
+                data-aos-duration="800"
             />
 
-            <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo" data-aos="fade-up">
+            <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo" data-aos="fade-up"
+                data-aos-delay="200">
                 Hi! I&apos;m Aswanth
                 <img src="./assets/hand-icon.png" alt="Waving hand icon" className="w-6 mb-1" />
             </h3>
 
-            <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo" data-aos="fade-up">
+            <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo" data-aos="fade-up"
+                data-aos-delay="400"
+                data-aos-duration="900" >
                 Boosting organic traffic with smart SEO
             </h1>
 
-            {/* <p className="max-w-2xl mx-auto font-Ovo" data-aos="fade-up">
-                I am an SEO Executive with experience in SEO audits, competitor analysis, on-page and off-page optimization, and driving organic traffic growth.
-            </p> */}
 
             {/* Premium Social Icons */}
-            <ul className="flex items-center justify-center gap-6 mt-8" data-aos="fade-up">
+            <ul className="flex items-center justify-center gap-6 mt-8">
 
                 {/* LinkedIn */}
-                <li className="relative group" >
+                <li className="relative group" data-aos="zoom-in"
+                    data-aos-delay="600">
                     <a
                         href="https://www.linkedin.com/in/aswanth-clt/"
                         target="_blank"
@@ -56,7 +58,8 @@ export default function Header() {
                 </li>
 
                 {/* WhatsApp */}
-                <li className="relative group">
+                <li className="relative group" data-aos="zoom-in"
+                    data-aos-delay="700">
                     <a
                         href="https://wa.me/+917356644734"
                         target="_blank"
@@ -83,7 +86,8 @@ export default function Header() {
                 </li>
 
                 {/* Instagram */}
-                <li className="relative group">
+                <li className="relative group" data-aos="zoom-in"
+                    data-aos-delay="800">
                     <a
                         href="https://instagram.com/azw4nth"
                         target="_blank"
@@ -110,7 +114,8 @@ export default function Header() {
                 </li>
 
                 {/* Email */}
-                <li className="relative group">
+                <li className="relative group" data-aos="zoom-in"
+                    data-aos-delay="900">
                     <a
                         href="mailto:aswanth1392@gmail.com"
                         aria-label="Send me an email"

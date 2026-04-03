@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
     const [showBackBtn, setShowBackBtn] = useState(false);
@@ -233,6 +234,36 @@ const Blog = () => {
                         </div>
 
                     ))}
+
+                </div>
+
+            </div>
+
+
+
+            {/* ============ SEO CTA / INTERNAL LINK SECTION ============ */}
+            <div className="bg-gray-900 text-white pt-12 pb-8">
+
+                <div className="max-w-7xl mx-auto px-6 text-center">
+
+                    <h3 className="text-xl font-semibold mb-3">
+                        Let’s Improve Your Search Rankings
+                    </h3>
+
+                    <p className="text-sm text-gray-400 mb-5 max-w-xl mx-auto">
+                        Get expert SEO solutions focused on traffic growth, keyword rankings, and performance optimization.
+                    </p>
+
+                    <Link
+                        to="/services"
+                        className="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium px-6 py-3 rounded-lg hover:bg-white/20 transition"
+                    >
+                        Explore Services
+                    </Link>
+
+                    <p className="text-xs text-gray-500 mt-6">
+                        © 2026 Your Name. All rights reserved.
+                    </p>
 
                 </div>
 

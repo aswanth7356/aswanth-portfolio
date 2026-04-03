@@ -12,9 +12,11 @@ function Allwok() {
 
     useEffect(() => {
         AOS.init({
-            duration: 900,
+            duration: 800,
             once: true,
             easing: "ease-out-cubic",
+            offset: 80,          // 👈 smoother trigger timing
+            delay: 50,
         });;
     }, []);
 
@@ -119,6 +121,13 @@ function Allwok() {
                 './assets/All-works/gtm2.webp'
             ],
         },
+        {
+            title: "",
+            description: "",
+            images: [],
+            isEmpty: true
+        }
+
 
 
     ];
@@ -126,71 +135,72 @@ function Allwok() {
     const [expanded, setExpanded] = useState(null);
 
     return (
-        <div className="relative overflow-hidden w-full min-h-screen px-[10%] pt-32 pb-16 text-gray-900 dark:text-gray-100">
+        <>
+            <div className="relative overflow-hidden w-full min-h-screen px-[10%] pt-32 pb-16 text-gray-900 dark:text-gray-100">
 
-            {/* Background Gradient */}
-            <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-black dark:via-gray-900 dark:to-black"></div>
+                {/* Background Gradient */}
+                <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-black dark:via-gray-900 dark:to-black"></div>
 
-            {/* Soft Glow Effects */}
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl -z-10"></div>
-            <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-400/20 rounded-full blur-3xl -z-10"></div>
+                {/* Soft Glow Effects */}
+                <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl -z-10"></div>
+                <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-400/20 rounded-full blur-3xl -z-10"></div>
 
-            {/* ============== SEO Metadata ================ */}
+                {/* ============== SEO Metadata ================ */}
 
-            <Helmet>
-                <title>SEO Portfolio & Case Studies | Calicut SEO Expert – Aswanth P</title>
+                <Helmet>
+                    <title>SEO Portfolio & Case Studies | Calicut SEO Expert – Aswanth P</title>
 
-                <meta
-                    name="description"
-                    content="Explore real SEO case studies by Aswanth P, Calicut SEO Expert. See ranking improvements, traffic growth, and proven strategies that deliver results."
-                />
+                    <meta
+                        name="description"
+                        content="Explore real SEO case studies by Aswanth P, Calicut SEO Expert. See ranking improvements, traffic growth, and proven strategies that deliver results."
+                    />
 
-                <meta name="robots" content="index, follow" />
+                    <meta name="robots" content="index, follow" />
 
-                <link
-                    rel="canonical"
-                    href="https://aswanth-portfolio-eta.vercel.app/all-work"
-                />
+                    <link
+                        rel="canonical"
+                        href="https://aswanth-portfolio-eta.vercel.app/all-work"
+                    />
 
-                {/* Open Graph */}
-                <meta property="og:title" content="SEO Portfolio & Case Studies | Calicut SEO Expert – Aswanth P" />
-                <meta property="og:site_name" content="Aswanth Portfolio Website" />
-                <meta
-                    property="og:description"
-                    content="Explore real SEO case studies by Aswanth P, Calicut SEO Expert. See ranking improvements, traffic growth, and proven strategies that deliver results."
-                />
-                <meta
-                    property="og:image"
-                    content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png"
-                />
-                <meta
-                    property="og:image:alt"
-                    content="Aswanth SEO Portfolio All Work Preview"
-                />
-                <meta
-                    property="og:url"
-                    content="https://aswanth-portfolio-eta.vercel.app/all-work"
-                />
-                <meta property="og:type" content="website" />
-                <meta property="og:locale" content="en_IN" />
+                    {/* Open Graph */}
+                    <meta property="og:title" content="SEO Portfolio & Case Studies | Calicut SEO Expert – Aswanth P" />
+                    <meta property="og:site_name" content="Aswanth Portfolio Website" />
+                    <meta
+                        property="og:description"
+                        content="Explore real SEO case studies by Aswanth P, Calicut SEO Expert. See ranking improvements, traffic growth, and proven strategies that deliver results."
+                    />
+                    <meta
+                        property="og:image"
+                        content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png"
+                    />
+                    <meta
+                        property="og:image:alt"
+                        content="Aswanth SEO Portfolio All Work Preview"
+                    />
+                    <meta
+                        property="og:url"
+                        content="https://aswanth-portfolio-eta.vercel.app/all-work"
+                    />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:locale" content="en_IN" />
 
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="SEO Portfolio & Case Studies | Calicut SEO Expert – Aswanth P" />
-                <meta
-                    name="twitter:description"
-                    content="Explore real SEO case studies by Aswanth P, Calicut SEO Expert. See ranking improvements, traffic growth, and proven strategies that deliver results."
-                />
-                <meta
-                    name="twitter:image"
-                    content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png"
-                />
-                <meta name="twitter:image:alt" content="Aswanth SEO Portfolio All Work Preview" />
+                    {/* Twitter */}
+                    <meta name="twitter:card" content="summary_large_image" />
+                    <meta name="twitter:title" content="SEO Portfolio & Case Studies | Calicut SEO Expert – Aswanth P" />
+                    <meta
+                        name="twitter:description"
+                        content="Explore real SEO case studies by Aswanth P, Calicut SEO Expert. See ranking improvements, traffic growth, and proven strategies that deliver results."
+                    />
+                    <meta
+                        name="twitter:image"
+                        content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png"
+                    />
+                    <meta name="twitter:image:alt" content="Aswanth SEO Portfolio All Work Preview" />
 
 
-                {/* Structured Data */}
-                <script type="application/ld+json">
-                    {`
+                    {/* Structured Data */}
+                    <script type="application/ld+json">
+                        {`
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -199,34 +209,39 @@ function Allwok() {
         "description": "Explore real SEO case studies by Aswanth P, Calicut SEO Expert. See ranking improvements, traffic growth, and proven strategies that deliver results."
       }
     `}
-                </script>
-            </Helmet>
+                    </script>
+                </Helmet>
 
 
 
-            {/* Page Header */}
-            <div className="text-center mb-12" data-aos="fade-up">
-                <h1 className="text-5xl font-bold mb-4">SEO Projects & Practical Case Studies</h1>
-                <p className="text-lg max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-                    Discover hands-on SEO work including audits, on-page and off-page optimization, keyword research, and performance tracking—focused on improving rankings, traffic, and search visibility.
-                </p>
-            </div>
+                {/* Page Header */}
+                <div className="text-center mb-12" data-aos="fade-up"
+                    data-aos-delay="100"
+                >
+                    <h1 className="text-5xl font-bold mb-4" data-aos="fade-up"
+                        data-aos-delay="150">SEO Projects & Practical Case Studies</h1>
+                    <p className="text-lg max-w-2xl mx-auto text-gray-600 dark:text-gray-300" data-aos="fade-up"
+                        data-aos-delay="250">
+                        Discover hands-on SEO work including audits, on-page and off-page optimization, keyword research, and performance tracking—focused on improving rankings, traffic, and search visibility.
+                    </p>
+                </div>
 
 
-            {/* Works Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 pt-12">
+                {/* Works Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 pt-12">
 
-                {works.map((work, index) => {
+                    {works.map((work, index) => {
 
-                    return (
+                        return (
 
-                        // Card 
+                            // Card 
 
-                        <div
-                            key={index}
-                            data-aos="fade-up"
-                            data-aos-delay={index * 100}
-                            className="
+                            <div
+                                key={index}
+                                data-aos="zoom-in-up"
+                                data-aos-delay={index * 120}
+                                data-aos-duration="700"
+                                className="
                             group
                             rounded-2xl
                             overflow-hidden
@@ -238,22 +253,22 @@ function Allwok() {
                             hover:-translate-y-2
                             hover:shadow-2xl
                             "
-                        >
+                            >
 
-                            {/* ===== Cover Image ===== */}
+                                {/* ===== Cover Image ===== */}
 
-                            <div className="relative w-full h-64 overflow-hidden">
+                                <div className="relative w-full h-64 overflow-hidden">
 
-                                {/* Carousel Image */}
-                                <img
-                                    src={work.images[currentSlide[index] || 0]}
-                                    alt={work.title}
-                                    loading="lazy"
-                                    onClick={() => {
-                                        console.log("Image clicked:", work.images[currentSlide[index] || 0]);
-                                        setSelectedImage(work.images[currentSlide[index] || 0]);
-                                    }}
-                                    className="
+                                    {/* Carousel Image */}
+                                    <img
+                                        src={work.images[currentSlide[index] || 0]}
+                                        alt={work.title}
+                                        loading="lazy"
+                                        onClick={() => {
+                                            console.log("Image clicked:", work.images[currentSlide[index] || 0]);
+                                            setSelectedImage(work.images[currentSlide[index] || 0]);
+                                        }}
+                                        className="
                                     w-full h-full
                                     object-cover
                                     scale-110
@@ -261,132 +276,166 @@ function Allwok() {
                                     group-hover:scale-100
                                     group-hover:brightness-105
                                     transition-all duration-700 ease-out"
-                                />
+                                    />
 
+                                    {/* Carousel Dots */}
+                                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full">
 
-                                {/* Hover Overlay */}
-                                {/* <div className="
-                                    absolute inset-0
-                                    opacity-0
-                                    group-hover:opacity-100
-                                    transition duration-500">
-                                </div> */}
+                                        {work.images.map((_, i) => {
 
-                                {/* Carousel Dots */}
-                                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                                            const active = (currentSlide[index] || 0) === i;
 
-                                    {work.images.map((_, i) => {
-
-                                        const active = (currentSlide[index] || 0) === i;
-
-                                        return (
-                                            <button
-                                                key={i}
-                                                onClick={() =>
-                                                    setCurrentSlide(prev => ({ ...prev, [index]: i }))
-                                                }
-                                                className={`
+                                            return (
+                                                <button
+                                                    key={i}
+                                                    onClick={() =>
+                                                        setCurrentSlide(prev => ({ ...prev, [index]: i }))
+                                                    }
+                                                    className={`
                                                         h-2.5 rounded-full transition-all duration-300
                                                         ${active
-                                                        ? "w-6 bg-orange-500 shadow-lg shadow-orange-500/40 animate-pulse"
-                                                        : "w-2.5 bg-gray-300 hover:bg-orange-400"}
+                                                            ? "w-6 bg-orange-500 shadow-lg shadow-orange-500/40 animate-pulse"
+                                                            : "w-2.5 bg-gray-300 hover:bg-orange-400"}
                                                 `}
-                                            />
-                                        );
+                                                />
+                                            );
 
-                                    })}
+                                        })}
+
+                                    </div>
 
                                 </div>
 
-                            </div>
 
 
+                                {/* ===== Card Content ===== */}
 
-                            {/* ===== Card Content ===== */}
+                                <div className="p-6 pt-6" data-aos="fade-up"
+                                    data-aos-delay="150">
 
-                            <div className="p-6 pt-6">
+                                    {/* Title */}
 
-                                {/* Title */}
-
-                                <h3 className="text-xl font-semibold mb-2 transition-colors duration-300">
-                                    {work.title}
-                                </h3>
+                                    <h3 className="text-xl font-semibold mb-2 transition-colors duration-300">
+                                        {work.title}
+                                    </h3>
 
 
-                                {/* Description */}
+                                    {/* Description */}
 
-                                <p
-                                    className={`
+                                    <p
+                                        className={`
                                         text-gray-600 dark:text-gray-300
                                         text-sm leading-7
                                         transition-colors duration-300
                                         ${expanded === index ? "" : "line-clamp-3"}
                                     `}
-                                >
-                                    {work.description}
-                                </p>
-
-
-                                {/* Show More / Less */}
-
-                                {expanded === index ? (
-                                    <button
-                                        onClick={() => setExpanded(null)}
-                                        className="text-blue-600 text-sm mt-1 hover:underline"
                                     >
-                                        Show less
-                                    </button>
-                                ) : (
-                                    <button
-                                        onClick={() => setExpanded(index)}
-                                        className="text-blue-600 text-sm mt-1 hover:underline"
-                                    >
-                                        Show more
-                                    </button>
-                                )}
+                                        {work.description}
+                                    </p>
 
+
+                                    {/* Show More / Less */}
+
+                                    {expanded === index ? (
+                                        <button
+                                            onClick={() => setExpanded(null)}
+                                            className="text-blue-600 text-sm mt-1 hover:underline"
+                                        >
+                                            Show less
+                                        </button>
+                                    ) : (
+                                        <button
+                                            onClick={() => setExpanded(index)}
+                                            className="text-blue-600 text-sm mt-1 hover:underline"
+                                        >
+                                            Show more
+                                        </button>
+                                    )}
+
+
+                                </div>
 
                             </div>
 
+                        );
+
+                    })}
+
+                </div>
+
+
+                {selectedImage && (
+                    <div
+                        className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+                        onClick={() => setSelectedImage(null)}
+                    >
+                        {/* ✅ THIS is where stopPropagation should go */}
+                        <div
+                            className="relative max-w-5xl w-full"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+
+                            {/* Close Button */}
+                            <button
+                                onClick={() => setSelectedImage(null)}
+                                className="absolute -top-10 right-0 text-white text-3xl cursor-pointer"
+                            >
+                                ✕
+                            </button>
+
+                            {/* Full Image */}
+                            <img
+                                src={selectedImage}
+                                alt="Preview"
+                                className="w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
+                            />
                         </div>
-
-                    );
-
-                })}
+                    </div>
+                )}
 
             </div>
 
 
-            {selectedImage && (
-                <div
-                    className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
-                    onClick={() => setSelectedImage(null)}
-                >
-                    {/* ✅ THIS is where stopPropagation should go */}
-                    <div
-                        className="relative max-w-5xl w-full"
-                        onClick={(e) => e.stopPropagation()}
-                    >
 
-                        {/* Close Button */}
-                        <button
-                            onClick={() => setSelectedImage(null)}
-                            className="absolute -top-10 right-0 text-white text-3xl cursor-pointer"
+            {/* ============ FOOTER CTA (MATCH BLOG PAGE) ============ */}
+
+            <div className="bg-gray-900 text-white pt-12 pb-8 w-full" data-aos="fade-up"
+                data-aos-delay="100">
+
+                <div className="max-w-7xl mx-auto px-6 text-center">
+
+                    <h3 className="text-xl font-semibold mb-3">
+                        Want Better Rankings & Organic Growth?
+                    </h3>
+
+                    <p className="text-sm text-gray-400 mb-5 max-w-xl mx-auto">
+                        I provide structured SEO strategies focused on improving visibility, fixing technical issues,
+                        and driving consistent organic traffic to your website.
+                    </p>
+
+                    <div className="flex justify-center gap-4 flex-wrap">
+
+                        <Link
+                            to="/services"
+                            className="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium px-6 py-3 rounded-lg hover:bg-white/20 transition"
                         >
-                            ✕
-                        </button>
+                            View Services
+                        </Link>
 
-                        {/* Full Image */}
-                        <img
-                            src={selectedImage}
-                            alt="Preview"
-                            className="w-full max-h-[80vh] object-contain rounded-lg shadow-2xl"
-                        />
+                        <Link
+                            to="/contact"
+                            className="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium px-6 py-3 rounded-lg hover:bg-white/20 transition"
+                        >
+                            Contact Me
+                        </Link>
+
                     </div>
-                </div>
-            )}
 
-        </div>
+                </div>
+
+            </div>
+        </>
+
     );
 }
 

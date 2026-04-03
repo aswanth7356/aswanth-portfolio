@@ -20,10 +20,10 @@ const AllServices = () => {
 
             <Helmet>
                 {/* ===== Title & Description ===== */}
-                <title>SEO Services in Calicut | Freelance SEO Specialist – Aswanth P</title>
+                <title>Affordable SEO Services in Calicut | On-Page, Technical & Local SEO</title>
                 <meta
                     name="description"
-                    content="Looking for SEO services in Calicut? Hire a freelance SEO specialist to improve rankings, increase organic traffic, and grow your business online."
+                    content="Get affordable SEO services in Calicut including on-page, technical, and local SEO. Improve rankings, boost traffic, and grow your business."
                 />
                 <link
                     rel="canonical"

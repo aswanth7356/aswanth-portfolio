@@ -411,7 +411,7 @@ function Allwok() {
                 <div className="absolute top-20 left-10 w-80 h-80 bg-blue-500/30 rounded-full blur-3xl -z-10"></div>
                 <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-500/30 rounded-full blur-3xl -z-10"></div>
 
-                <div className="max-w-7xl mx-auto px-6 text-center">
+                <div className="max-w-7xl mx-auto px-6 text-center py-10">
 
                     <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
                         Want Better Rankings & Organic Growth?

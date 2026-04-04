@@ -244,51 +244,48 @@ const Blog = () => {
             {/* ============ SEO CTA / INTERNAL LINK SECTION ============ */}
             <div className="relative pt-12 pb-8 w-full overflow-hidden">
 
-  {/* Background Gradient */}
-  <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-100 via-white to-purple-100 dark:from-black dark:via-gray-900 dark:to-black"></div>
+                {/* Background Gradient */}
+                <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-100 via-white to-purple-100 dark:from-black dark:via-gray-900 dark:to-black"></div>
 
-  {/* Glow Effects */}
-  <div className="absolute top-16 left-10 w-80 h-80 bg-blue-500/30 rounded-full blur-3xl -z-10"></div>
-  <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-500/30 rounded-full blur-3xl -z-10"></div>
+                {/* Glow Effects */}
+                <div className="absolute top-16 left-10 w-80 h-80 bg-blue-500/30 rounded-full blur-3xl -z-10"></div>
+                <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-500/30 rounded-full blur-3xl -z-10"></div>
 
-  <div className="max-w-7xl mx-auto px-6 text-center">
+                <div className="max-w-7xl mx-auto px-6 text-center py-10">
 
-    <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
-      Let’s Improve Your Search Rankings
-    </h3>
+                    <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
+                        Let’s Improve Your Search Rankings
+                    </h3>
 
-    <p className="text-sm text-gray-700 dark:text-gray-400 mb-5 max-w-xl mx-auto">
-      Get expert SEO solutions focused on traffic growth, keyword rankings, and performance optimization.
-    </p>
+                    <p className="text-sm text-gray-700 dark:text-gray-400 mb-5 max-w-xl mx-auto">
+                        Get expert SEO solutions focused on traffic growth, keyword rankings, and performance optimization.
+                    </p>
 
-    <Link
-      to="/services"
-      className="
-        group inline-block
-        bg-white/70 backdrop-blur-md
-        border border-black
-        text-gray-800 font-medium
-        px-4 py-2 text-sm
-        rounded-full
+                    <Link
+                        to="/services"
+                        className="
+                        group inline-block
+                        bg-white/70 backdrop-blur-md
+                        border border-black
+                        text-gray-800 font-medium
+                        px-4 py-2 text-sm
+                        rounded-full
 
-        transition-all duration-300
+                        transition-all duration-300
 
-        hover:bg-blue-600
-        hover:text-white
-        hover:border-blue-600
-        hover:shadow-md
-        hover:-translate-y-0.5
-      "
-    >
-      Explore Services
-    </Link>
+                        hover:bg-blue-600
+                        hover:text-white
+                        hover:border-blue-600
+                        hover:shadow-md
+                        hover:-translate-y-0.5
+                    "
+                    >
+                        Explore Services
+                    </Link>
 
-    <p className="text-xs text-gray-600 dark:text-gray-500 mt-6">
-      © 2026 Aswanth. All rights reserved.
-    </p>
 
-  </div>
-</div>
+                </div>
+            </div>
 
         </div>
     );

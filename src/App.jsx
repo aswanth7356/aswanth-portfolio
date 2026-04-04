@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet'
 import { Routes, Route } from 'react-router-dom'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Work from './components/Work'
 import About from './components/About'
@@ -120,7 +119,6 @@ export default function App() {
                                 <Skills />
                                 <Work />
                                 <Faq />
-                                <Contact />
                             </main>
                             <Footer />
                         </>

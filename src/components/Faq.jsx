@@ -8,10 +8,10 @@ export default function FAQSample() {
   // Initialize AOS
   useEffect(() => {
     AOS.init({
-      duration: 800, // animation duration in ms
+      duration: 800,
       easing: "ease-out-cubic",
-      once: true, // whether animation should happen only once
-      offset: 100, // offset from the viewport before triggering
+      once: true,
+      offset: 100,
     });
   }, []);
 
@@ -44,7 +44,7 @@ export default function FAQSample() {
     {
       question: "What does a SEO analyst do?",
       answer:
-        "A SEO analyst creates strategies and content to connect brands with their audience online. From optimizing websites to tracking performance, they help drive traffic, engagement, and business growth.",
+        "A SEO analyst creates strategies and content to connect brands with their target audience online. From optimizing websites to tracking performance, they help drive traffic, engagement, and business growth.",
     },
     {
       question: "How does SEO help businesses?",
@@ -55,10 +55,10 @@ export default function FAQSample() {
       question: "What services does Aswanth provide?",
       answer: (
         <>
-          I offer a range of SEO and digital marketing{' '}
-          <a href="/services" className="text-blue-600 ">
+          I offer a range of SEO and digital marketing{" "}
+          <a href="/services" className="text-blue-600 dark:text-blue-400">
             services
-          </a>{' '}
+          </a>{" "}
           including on-page SEO, keyword research, content optimization, and website performance improvement.
         </>
       ),
@@ -67,18 +67,18 @@ export default function FAQSample() {
       question: "Where can I see all of Aswanth’s work?",
       answer: (
         <>
-          You can explore all of my completed{' '}
-          <a href="/all-work" className="text-blue-600 ">
+          You can explore all of my completed{" "}
+          <a href="/all-work" className="text-blue-600 dark:text-blue-400">
             SEO work
           </a>
-          , including on-page, off-page, local, technical, and many other SEO projects. It showcases my skills, projects, and web solutions in detail.
+          , including on-page, off-page, local, technical, and many other SEO projects.
         </>
       ),
     },
     {
       question: "How are AEO and GEO different from SEO?",
       answer:
-        "AEO (Answer Engine Optimization) focuses on optimizing content for voice search and AI-driven results, while GEO (Generative Engine Optimization) targets audiences in specific regions. SEO improves website rankings to increase organic traffic.",
+        "AEO (Answer Engine Optimization) focuses on optimizing content for voice search and AI-driven results, while GEO (Generative Engine Optimization) targets region-specific audiences. SEO improves website rankings to increase organic traffic.",
     },
   ];
 
@@ -92,8 +92,8 @@ export default function FAQSample() {
       return (
         <div
           key={realIndex}
-          className="bg-white rounded-xl border shadow-sm overflow-hidden"
-          data-aos="fade-up" // <-- Added AOS animation here
+          className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm overflow-hidden transition-all"
+          data-aos="fade-up"
         >
           <button
             onClick={() =>
@@ -101,9 +101,11 @@ export default function FAQSample() {
             }
             className="w-full flex justify-between items-center p-5 text-left"
           >
-            <span className="font-medium">{faq.question}</span>
+            <span className="font-medium text-gray-900 dark:text-white">
+              {faq.question}
+            </span>
             <span
-              className={`text-xl transition-transform ${activeIndex === realIndex ? "rotate-45" : ""
+              className={`text-xl text-gray-800 dark:text-white transition-transform ${activeIndex === realIndex ? "rotate-45" : ""
                 }`}
             >
               +
@@ -112,9 +114,9 @@ export default function FAQSample() {
 
           <div
             className={`transition-all duration-300 ${activeIndex === realIndex
-              ? "max-h-40 px-5 pb-5"
-              : "max-h-0 overflow-hidden"
-              } text-gray-600`}
+                ? "max-h-40 px-5 pb-5"
+                : "max-h-0 overflow-hidden"
+              } text-gray-600 dark:text-gray-300`}
           >
             {faq.answer}
           </div>
@@ -123,23 +125,27 @@ export default function FAQSample() {
     });
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-r from-blue-50 to-purple-50">
+    <section className="relative py-20 px-4 overflow-hidden">
+      {/* Background Gradient */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-black dark:via-gray-900 dark:to-black"></div>
+
+      {/* Glow Effects */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-400/20 rounded-full blur-3xl -z-10"></div>
+
       {/* Heading */}
-      <div className="text-center mb-14" data-aos="fade-up" data-aos-delay="100">
-        <h2 className="text-4xl font-semibold mb-4">
+      <div className="text-center mb-14" data-aos="fade-up">
+        <h2 className="text-4xl font-semibold mb-4 text-gray-900 dark:text-white">
           Frequently Asked Questions
         </h2>
-        <p className="text-gray-600 max-w-xl mx-auto">
+        <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
           Everything you need to know about SEO and digital marketing services.
         </p>
       </div>
 
-      {/* 2 Column Layout */}
+      {/* FAQ Grid */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
-        {/* LEFT */}
         <div className="space-y-4">{renderFaq(leftFaqs, 0)}</div>
-
-        {/* RIGHT */}
         <div className="space-y-4">{renderFaq(rightFaqs, 5)}</div>
       </div>
     </section>

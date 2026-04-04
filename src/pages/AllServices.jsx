@@ -414,15 +414,30 @@ const AllServices = () => {
                     </div>
 
                     {/* CTA */}
-                    <div className="text-center mt-14" data-aos="fade-up">
-                        <Link
-                            to="/contact"
-                            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-xl font-medium shadow-md 
-                            hover:bg-blue-700 transition"
-                        >
-                            Start Growing Your Website
-                        </Link>
-                    </div>
+                   <div className="text-center mt-14" data-aos="fade-up">
+    <Link
+        to="/contact"
+        className="
+            inline-block
+            px-5 py-2
+            text-sm font-medium
+            rounded-full
+
+            border border-blue-600
+            text-blue-600 dark:text-white
+            bg-transparent
+
+            transition-all duration-300
+
+            hover:bg-blue-600 dark:hover:bg-white
+            hover:text-white dark:hover:text-black
+            hover:shadow-md
+            hover:-translate-y-0.5
+        "
+    >
+        Start Growing Your Website
+    </Link>
+</div>
 
                 </section>
 

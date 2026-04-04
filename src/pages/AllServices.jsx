@@ -20,7 +20,7 @@ const AllServices = () => {
 
             <Helmet>
                 {/* ===== Title & Description ===== */}
-                <title>Affordable SEO Services in Calicut | On-Page, Technical & Local SEO</title>
+                <title>SEO Services in Calicut | On-Page, Technical & Local SEO</title>
                 <meta
                     name="description"
                     content="Get affordable SEO services in Calicut including on-page, technical, and local SEO. Improve rankings, boost traffic, and grow your business."

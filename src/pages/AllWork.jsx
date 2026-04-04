@@ -399,32 +399,73 @@ function Allwok() {
 
             {/* ============ FOOTER CTA (MATCH BLOG PAGE) ============ */}
 
-            <div className="bg-gray-900 text-white pt-12 pb-8 w-full" data-aos="fade-up"
-                data-aos-delay="100">
+            <div
+                className="relative pt-12 pb-8 w-full overflow-hidden"
+                data-aos="fade-up"
+                data-aos-delay="100"
+            >
+                {/* Background Gradient (more bold) */}
+                <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-100 via-white to-purple-100 dark:from-black dark:via-gray-900 dark:to-black"></div>
+
+                {/* Stronger Glow Effects */}
+                <div className="absolute top-20 left-10 w-80 h-80 bg-blue-500/30 rounded-full blur-3xl -z-10"></div>
+                <div className="absolute bottom-10 right-10 w-80 h-80 bg-purple-500/30 rounded-full blur-3xl -z-10"></div>
 
                 <div className="max-w-7xl mx-auto px-6 text-center">
 
-                    <h3 className="text-xl font-semibold mb-3">
+                    <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
                         Want Better Rankings & Organic Growth?
                     </h3>
 
-                    <p className="text-sm text-gray-400 mb-5 max-w-xl mx-auto">
+                    <p className="text-sm text-gray-700 dark:text-gray-400 mb-5 max-w-xl mx-auto">
                         I provide structured SEO strategies focused on improving visibility, fixing technical issues,
                         and driving consistent organic traffic to your website.
                     </p>
 
                     <div className="flex justify-center gap-4 flex-wrap">
 
+                        {/* Button 1 */}
                         <Link
                             to="/services"
-                            className="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium px-6 py-3 rounded-lg hover:bg-white/20 transition"
+                            className="
+                            group inline-block
+                            bg-white/70 backdrop-blur-md
+                            border border-black
+                            text-gray-800 font-medium
+                            px-4 py-2 text-sm
+                            rounded-full
+
+                            transition-all duration-300
+
+                            hover:bg-blue-600
+                            hover:text-white
+                            hover:border-blue-600
+                            hover:shadow-md
+                            hover:-translate-y-0.5
+                        "
                         >
                             View Services
                         </Link>
 
+                        {/* Button 2 */}
                         <Link
                             to="/contact"
-                            className="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium px-6 py-3 rounded-lg hover:bg-white/20 transition"
+                            className="
+                            group inline-block
+                            bg-white/70 backdrop-blur-md
+                            border border-black
+                            text-gray-800 font-medium
+                            px-4 py-2 text-sm
+                            rounded-full
+
+                            transition-all duration-300
+
+                            hover:bg-purple-600
+                            hover:text-white
+                            hover:border-purple-600
+                            hover:shadow-md
+                            hover:-translate-y-0.5
+                        "
                         >
                             Contact Me
                         </Link>
@@ -432,7 +473,6 @@ function Allwok() {
                     </div>
 
                 </div>
-
             </div>
         </>
 

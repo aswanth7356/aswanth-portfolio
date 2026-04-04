@@ -14,8 +14,8 @@ export default function Footer() {
                 />
 
                 <p className="text-gray-600 dark:text-gray-300 text-sm max-w-md mx-auto">
-                    I build modern, responsive websites and provide SEO services
-                    to help businesses grow online.
+                    I provide structured SEO strategies and optimization techniques
+                    to improve website visibility and drive organic growth.
                 </p>
 
                 {/* Email */}
@@ -31,33 +31,6 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Navigation Links (SEO + Routing FIX) */}
-            <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-gray-600 dark:text-gray-300">
-                
-                <Link to="/" className="hover:text-blue-500 transition">
-                    Home
-                </Link>
-
-                <Link to="/blog" className="hover:text-blue-500 transition">
-                    Blog
-                </Link>
-
-                {/* ⭐ MAIN INTERNAL LINK (IMPORTANT) */}
-                <Link
-                    to="/services"
-                    className="hover:text-blue-500 transition font-medium"
-                >
-                    Services
-                </Link>
-
-                <Link to="/all-work" className="hover:text-blue-500 transition">
-                    Projects
-                </Link>
-
-                <Link to="/contact" className="hover:text-blue-500 transition">
-                    Contact
-                </Link>
-            </div>
 
             {/* Bottom Section */}
             <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-10 pt-4">

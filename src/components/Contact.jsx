@@ -61,7 +61,7 @@ export default function GamifiedSEO() {
                             px-6 py-4 rounded-xl font-medium shadow-md transition-all duration-300
                             transform
                             ${selected === challenge.id
-                                ? "bg-blue-600 text-white scale-105 shadow-2xl"
+                                ? "bg-gradient-to-r from-blue-400 to-purple-500 text-white scale-105 shadow-2xl"
                                 : "bg-white dark:bg-darkHover/30 text-black dark:text-white hover:scale-105 hover:shadow-xl hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500 hover:text-white"
                             }
                         `}
@@ -75,39 +75,40 @@ export default function GamifiedSEO() {
 
             {tip && (
                 <div
-                    className="mt-10 text-center"
+                    className="mt-16 text-center"
                     data-aos="fade-up"
                     data-aos-delay="600"
                 >
-                    <p className="text-xl font-semibold text-gray-800 dark:text-white mb-6">{tip}</p>
+                    <p className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-6">
+                        {tip}
+                    </p>
+
                     <a
-    href="/contact"
-    className="
-    group relative inline-flex items-center gap-2 justify-center
-    px-6 py-3
-    text-sm md:text-base
-    rounded-full
-    border border-blue-400/40
-    text-blue-600
-    backdrop-blur-md
-    bg-white/10
+                        href="/contact"
+                        className="
+                            group inline-flex items-center justify-center gap-2
+                            px-4 py-2
+                            text-sm font-medium
+                            rounded-full
 
-    transition-all duration-300 ease-in-out
-    w-full sm:w-auto
+                            bg-white text-gray-800
+                            border-2 border-blue-400
 
-    hover:text-white
-    hover:bg-orange-500
-    hover:border-orange-500
-    hover:shadow-[0_8px_25px_rgba(255,115,0,0.4)]
-    hover:-translate-y-1
-    "
-    data-aos="fade-up"
-    data-aos-delay="700"
->
-    Want personalized help? Contact me
+                            transition-all duration-300 ease-in-out
+                            w-auto
 
-    <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-</a>
+                            hover:bg-gray-800
+                            hover:text-white
+                            hover:border-gray-600
+                            hover:shadow-md
+                            hover:-translate-y-0.5
+
+                            active:scale-95
+                        "
+                    >
+                        Want personalized help? Contact me
+                        <FaArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
+                    </a>
                 </div>
             )}
         </div>

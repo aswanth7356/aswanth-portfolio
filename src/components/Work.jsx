@@ -110,7 +110,7 @@ export default function Work() {
 
             </div>
             {/* Show More Button */}
-            <div className="flex justify-center mt-24" data-aos="fade-up"
+            <div className="flex justify-center mt-24"
                 data-aos-delay="300">
 
                 <Link

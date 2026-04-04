@@ -19,7 +19,7 @@ export default function Skills() {
   /* Backlink Counter */
   useEffect(() => {
     let start = 0;
-    const end = 200;
+    const end = 300;
     const duration = 1500;
     const increment = end / (duration / 20);
 

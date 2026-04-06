@@ -3,74 +3,117 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
-        <div className="relative py-10 overflow-hidden">
+        <footer className="bg-white dark:bg-black py-6 border-t border-gray-300 dark:border-gray-800">
 
+            <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-center md:text-left">
 
-            {/* Top Section */}
-            <div className="text-center">
-
-                <img
-                    src="/assets/A Logo2.png"
-                    alt="Aswanth Portfolio Logo"
-                    className="w-36 mx-auto mb-3"
-                />
-
-                <p className="text-gray-600 dark:text-gray-300 text-sm max-w-md mx-auto">
-                    I provide structured SEO strategies and optimization techniques
-                    to improve website visibility and drive organic growth.
-                </p>
-
-                {/* Email */}
-                <div className="flex items-center justify-center gap-2 mt-3">
-                    <img src="./assets/mail_icon.png" alt="" className="w-5 dark:hidden" />
-                    <img src="./assets/mail_icon_dark.png" alt="" className="w-5 hidden dark:block" />
-                    <a
-                        href="mailto:aswanth1392@gmail.com"
-                        className="hover:underline transition-all duration-300 text-gray-800 dark:text-gray-200"
-                    >
-                        aswanth1392@gmail.com
-                    </a>
+                {/* 1. Brand Section */}
+                <div>
+                    <img
+                        src="/assets/A Logo2.png"
+                        alt="Aswanth Portfolio Logo"
+                        className="w-32 mx-auto md:mx-0 mb-3"
+                    />
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">
+                        We provide structured SEO strategies and optimization techniques
+                        to improve website visibility and drive organic growth.
+                    </p>
                 </div>
-            </div>
 
-            {/* Bottom Section */}
-            <div className="text-center sm:flex items-center justify-between border-t border-gray-300 dark:border-gray-700 mx-[10%] mt-10 pt-4">
-                <p className="text-gray-500 text-sm mt-6 sm:mt-0">
-                    © 2026 Aswanth P. All rights reserved.
-                </p>
+                {/* 2. Quick Links */}
+                <div>
+                    <h3 className="font-semibold text-lg mb-3 text-black dark:text-white">
+                        Quick Links
+                    </h3>
+                    <ul className="space-y-2">
+                        <li><Link to="/" className="footer-link">Home</Link></li>
+                        <li><Link to="/all-work" className="footer-link">All Works</Link></li>
+                        <li><Link to="/blog" className="footer-link">Blog</Link></li>
+                        <li><Link to="/contact" className="footer-link">Contact</Link></li>
+                    </ul>
+                </div>
 
-                <ul className="flex items-center gap-6 justify-center mt-4 sm:mt-0">
-                    <li>
+                {/* 3. Services (SEO BOOST SECTION) */}
+                <div>
+                    <h3 className="font-semibold text-lg mb-3 text-black dark:text-white">
+                        Services
+                    </h3>
+                    <ul className="space-y-2">
+                        <li>
+                            <Link to="/services" className="footer-link">
+                                SEO Services
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/services" className="footer-link">
+                                Digital Marketing Services
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/services" className="footer-link">
+                                Website Optimization
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+
+                {/* 4. Contact & Social */}
+                <div>
+                    <h3 className="font-semibold text-lg mb-3 text-black dark:text-white">
+                        Contact
+                    </h3>
+
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                        aswanth1392@gmail.com
+                    </p>
+
+                    <div className="flex justify-center md:justify-start gap-4 mt-3">
                         <a
                             href="https://www.linkedin.com/in/aswanth-clt/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-700 hover:text-blue-400 transition"
+                            className="text-blue-600 hover:text-blue-400"
                         >
-                            <FaLinkedin size={26} />
+                            <FaLinkedin size={22} />
                         </a>
-                    </li>
-                    <li>
                         <a
                             href="https://wa.me/+917356644734"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-green-500 hover:text-green-400 transition"
+                            className="text-green-500 hover:text-green-400"
                         >
-                            <FaWhatsapp size={26} />
+                            <FaWhatsapp size={22} />
                         </a>
-                    </li>
-                    <li>
                         <a
                             href="tel:+917356644734"
-                            className="text-blue-500 hover:text-blue-400 transition"
+                            className="text-blue-500 hover:text-blue-400"
                         >
-                            <FaPhoneAlt size={22} />
+                            <FaPhoneAlt size={20} />
                         </a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
+            {/* Bottom */}
+            <div className="text-center mt-10 text-sm text-gray-500">
+                © 2026 Aswanth P. All rights reserved.
+            </div>
+
+            {/* Reusable class */}
+            <style jsx>{`
+                .footer-link {
+                    color: #6b7280;
+                    transition: 0.3s;
+                }
+                .footer-link:hover {
+                    color: black;
+                }
+                .dark .footer-link:hover {
+                    color: white;
+                }
+            `}</style>
+
+        </footer>
     );
 }

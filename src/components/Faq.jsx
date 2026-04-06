@@ -55,9 +55,9 @@ export default function FAQSample() {
       question: "What services does Aswanth provide?",
       answer: (
         <>
-          I offer a range of SEO and digital marketing{" "}
+          I offer a range of Digital marketing and {" "}
           <a href="/services" className="text-blue-600 dark:text-blue-400">
-            services
+            SEO services
           </a>{" "}
           including on-page SEO, keyword research, content optimization, and website performance improvement.
         </>

@@ -23,7 +23,7 @@ const AllServices = () => {
                 <title>SEO Services in Calicut | On-Page, Technical & Local SEO</title>
                 <meta
                     name="description"
-                    content="Get affordable SEO services in Calicut including on-page, technical, and local SEO. Improve rankings, boost traffic, and grow your business."
+                    content="Get expert SEO services in Calicut including on-page, technical, and local SEO. Improve rankings, drive more traffic, and grow your business."
                 />
                 <link
                     rel="canonical"
@@ -121,8 +121,7 @@ const AllServices = () => {
                     <div className="text-center mb-12" data-aos="fade-up">
 
                         <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 max-w-3xl mx-auto leading-tight">
-                            SEO Services for Business Growth
-                        </h1>
+                            SEO Services in Calicut That Drive Real Business Growth                        </h1>
 
                         <p className="text-lg max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
                             I help businesses improve search engine rankings, increase organic traffic,
@@ -414,10 +413,10 @@ const AllServices = () => {
                     </div>
 
                     {/* CTA */}
-                   <div className="text-center mt-14" data-aos="fade-up">
-    <Link
-        to="/contact"
-        className="
+                    <div className="text-center mt-14" data-aos="fade-up">
+                        <Link
+                            to="/contact"
+                            className="
             inline-block
             px-5 py-2
             text-sm font-medium
@@ -434,10 +433,10 @@ const AllServices = () => {
             hover:shadow-md
             hover:-translate-y-0.5
         "
-    >
-        Start Growing Your Website
-    </Link>
-</div>
+                        >
+                            Start Growing Your Website
+                        </Link>
+                    </div>
 
                 </section>
 

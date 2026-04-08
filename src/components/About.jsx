@@ -104,15 +104,6 @@ export default function About() {
                         through on-page and off-page SEO, content optimization, and backlink
                         strategies. I focus on driving organic traffic, improving rankings,
                         and maximizing online growth for businesses.
-
-                        Explore my{" "}
-                        <Link
-                            to="/services"
-                            className="text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300 transition-colors duration-300 font-medium"
-                        >
-                            SEO services
-                        </Link>{" "}
-                        to see how I can help your business grow online.
                     </p>
 
                     {/* Info Cards */}

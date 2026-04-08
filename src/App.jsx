@@ -12,10 +12,11 @@ import ContactPage from './pages/ContactPage'
 import AllWork from './pages/AllWork'
 import NotFound from './pages/NotFound'
 import AllServices from './pages/AllServices'
-import Skills from './components/Skills'
 import ScrollTopButton from './components/ScrollTopButton'
 import Faq from './components/Faq'
 import "aos/dist/aos.css";
+import Service from './components/Service'
+import Experience from './components/Experience'
 
 
 export default function App() {
@@ -116,7 +117,8 @@ export default function App() {
                             <main>
                                 <Header />
                                 <About />
-                                <Skills />
+                                <Service />
+                                <Experience />
                                 <Work />
                                 <Faq />
                             </main>

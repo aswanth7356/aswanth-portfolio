@@ -131,7 +131,7 @@ export default function Work() {
                     group-hover:bg-white group-hover:text-black 
                     transition duration-300">
 
-                        Explore More
+                        Explore More Works
                         <span className="group-hover:translate-x-1 transition">
                             →
                         </span>

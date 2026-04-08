@@ -121,12 +121,7 @@ function Allwok() {
                 './assets/All-works/gtm2.webp'
             ],
         },
-        {
-            title: "",
-            description: "",
-            images: [],
-            isEmpty: true
-        }
+        
 
 
 

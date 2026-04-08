@@ -17,14 +17,24 @@ export default function FAQSample() {
 
   const faqs = [
     {
-      question: "Who is Aswanth?",
+      question: "What does an SEO analyst do?",
       answer:
-        "I’m an aspiring SEO and digital marketing professional from Calicut, currently gaining hands-on experience in on-page SEO, keyword research, and website optimization to help businesses grow online.",
+        "An SEO analyst creates strategies and content to connect brands with their target audience online. From optimizing websites to tracking performance, they help drive traffic, engagement, and business growth.",
     },
     {
-      question: "Why is Aswanth a leading digital marketing expert in Calicut?",
+      question: "How does SEO help businesses?",
+      answer:
+        "SEO (Search Engine Optimization) helps websites rank higher on search engines like Google. Higher rankings increase website traffic, build trust, and support business growth.",
+    },
+    {
+      question: "Why is Aswanth an SEO expert in Calicut?",
       answer:
         "I provide practical, goal-focused SEO and digital marketing solutions. With hands-on experience and attention to each business, I help websites grow online in a simple and effective way.",
+    },
+    {
+      question: "How does Aswanth stay updated as an SEO expert in India?",
+      answer:
+        "I stay updated by following Google updates, SEO blogs, and industry experts. I use tools like Semrush and Analytics, test strategies, and refine my approach based on real performance data.",
     },
     {
       question: "How does Aswanth boost business growth with SEO?",
@@ -42,20 +52,10 @@ export default function FAQSample() {
         "I focus on clear planning and simple SEO strategies. I avoid confusing jargon and make digital marketing easy to understand for business owners and clients.",
     },
     {
-      question: "What does a SEO analyst do?",
-      answer:
-        "A SEO analyst creates strategies and content to connect brands with their target audience online. From optimizing websites to tracking performance, they help drive traffic, engagement, and business growth.",
-    },
-    {
-      question: "How does SEO help businesses?",
-      answer:
-        "SEO (Search Engine Optimization) helps websites rank higher on search engines like Google. Higher rankings increase website traffic, build trust, and support business growth.",
-    },
-    {
       question: "What services does Aswanth provide?",
       answer: (
         <>
-          I offer a range of Digital marketing and {" "}
+          I offer a range of Digital marketing and{" "}
           <a href="/services" className="text-blue-600 dark:text-blue-400">
             SEO services
           </a>{" "}
@@ -114,8 +114,8 @@ export default function FAQSample() {
 
           <div
             className={`transition-all duration-300 ${activeIndex === realIndex
-                ? "max-h-40 px-5 pb-5"
-                : "max-h-0 overflow-hidden"
+              ? "max-h-40 px-5 pb-5"
+              : "max-h-0 overflow-hidden"
               } text-gray-600 dark:text-gray-300`}
           >
             {faq.answer}

@@ -17,6 +17,7 @@ import Faq from './components/Faq'
 import "aos/dist/aos.css";
 import Service from './components/Service'
 import Experience from './components/Experience'
+import Testimonial from './components/Testimonial'
 
 
 export default function App() {
@@ -120,6 +121,7 @@ export default function App() {
                                 <Service />
                                 <Experience />
                                 <Work />
+                                <Testimonial />
                                 <Faq />
                             </main>
                             <Footer />

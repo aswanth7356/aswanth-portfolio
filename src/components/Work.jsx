@@ -39,7 +39,14 @@ export default function Work() {
     ];
 
     return (
-        <div id="work" className="w-full px-[12%] py-16 scroll-mt-20">
+        <div id="work" className="relative w-full px-[12%] py-16 scroll-mt-20 overflow-hidden">
+
+            {/* Background Gradient FULL WIDTH */}
+            <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-black dark:via-gray-900 dark:to-black"></div>
+
+            {/* Glow Effects */}
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-400/20 rounded-full blur-3xl -z-10"></div>
 
             {/* Heading */}
             <h2
@@ -64,11 +71,11 @@ export default function Work() {
                 {work.map((item, index) => (
                     <Link
                         key={index}
-                        to="/all-work" // ✅ same link for all cards
+                        to="/all-work"
                         data-aos="fade-up"
-                        data-aos-delay={index * 150}   // 🔥 stagger effect
+                        data-aos-delay={index * 150}
                         data-aos-duration="1000"
-                        className="relative rounded-2xl overflow-hidden group cursor-pointer shadow-lg block"
+                        className="relative rounded-2xl overflow-hidden group cursor-pointer shadow-lg block hover:-translate-y-2 transition duration-500"
                     >
 
                         {/* Image */}
@@ -76,30 +83,30 @@ export default function Work() {
                             src={item.icon}
                             alt={item.name}
                             className="w-full h-[280px] object-cover 
-                group-hover:scale-110 transition duration-700 ease-out"
+                            group-hover:scale-110 transition duration-700 ease-out"
                         />
 
                         {/* Gradient Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t 
-            from-black/80 via-black/30 to-transparent"></div>
+                        from-black/80 via-black/30 to-transparent"></div>
 
                         {/* Content */}
                         <div className="absolute bottom-0 p-5 text-white w-full">
 
                             <h2 className="text-lg font-semibold opacity-0 
-                group-hover:opacity-100 transition duration-500">
+                            group-hover:opacity-100 transition duration-500">
                                 {item.name}
                             </h2>
 
                             <p className="text-sm mt-2 opacity-0 
-                group-hover:opacity-100 transition duration-500">
+                            group-hover:opacity-100 transition duration-500">
                                 {item.description}
                             </p>
 
                             {/* Arrow */}
                             <div className="mt-4 w-9 h-9 flex items-center 
-                justify-center rounded-full bg-white text-black 
-                group-hover:bg-lime-400 transition duration-300">
+                            justify-center rounded-full bg-white text-black 
+                            group-hover:bg-lime-400 transition duration-300">
                                 →
                             </div>
 
@@ -109,9 +116,13 @@ export default function Work() {
                 ))}
 
             </div>
+
             {/* Show More Button */}
-            <div className="flex justify-center mt-24"
-                data-aos-delay="300">
+            <div
+                className="flex justify-center mt-24"
+                data-aos="fade-up"
+                data-aos-delay="300"
+            >
 
                 <Link
                     to="/all-work"

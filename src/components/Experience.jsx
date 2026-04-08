@@ -1,23 +1,21 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaLink, FaSearch, FaChartLine, FaCogs } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
-export default function Experience() {
-    const cardsRef = useRef([]);
+export default function ExperienceTabs() {
+    const [activeTab, setActiveTab] = useState(0);
     const [count, setCount] = useState(0);
 
-    /* Initialize AOS */
     useEffect(() => {
         AOS.init({
-            duration: 900,
+            duration: 800,
             once: true,
             easing: "ease-out-cubic",
         });
     }, []);
 
-    /* Backlink Counter */
+    // Backlink Counter
     useEffect(() => {
         let start = 0;
         const end = 300;
@@ -38,10 +36,41 @@ export default function Experience() {
 
     const experiences = [
         {
+            title: "Keyword Research & On-Page SEO",
+            icon: <FaSearch />,
+            color: "from-blue-500 to-cyan-500",
+            points: [
+                "Conducted keyword research using Semrush to identify relevant keywords, search intent, and ranking opportunities.",
+                "Optimized on-page elements including meta titles, meta descriptions, headings (H1–H3), and URL structure.",
+                "Worked on internal linking to improve site structure and enhance user navigation.",
+                "Assisted in optimizing content for better keyword placement, readability, and SEO best practices.",
+            ],
+        },
+        {
+            title: "Competitor Analysis & Content Strategy",
+            icon: <FaChartLine />,
+            color: "from-pink-500 to-rose-500",
+            points: [
+                "Assisted in analyzing competitors’ SEO strategies to identify keyword gaps and content opportunities.",
+                "Supported competitor research using SEO tools to understand ranking patterns and trends.",
+                "Helped in planning and optimizing content based on targeted keywords and search intent.",
+                "Applied basic SEO best practices such as keyword placement, readability, and internal linking in content.",
+            ],
+        },
+        {
+            title: "Technical SEO & Event Tracking",
+            icon: <FaCogs />,
+            color: "from-orange-500 to-red-500",
+            points: [
+                "Implemented Google Tag Manager (GTM) for event tracking and conversion monitoring.",
+                "Conducted technical SEO audits to identify crawl errors, indexing issues, and on-page improvements.",
+                "Analyzed website performance using Google PageSpeed Insights and optimized Core Web Vitals to improve loading speed and performance.",
+            ],
+        },
+        {
             title: "Off-Page SEO & Link Building",
             icon: <FaLink />,
             color: "from-purple-500 to-indigo-500",
-            aos: "fade-up",
             points: [
                 `Built and managed ${count}+ high-quality backlinks through guest posting, social bookmarking, and directory submissions.`,
                 "Secured backlinks from high Domain Authority (DA) websites with low Spam Score (SS) to maintain strong link profile health.",
@@ -49,36 +78,13 @@ export default function Experience() {
             ],
         },
         {
-            title: "Keyword Research & On-Page SEO",
-            icon: <FaSearch />,
-            color: "from-blue-500 to-cyan-500",
-            aos: "fade-up",
-            points: [
-                "Conducted keyword research using Semrush to identify ranking opportunities.",
-                "Optimized meta tags, headings, and internal linking structure.",
-                "Improved content targeting based on search intent analysis.",
-            ],
-        },
-        {
             title: "Analytics & Performance Tracking",
             icon: <FaChartLine />,
             color: "from-emerald-500 to-green-500",
-            aos: "fade-up",
             points: [
                 "Monitored performance using Google Analytics & Search Console.",
                 "Analyzed traffic behavior and keyword ranking trends.",
                 "Identified organic growth opportunities using performance data.",
-            ],
-        },
-        {
-            title: "Technical SEO & Event Tracking",
-            icon: <FaCogs />,
-            color: "from-orange-500 to-red-500",
-            aos: "fade-up",
-            points: [
-                "Implemented Google Tag Manager (GTM) for event tracking and conversion monitoring.",
-                "Conducted technical SEO audits to identify crawl errors, indexing issues, and on-page improvements.",
-                "Analyzed website performance using Google PageSpeed Insights and optimized Core Web Vitals to improve loading speed and overall performance.",
             ],
         },
     ];
@@ -87,66 +93,74 @@ export default function Experience() {
         <section id="skills" className="w-full px-[12%] py-24 scroll-mt-20">
 
             {/* Heading */}
-            <h4
-                className="text-center text-lg font-Ovo mb-2"
-                data-aos="fade-up"
-            >
+            <h4 className="text-center text-lg font-Ovo mb-2" data-aos="fade-up">
                 Professional Experience & Responsibilities
             </h4>
 
-            <h2
-                className="text-center text-4xl sm:text-5xl font-Ovo mb-20"
-                data-aos="fade-up"
-                data-aos-delay="100"
-            >
-                SEO Trainee – Viral Mafia Agency
+            <h2 className="text-center text-4xl sm:text-5xl font-Ovo mb-16" data-aos="fade-up">
+                SEO Executive – Viral Mafia Agency
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto items-stretch">
+            {/* Main Layout */}
+            <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
 
-                {experiences.map((exp, index) => (
-                    <div
-                        key={index}
-                        data-aos={exp.aos}
-                        data-aos-delay={index * 150}
-                        className="group relative h-full"
-                    >
+                {/* LEFT SIDE (Tabs) */}
+                <div className="flex md:flex-col gap-4 overflow-x-auto md:overflow-visible">
 
-                        {/* Gradient Border */}
-                        <div className={`absolute -inset-[1px] rounded-2xl bg-gradient-to-r ${exp.color} opacity-0 group-hover:opacity-100 blur-sm transition duration-500`}></div>
+                    {experiences.map((exp, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setActiveTab(index)}
+                            className={`flex items-center gap-3 px-4 py-3 rounded-lg text-left transition-all duration-300 min-w-[220px] md:min-w-0
 
-                        {/* Card */}
-                        <div className="relative h-full flex flex-col rounded-2xl p-8 bg-white dark:bg-darkHover/50 border border-gray-200 dark:border-white/20 backdrop-blur-lg shadow-md group-hover:shadow-2xl group-hover:-translate-y-2 transition duration-500">
-
-                            {/* Title + Icon */}
-                            <div className="flex items-center gap-3 mb-5">
-                                <div className={`text-white p-2 rounded-lg bg-gradient-to-r ${exp.color}`}>
-                                    {exp.icon}
-                                </div>
-
-                                <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-                                    {exp.title}
-                                </h3>
+                                ${activeTab === index
+                                    ? "bg-transparent text-gray-900 dark:text-white border-2 border-green-500 shadow-[0_0_15px_rgba(34,197,94,0.4)]"
+                                    : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-white/80 hover:bg-gray-200 dark:hover:bg-gray-700 hover:scale-[1.02]"
+                                }`}
+                        >
+                            <div className={`p-2 rounded-full bg-gradient-to-r ${exp.color} text-white`}>
+                                {exp.icon}
                             </div>
 
-                            <ul className="space-y-3 flex-grow">
-                                {exp.points.map((point, i) => (
-                                    <li
-                                        key={i}
-                                        className="flex items-start gap-3 text-sm sm:text-base text-gray-700 dark:text-white/80"
-                                    >
-                                        <span className="text-green-500 text-lg mt-[2px]">✔</span>
-                                        {point}
-                                    </li>
-                                ))}
-                            </ul>
+                            <span className="text-sm font-medium">
+                                {exp.title}
+                            </span>
+                        </button>
+                    ))}
 
+                </div>
+
+                {/* RIGHT SIDE (Content) */}
+                <div
+                    key={activeTab}
+                    className="md:col-span-2 bg-white dark:bg-darkHover/50 border border-gray-200 dark:border-white/20 rounded-2xl p-8 shadow-md"
+                    data-aos="fade-up"
+                >
+
+                    {/* Title */}
+                    <div className="flex items-center gap-3 mb-6">
+                        <div className={`p-3 rounded-full bg-gradient-to-r ${experiences[activeTab].color} text-white text-xl`}>
+                            {experiences[activeTab].icon}
                         </div>
+
+                        <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
+                            {experiences[activeTab].title}
+                        </h3>
                     </div>
-                ))}
+
+                    {/* Points */}
+                    <ul className="space-y-4 text-gray-700 dark:text-white/80">
+                        {experiences[activeTab].points.map((point, i) => (
+                            <li key={i} className="flex items-start gap-3">
+                                <span className="text-green-500 mt-[2px]">✔</span>
+                                {point}
+                            </li>
+                        ))}
+                    </ul>
+
+                </div>
 
             </div>
         </section>
     );
 }
-

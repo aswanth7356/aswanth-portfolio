@@ -3,6 +3,21 @@
 
 <head>
     <meta charset="UTF-8" />
+
+    <!-- Immediately set dark mode to prevent flash -->
+    <script>
+        (function () {
+            const theme = localStorage.theme || 'dark'; // default to dark
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        })();
+    </script>
+
+
+
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <title>Aswanth Portfolio</title> -->

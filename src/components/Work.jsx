@@ -93,10 +93,10 @@ export default function Work() {
                         {/* Content */}
                         <div className="absolute bottom-0 p-5 text-white w-full">
 
-                            <h2 className="text-lg font-semibold opacity-0 
-                            group-hover:opacity-100 transition duration-500">
+                            <span className="text-lg font-semibold opacity-0 
+                                group-hover:opacity-100 transition duration-500">
                                 {item.name}
-                            </h2>
+                            </span>
 
                             <p className="text-sm mt-2 opacity-0 
                             group-hover:opacity-100 transition duration-500">

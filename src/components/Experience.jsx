@@ -133,7 +133,11 @@ export default function ExperienceTabs() {
                 {/* RIGHT SIDE (Content) */}
                 <div
                     key={activeTab}
-                    className="md:col-span-2 bg-white dark:bg-darkHover/50 border border-gray-200 dark:border-white/20 rounded-2xl p-8 shadow-md"
+                    className={`md:col-span-2 rounded-2xl p-8 shadow-md border
+                    ${activeTab !== null
+                            ? "border-2 border-green-600 shadow-[0_0_15px_rgba(34,197,94,0.4)]"
+                            : "border border-gray-200 dark:border-white/20 bg-white dark:bg-darkHover/50"
+                        }`}
                     data-aos="fade-up"
                 >
 

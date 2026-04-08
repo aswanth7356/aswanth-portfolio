@@ -65,8 +65,14 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
 
+    // Set initial theme to dark if not already set
     if (!localStorage.theme) {
-      localStorage.theme = "light";
+      localStorage.theme = "dark";
+    }
+
+    if (localStorage.theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
       document.documentElement.classList.remove("dark");
     }
 

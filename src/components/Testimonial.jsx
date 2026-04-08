@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function WhyChooseMe() {
     const points = [
@@ -12,12 +13,21 @@ function WhyChooseMe() {
         "Continuously learning and adapting to Google algorithm updates",
     ];
 
+    // Initialize AOS
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: "ease-out-cubic",
+        });
+    }, []);
+
     return (
         <section className="py-20 px-5">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
                 {/* Left Side */}
-                <div>
+                <div data-aos="fade-right" data-aos-delay="200">
                     <h2 className="text-4xl font-Ovo font-bold mb-5 leading-snug">
                         Why Choose Me ?
                     </h2>
@@ -28,7 +38,7 @@ function WhyChooseMe() {
                             SEO expert in Calicut
                         </span>
                         , I focus on delivering measurable improvements through practical
-                        strategies.<br></br> Explore my{" "}
+                        strategies.<br /> Explore my{" "}
                         <Link
                             to="/services"
                             className="text-blue-600 dark:text-blue-400 hover:underline"
@@ -45,14 +55,12 @@ function WhyChooseMe() {
                         to see how I approach real-world projects.
                     </p>
 
-                    {/* Extra Content */}
                     <p className="text-gray-500 dark:text-gray-400 mb-6">
                         As someone working in SEO, I understand how important it is to build
                         visibility, attract the right audience, and improve website performance.
                         My approach is simple — analyze, optimize, and grow.
                     </p>
 
-                    {/* Small CTA */}
                     <Link
                         to="/contact"
                         className="inline-block mt-2 px-4 py-2 text-sm bg-black text-white rounded-full 
@@ -67,6 +75,8 @@ function WhyChooseMe() {
                     {points.map((item, index) => (
                         <div
                             key={index}
+                            data-aos="fade-up"
+                            data-aos-delay={index * 150} // Staggered animation
                             className="flex items-start gap-4 bg-white dark:bg-[#1a1a1a] p-5 rounded-xl shadow-md hover:shadow-xl transition duration-300"
                         >
                             <FaCheckCircle className="text-green-500 mt-1 text-lg" />

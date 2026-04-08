@@ -94,11 +94,11 @@ export default function ExperienceTabs() {
 
             {/* Heading */}
             <h4 className="text-center text-lg font-Ovo mb-2" data-aos="fade-up">
-                Professional Experience & Responsibilities
+                SEO Executive – Viral Mafia Agency
             </h4>
 
             <h2 className="text-center text-4xl sm:text-5xl font-Ovo mb-16" data-aos="fade-up">
-                SEO Executive – Viral Mafia Agency
+                Professional Experience & Responsibilities
             </h2>
 
             {/* Main Layout */}

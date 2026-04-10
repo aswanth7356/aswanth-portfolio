@@ -26,7 +26,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (scrollY > 50) {
+      if (window.scrollY > 50) {
         navRef.current.classList.add(
           "bg-white",
           "bg-opacity-50",
@@ -35,6 +35,7 @@ export default function Navbar() {
           "dark:bg-darkTheme",
           "dark:shadow-white/20"
         );
+
         navLinkRef.current.classList.remove(
           "bg-white",
           "shadow-sm",
@@ -52,6 +53,7 @@ export default function Navbar() {
           "dark:bg-darkTheme",
           "dark:shadow-white/20"
         );
+
         navLinkRef.current.classList.add(
           "bg-white",
           "shadow-sm",
@@ -64,17 +66,6 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Set initial theme to dark if not already set
-    if (!localStorage.theme) {
-      localStorage.theme = "light";
-    }
-
-    if (localStorage.theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -111,36 +102,11 @@ export default function Navbar() {
           ref={navLinkRef}
           className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/30 dark:bg-transparent"
         >
-          <li>
-            <NavLink to="/" className={navStyle}>
-              Home
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink to="/all-work" className={navStyle}>
-              Works
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink to="/services" className={navStyle}>
-              Services
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink to="/blog" className={navStyle}>
-              Blog
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink to="/contact" className={navStyle}>
-              Contact
-            </NavLink>
-          </li>
-
+          <li><NavLink to="/" className={navStyle}>Home</NavLink></li>
+          <li><NavLink to="/all-work" className={navStyle}>Works</NavLink></li>
+          <li><NavLink to="/services" className={navStyle}>Services</NavLink></li>
+          <li><NavLink to="/blog" className={navStyle}>Blog</NavLink></li>
+          <li><NavLink to="/contact" className={navStyle}>Contact</NavLink></li>
         </ul>
 
         {/* Right Side */}
@@ -178,33 +144,20 @@ export default function Navbar() {
           ref={sideMenuRef}
           className="fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen transition-all duration-500"
         >
-          {/* Close Button */}
           <button
             className="absolute right-6 top-6"
             onClick={closeMenu}
-            aria-label="Close menu"
           >
             <img src="./assets/close-black.png" alt="" className="w-5 dark:hidden" />
             <img src="./assets/close-white.png" alt="" className="w-5 hidden dark:block" />
           </button>
 
-          {/* Menu Items */}
           <ul className="flex md:hidden flex-col gap-4 py-20 px-10 h-full bg-rose-50 font-Ovo dark:bg-darkHover dark:text-white">
-            <li>
-              <NavLink to="/" onClick={closeMenu}>Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/all-work" onClick={closeMenu}>Works</NavLink>
-            </li>
-            <li>
-              <NavLink to="/services" onClick={closeMenu}>Services</NavLink>
-            </li>
-            <li>
-              <NavLink to="/blog" onClick={closeMenu}>Blog</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact" onClick={closeMenu}>Contact me</NavLink>
-            </li>
+            <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
+            <li><NavLink to="/all-work" onClick={closeMenu}>Works</NavLink></li>
+            <li><NavLink to="/services" onClick={closeMenu}>Services</NavLink></li>
+            <li><NavLink to="/blog" onClick={closeMenu}>Blog</NavLink></li>
+            <li><NavLink to="/contact" onClick={closeMenu}>Contact</NavLink></li>
           </ul>
         </div>
       </nav>

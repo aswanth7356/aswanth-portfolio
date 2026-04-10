@@ -67,7 +67,7 @@ export default function Navbar() {
 
     // Set initial theme to dark if not already set
     if (!localStorage.theme) {
-      localStorage.theme = "dark";
+      localStorage.theme = "light";
     }
 
     if (localStorage.theme === "dark") {

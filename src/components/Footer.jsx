@@ -73,6 +73,7 @@ export default function Footer() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-600 hover:text-blue-400"
+                            aria-label="Visit LinkedIn profile"
                         >
                             <FaLinkedin size={22} />
                         </a>
@@ -81,12 +82,14 @@ export default function Footer() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-green-500 hover:text-green-400"
+                            aria-label="Chat on WhatsApp"
                         >
                             <FaWhatsapp size={22} />
                         </a>
                         <a
                             href="tel:+917356644734"
                             className="text-blue-500 hover:text-blue-400"
+                            aria-label="Call phone number"
                         >
                             <FaPhoneAlt size={20} />
                         </a>

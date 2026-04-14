@@ -202,7 +202,8 @@ export default function About() {
 
                                 <img
                                     src={tool.icon}
-                                    alt={tool.name}
+                                    alt=""
+                                    aria-hidden="true"
                                     className={`object-contain transition-all duration-300 
                                         ${tool.size === "large"
                                             ? "w-14 sm:w-16"

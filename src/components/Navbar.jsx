@@ -147,6 +147,7 @@ export default function Navbar() {
           <button
             className="absolute right-6 top-6"
             onClick={closeMenu}
+            aria-label="Close menu"
           >
             <img src="./assets/close-black.png" alt="" className="w-5 dark:hidden" />
             <img src="./assets/close-white.png" alt="" className="w-5 hidden dark:block" />

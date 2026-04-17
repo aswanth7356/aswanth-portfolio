@@ -48,7 +48,7 @@ export default function About() {
             icon2: './assets/project-icon-dark.png',
             description: [
                 {
-                    title: 'SEO Trainee – Viral Mafia Agency',
+                    title: 'SEO Executive – Viral Mafia Agency',
                     duration: 'Jan 2026 – Present',
                 },
                 {

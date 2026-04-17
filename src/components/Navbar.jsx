@@ -104,7 +104,7 @@ export default function Navbar() {
         >
           <li><NavLink to="/" className={navStyle}>Home</NavLink></li>
           <li><NavLink to="/all-work" className={navStyle}>Works</NavLink></li>
-          <li><NavLink to="/services" className={navStyle}>Services</NavLink></li>
+          <li><NavLink to="/seo-services" className={navStyle}>Services</NavLink></li>
           <li><NavLink to="/blog" className={navStyle}>Blog</NavLink></li>
           <li><NavLink to="/contact" className={navStyle}>Contact</NavLink></li>
         </ul>
@@ -156,7 +156,7 @@ export default function Navbar() {
           <ul className="flex md:hidden flex-col gap-4 py-20 px-10 h-full bg-rose-50 font-Ovo dark:bg-darkHover dark:text-white">
             <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
             <li><NavLink to="/all-work" onClick={closeMenu}>Works</NavLink></li>
-            <li><NavLink to="/services" onClick={closeMenu}>Services</NavLink></li>
+            <li><NavLink to="/seo-services" onClick={closeMenu}>Services</NavLink></li>
             <li><NavLink to="/blog" onClick={closeMenu}>Blog</NavLink></li>
             <li><NavLink to="/contact" onClick={closeMenu}>Contact</NavLink></li>
           </ul>

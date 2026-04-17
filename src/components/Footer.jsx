@@ -40,17 +40,17 @@ export default function Footer() {
                     </h3>
                     <ul className="space-y-2">
                         <li>
-                            <Link to="/services" className="footer-link">
+                            <Link to="/seo-services" className="footer-link">
                                 SEO Services
                             </Link>
                         </li>
                         <li>
-                            <Link to="/services" className="footer-link">
+                            <Link to="/seo-services" className="footer-link">
                                 Digital Marketing Services
                             </Link>
                         </li>
                         <li>
-                            <Link to="/services" className="footer-link">
+                            <Link to="/seo-services" className="footer-link">
                                 Website Optimization
                             </Link>
                         </li>

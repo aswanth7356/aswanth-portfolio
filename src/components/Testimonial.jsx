@@ -40,7 +40,7 @@ function WhyChooseMe() {
                         , I focus on delivering measurable improvements through practical
                         strategies.<br /> Explore my{" "}
                         <Link
-                            to="/services"
+                            to="/seo-services"
                             className="text-blue-600 dark:text-blue-400 hover:underline"
                         >
                             SEO services

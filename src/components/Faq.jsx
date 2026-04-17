@@ -56,7 +56,7 @@ export default function FAQSample() {
       answer: (
         <>
           I offer a range of Digital marketing and{" "}
-          <a href="/services" className="text-blue-600 dark:text-blue-400">
+          <a href="/seo-services" className="text-blue-600 dark:text-blue-400">
             SEO services
           </a>{" "}
           including on-page SEO, keyword research, content optimization, and website performance improvement.

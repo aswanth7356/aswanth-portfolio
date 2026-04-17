@@ -132,7 +132,7 @@ export default function App() {
                 {/* Routing pages */}
                 <Route path="/all-work" element={<AllWork />} />
                 <Route path="/blog" element={<Blog />} />
-                <Route path="/services" element={<AllServices />} />
+                <Route path="/seo-services" element={<AllServices />} />
                 <Route path="/contact" element={<ContactPage />} />
 
                 {/* Catch all invalid routes */}

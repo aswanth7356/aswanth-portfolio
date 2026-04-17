@@ -27,7 +27,7 @@ const AllServices = () => {
                 />
                 <link
                     rel="canonical"
-                    href="https://aswanth-portfolio-eta.vercel.app/services"
+                    href="https://aswanth-portfolio-eta.vercel.app/seo-services"
                 />
                 <meta name="robots" content="index, follow" />
 
@@ -36,7 +36,7 @@ const AllServices = () => {
                 <meta property="og:description" content="Hire a freelance SEO specialist in Calicut. Aswanth P offers expert SEO services including on-page SEO, technical SEO, local SEO, and link building to improve rankings." />
                 <meta property="og:image" content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png" />
                 <meta property="og:image:alt" content="Aswanth P SEO Services Preview" />
-                <meta property="og:url" content="https://aswanth-portfolio-eta.vercel.app/services" />
+                <meta property="og:url" content="https://aswanth-portfolio-eta.vercel.app/seo-services" />
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="Aswanth Portfolio" />
                 <meta property="og:locale" content="en_IN" />
@@ -54,7 +54,7 @@ const AllServices = () => {
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "SEO Services in Calicut | Freelance SEO Specialist – Aswanth P",
-      "url": "https://aswanth-portfolio-eta.vercel.app/services",
+      "url": "https://aswanth-portfolio-eta.vercel.app/seo-services",
       "description": "Hire a freelance SEO specialist in Calicut. Aswanth P provides professional SEO services including on-page SEO, technical SEO, local SEO, and link building to boost rankings and grow your business."
     }
     `}
@@ -101,7 +101,7 @@ const AllServices = () => {
     "name": "Calicut, Kerala, India"
   },
   "description": "Professional SEO services including on-page SEO, technical SEO, keyword research, and link building to improve search rankings and grow business.",
-  "url": "https://aswanth-portfolio-eta.vercel.app/services"
+  "url": "https://aswanth-portfolio-eta.vercel.app/seo-services"
 }
 `}
                 </script>

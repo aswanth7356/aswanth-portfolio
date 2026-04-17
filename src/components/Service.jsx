@@ -67,7 +67,7 @@ export default function Services() {
       >
         Looking for reliable{" "}
         <Link
-          to="/services"
+          to="/seo-services"
           className="font-semibold text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300"
         >
           SEO services in Calicut
@@ -112,7 +112,7 @@ export default function Services() {
       {/* CTA BUTTON */}
       <div className="flex justify-center mt-20" data-aos="fade-up" data-aos-delay="300">
         <Link
-          to="/services"
+          to="/seo-services"
           className="relative group px-3 py-2 rounded-full 
                     text-sm font-semibold tracking-wide overflow-hidden"
         >

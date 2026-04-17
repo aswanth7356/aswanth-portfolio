@@ -262,7 +262,7 @@ const Blog = () => {
                     </p>
 
                     <Link
-                        to="/services"
+                        to="/seo-services"
                         className="
                         group inline-block
                         bg-white/70 backdrop-blur-md

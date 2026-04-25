@@ -42,17 +42,29 @@ export default function About() {
             {/* TOP SECTION */}
             <div className="flex flex-col lg:flex-row items-stretch gap-16 my-10">
 
-                {/* IMAGE */}
                 <div
-                    className="w-64 sm:w-80 mx-auto rounded-3xl overflow-hidden"
+                    className="w-64 sm:w-80 mx-auto relative group"
                     data-aos="fade-right"
                     data-aos-duration="900"
                 >
-                    <img
-                        src="./assets/cv-profile-img2.webp"
-                        alt="Aswanth SEO Executive"
-                        className="w-full h-full object-cover"
-                    />
+
+                    {/* Gradient Border Glow */}
+                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500 to-purple-500 opacity-20 blur-xl group-hover:opacity-40 transition duration-500"></div>
+
+                    {/* Image Container */}
+                    <div className="relative rounded-3xl overflow-hidden shadow-xl border border-gray-200 dark:border-white/10">
+                        <img
+                            src="./assets/cv-profile-img2.webp"
+                            alt="Aswanth SEO Executive"
+                            className="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:rotate-1"
+                        />
+
+                        {/* Overlay Text */}
+                        <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center text-white text-sm font-medium">
+                            SEO & Growth 🚀
+                        </div>
+                    </div>
+
                 </div>
 
                 {/* CONTENT */}
@@ -72,14 +84,15 @@ export default function About() {
                                 SEO Expert in Calicut, Kerala
                             </span><br /><br />
 
-                            I’m a BCA graduate with a strong foundation in web technologies and currently working as an{" "}
-                            <span className="text-blue-600 dark:text-blue-400 font-semibold">SEO Executive</span>.
-                            I specialize in improving
-                            <span className="text-blue-600 dark:text-blue-400 font-semibold"> website visibility</span>,
-                            increasing
-                            <span className="text-blue-600 dark:text-blue-400 font-semibold"> organic traffic</span>,
-                            and boosting
-                            <span className="text-blue-600 dark:text-blue-400 font-semibold"> keyword rankings</span>.
+                            I’m Aswanth, working as an <span className="">SEO Executive at Viral Mafia Agency</span> in Calicut.
+                            As an <a
+                                href="https://www.linkedin.com/in/aswanth-clt"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+                            >
+                                SEO Expert in Calicut
+                            </a>,<br></br> I focus on helping businesses improve their online presence and achieve sustainable growth through effective SEO strategies.
                         </p>
 
                         <p
@@ -87,11 +100,17 @@ export default function About() {
                             data-aos="fade-up"
                             data-aos-delay="200"
                         >
-                            I have hands-on experience working on live client projects where I handle
-                            <span className="text-blue-600 dark:text-blue-400 font-semibold"> keyword research</span>,
-                            <span className="text-blue-600 dark:text-blue-400 font-semibold"> on-page SEO</span>,
-                            <span className="text-blue-600 dark:text-blue-400 font-semibold"> technical SEO audits</span>, and
-                            <span className="text-blue-600 dark:text-blue-400 font-semibold"> link building strategies</span>.
+                            I specialize in improving
+                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> search visibility</span>,
+                            increasing
+                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> organic traffic</span>,
+                            and achieving better
+                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> keyword rankings</span>.
+                            <br></br>I have hands-on experience in
+                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> keyword research</span>,
+                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> on-page SEO</span>,
+                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> technical SEO audits</span>, and
+                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> link building</span>.
                         </p>
 
                         <p
@@ -99,9 +118,8 @@ export default function About() {
                             data-aos="fade-up"
                             data-aos-delay="300"
                         >
-                            I use tools like Google Analytics, Search Console, and Semrush to analyze
-                            performance and implement data-driven strategies that improve rankings,
-                            traffic, and conversions.
+                            What sets me apart is my approach to SEO — I don’t just focus on rankings, but on real business growth.
+                            By using tools like Google Analytics, Search Console, and Semrush, I create data-driven strategies that improve traffic, engagement, and conversions.
                         </p>
 
                         <p
@@ -116,18 +134,29 @@ export default function About() {
                     </div>
 
                     <p
-                        className="mt-8 text-sm text-green-600 font-semibold"
+                        className="mt-2 text-sm text-green-600 font-semibold"
                         data-aos="fade-up"
                         data-aos-delay="500"
                     >
-                        ✔ Focused on real growth, not just rankings 🚀
+                        <a
+                            href="https://wa.me/+917356644734"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 group hover:underline"
+                        >
+                            Let’s transform your vision into a reality that inspires!
+
+                            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-gray-800 dark:text-white text-sm transition-all duration-300 group-hover:translate-x-1 group-hover:bg-white/40">
+                                →
+                            </span>
+                        </a>
                     </p>
 
                 </div>
             </div>
 
             {/* CARDS */}
-            <div className="grid sm:grid-cols-3 gap-6 my-10">
+            <div className="grid sm:grid-cols-3 gap-6 my-16">
 
                 <div className="p-6 border border-gray-400  rounded-xl hover:shadow-lg transition">
                     <h3 className="font-semibold text-lg mb-4">Specialization</h3>

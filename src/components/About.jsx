@@ -185,7 +185,7 @@ export default function About() {
                             <p className="font-medium">SEO Executive</p>
                             <p className="text-xs">
                                 Viral Mafia Agency • Jan 2026 -
-                                <span className="text-green-500 font-semibold"> Present</span>
+                                <span className="text-green-700 font-semibold"> Present</span>
                             </p>
                         </div>
 

@@ -128,8 +128,8 @@ export default function About() {
                             data-aos-delay="400"
                         >
                             SEO is not just about tools — it’s about delivering the
-                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> right content</span> to the
-                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> right audience at the right time</span>.
+                            <span className=""> right content</span> to the
+                            <span className=""> right audience at the right time</span>.
                         </p>
                     </div>
 
@@ -158,7 +158,11 @@ export default function About() {
             {/* CARDS */}
             <div className="grid sm:grid-cols-3 gap-6 my-16">
 
-                <div className="p-6 border border-gray-400  rounded-xl hover:shadow-lg transition">
+                <div className="p-6 border border-gray-300 dark:border-white/20 rounded-xl 
+        transition-all duration-300 ease-out
+        hover:-translate-y-2 hover:shadow-2xl hover:border-blue-400
+        hover:bg-white/70 dark:hover:bg-white/5 backdrop-blur-sm">
+
                     <h3 className="font-semibold text-lg mb-4">Specialization</h3>
                     <ul className="text-sm text-gray-600 leading-5 dark:text-white/80 space-y-2">
                         <li>✔ SEO Strategy</li>
@@ -169,12 +173,15 @@ export default function About() {
                     </ul>
                 </div>
 
-                <div className="p-6 border border-gray-400 rounded-xl hover:shadow-lg transition">
+                <div className="p-6 border border-gray-300 dark:border-white/20 rounded-xl 
+        transition-all duration-300 ease-out
+        hover:-translate-y-2 hover:shadow-2xl hover:border-purple-400
+        hover:bg-white/70 dark:hover:bg-white/5 backdrop-blur-sm">
+
                     <h3 className="font-semibold text-lg mb-4">Experience</h3>
 
                     <div className="text-sm text-gray-600 leading-5 dark:text-white/80 space-y-3">
                         <div>
-
                             <p className="font-medium">SEO Executive</p>
                             <p className="text-xs">
                                 Viral Mafia Agency • Jan 2026 -
@@ -186,6 +193,7 @@ export default function About() {
                             <p className="font-medium">Digital Marketing Course</p>
                             <p className="text-xs">Sep 2025 - Dec 2025</p>
                         </div>
+
                         <div>
                             <p className="font-medium">Office Assistant</p>
                             <p className="text-xs">2023 - 2025</p>
@@ -193,7 +201,11 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="p-6 border border-gray-400  rounded-xl hover:shadow-lg transition">
+                <div className="p-6 border border-gray-300 dark:border-white/20 rounded-xl 
+        transition-all duration-300 ease-out
+        hover:-translate-y-2 hover:shadow-2xl hover:border-pink-400
+        hover:bg-white/70 dark:hover:bg-white/5 backdrop-blur-sm">
+
                     <h3 className="font-semibold text-lg mb-4">Education</h3>
                     <p className="text-sm text-gray-600 leading-5 dark:text-white/80">
                         Bachelor of Computer Application (BCA) <br />
@@ -208,39 +220,57 @@ export default function About() {
                 Tools I Used
             </h3>
 
-            <ul className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-5">
-                {tools.map((tool, index) => (
-                    <li
-                        key={tool.name}
-                        data-aos="zoom-in"
-                        data-aos-delay={index * 80}
-                        className="relative group flex items-center justify-center
-                            aspect-square border border-gray-300 dark:border-white/30
-                            rounded-lg transition-all duration-300 ease-in-out
-                            hover:scale-110 hover:bg-gray-100 dark:hover:bg-white/10
-                            hover:border-black dark:hover:border-white hover:shadow-xl"
-                    >
-                        <span
-                            className="absolute -top-8 opacity-0 group-hover:opacity-100
-                                scale-90 group-hover:scale-100 transition-all duration-300
-                                bg-black text-white text-xs px-2 py-1 rounded-md whitespace-nowrap
-                                pointer-events-none dark:bg-white dark:text-black"
-                        >
-                            {tool.name}
-                        </span>
+            <ul className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-4 sm:gap-6">
+    {tools.map((tool, index) => (
+        <li
+            key={tool.name}
+            data-aos="zoom-in"
+            data-aos-delay={index * 70}
+            className="group relative flex flex-col items-center justify-center
+                p-3 sm:p-4 rounded-xl
 
-                        <img
-                            src={tool.icon}
-                            alt=""
-                            aria-hidden="true"
-                            className={`object-contain transition-all duration-300 
-                                ${tool.size === "large"
-                                    ? "w-14 sm:w-16"
-                                    : "w-10 sm:w-12"}`}
-                        />
-                    </li>
-                ))}
-            </ul>
+                /* BASE */
+                border border-gray-200 dark:border-white/10
+                bg-white/60 dark:bg-white/5 backdrop-blur-md
+
+                /* TRANSITION */
+                transition-all duration-300 ease-out
+
+                /* HOVER */
+                hover:-translate-y-2
+                hover:shadow-2xl
+                hover:border-transparent
+                hover:bg-white/80 dark:hover:bg-white/10
+            "
+        >
+
+            {/* GRADIENT BORDER ON HOVER */}
+            <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300
+                bg-gradient-to-r from-blue-500 to-purple-500 p-[1px] -z-10">
+                <div className="w-full h-full rounded-xl bg-white dark:bg-black"></div>
+            </div>
+
+            {/* ICON */}
+            <div className="flex items-center justify-center mb-2">
+                <img
+                    src={tool.icon}
+                    alt={tool.name}
+                    className={`object-contain transition-all duration-300 
+                        group-hover:scale-110 group-hover:-translate-y-0.5
+                        ${tool.size === "large"
+                            ? "w-10 sm:w-12"
+                            : "w-8 sm:w-10"}`}
+                />
+            </div>
+
+            {/* LABEL */}
+            <p className="text-[10px] sm:text-xs text-gray-600 dark:text-white/70 text-center leading-tight">
+                {tool.name}
+            </p>
+
+        </li>
+    ))}
+</ul>
 
         </div>
     );

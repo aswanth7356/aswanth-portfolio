@@ -89,7 +89,7 @@ export default function About() {
                                 href="https://www.linkedin.com/in/aswanth-clt"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+                                className="text-gray-800 dark:text-blue-400 font-semibold hover:underline"
                             >
                                 SEO Expert in Calicut
                             </a>,<br></br> I focus on helping businesses improve their online presence and achieve sustainable growth through effective SEO strategies.

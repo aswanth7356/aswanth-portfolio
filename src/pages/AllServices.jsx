@@ -131,6 +131,73 @@ const AllServices = () => {
                     </div>
                 </section>
 
+
+
+                <section className="max-w-6xl mx-auto pb-20 px-6 grid md:grid-cols-2 gap-16 items-center">
+
+                    {/* IMAGE FIRST (better visual flow on desktop) */}
+                    <div
+                        className="flex justify-center order-1 md:order-2"
+                        data-aos="fade-left"
+                    >
+                        <img
+                            src="./assets/seo-growth.webp"
+                            alt="SEO growth illustration showing website ranking improvement"
+                            className="w-80 md:w-[420px] rounded-3xl shadow-xl border border-gray-200 dark:border-gray-700 
+                        hover:scale-105 transition duration-500"
+                        />
+                    </div>
+
+                    {/* CONTENT */}
+                    <div
+                        className="text-gray-700 dark:text-gray-300 order-2 md:order-1"
+                        data-aos="fade-right"
+                    >
+                        {/* SECTION LABEL */}
+                        <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">
+                            SEO Services
+                        </span>
+
+                        {/* HEADING */}
+                        <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6 leading-snug dark:text-white">
+                            SEO Services That Drive Real Business Growth
+                        </h2>
+
+                        {/* DESCRIPTION */}
+                        <p className="mb-4 text-lg leading-relaxed">
+                            SEO is more than just ranking keywords — it’s about building a strong online presence
+                            that attracts the right audience and converts them into customers. I provide freelance
+                            SEO services focused on long-term success and sustainable growth.
+                        </p>
+
+                        <p className="mb-6 text-lg leading-relaxed">
+                            My strategy combines technical SEO, content optimization, and high-quality link building
+                            to help your website rank higher and generate measurable business results.
+                        </p>
+
+                        {/* BENEFITS */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                            <div className="flex items-start gap-3">
+                                <span className="text-green-500 text-xl">✔</span>
+                                <p>Improve visibility on Google</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="text-green-500 text-xl">✔</span>
+                                <p>Drive targeted organic traffic</p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <span className="text-green-500 text-xl">✔</span>
+                                <p>Increase leads and conversions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+
+
                 {/* SERVICES GRID */}
                 <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 pb-24">
 
@@ -189,68 +256,7 @@ const AllServices = () => {
 
                 </section>
 
-                <section className="max-w-6xl mx-auto py-24 px-6 grid md:grid-cols-2 gap-16 items-center">
 
-                    {/* IMAGE FIRST (better visual flow on desktop) */}
-                    <div
-                        className="flex justify-center order-1 md:order-2"
-                        data-aos="fade-left"
-                    >
-                        <img
-                            src="./assets/seo-growth.webp"
-                            alt="SEO growth illustration showing website ranking improvement"
-                            className="w-80 md:w-[420px] rounded-3xl shadow-xl border border-gray-200 dark:border-gray-700 
-      hover:scale-105 transition duration-500"
-                        />
-                    </div>
-
-                    {/* CONTENT */}
-                    <div
-                        className="text-gray-700 dark:text-gray-300 order-2 md:order-1"
-                        data-aos="fade-right"
-                    >
-                        {/* SECTION LABEL */}
-                        <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">
-                            SEO Services
-                        </span>
-
-                        {/* HEADING */}
-                        <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6 leading-snug dark:text-white">
-                            SEO Services That Drive Real Business Growth
-                        </h2>
-
-                        {/* DESCRIPTION */}
-                        <p className="mb-4 text-lg leading-relaxed">
-                            SEO is more than just ranking keywords — it’s about building a strong online presence
-                            that attracts the right audience and converts them into customers. I provide freelance
-                            SEO services focused on long-term success and sustainable growth.
-                        </p>
-
-                        <p className="mb-6 text-lg leading-relaxed">
-                            My strategy combines technical SEO, content optimization, and high-quality link building
-                            to help your website rank higher and generate measurable business results.
-                        </p>
-
-                        {/* BENEFITS */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                            <div className="flex items-start gap-3">
-                                <span className="text-green-500 text-xl">✔</span>
-                                <p>Improve visibility on Google</p>
-                            </div>
-
-                            <div className="flex items-start gap-3">
-                                <span className="text-green-500 text-xl">✔</span>
-                                <p>Drive targeted organic traffic</p>
-                            </div>
-
-                            <div className="flex items-start gap-3">
-                                <span className="text-green-500 text-xl">✔</span>
-                                <p>Increase leads and conversions</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
 
                 {/* PROCESS - TIMELINE STYLE */}
                 <section className="max-w-5xl mx-auto py-24 px-6">

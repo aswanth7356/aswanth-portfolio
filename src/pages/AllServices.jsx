@@ -138,7 +138,6 @@ const AllServices = () => {
                     {/* IMAGE FIRST (better visual flow on desktop) */}
                     <div
                         className="flex justify-center order-1 md:order-2"
-                        data-aos="fade-left"
                     >
                         <img
                             src="./assets/seo-growth.webp"

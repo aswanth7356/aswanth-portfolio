@@ -18,6 +18,7 @@ import "aos/dist/aos.css";
 import Service from './components/Service'
 import Experience from './components/Experience'
 import Testimonial from './components/Testimonial'
+import GetinTouch from './components/GetinTouch'
 
 
 export default function App() {
@@ -101,6 +102,7 @@ export default function App() {
                                 <Work />
                                 <Testimonial />
                                 <Faq />
+                                <GetinTouch />
                             </main>
                             <Footer />
                         </>

@@ -28,73 +28,51 @@ export default function App() {
             {/* ============== SEO Metadata ================ */}
 
             <Helmet>
-                {/* ===== Title & Description ===== */}
-                <title>SEO Expert in Calicut – Freelance SEO Specialist | Aswanth P</title>
+                {/* ===== Basic SEO ===== */}
+                <title>Best Freelance SEO Expert in Calicut | Aswanth P</title>
 
                 <meta
                     name="description"
-                    content="Looking for an SEO expert in Calicut? Aswanth P provides expert SEO services to boost rankings, increase traffic, and grow your online business."
+                    content="Looking for a freelance SEO expert in Calicut? I help businesses in Kozhikode and Kerala grow on Google with proven SEO strategies and traffic growth."
                 />
-                <link rel="canonical" href="https://aswanth-portfolio-eta.vercel.app/" />
+
+                <meta
+                    name="keywords"
+                    content="freelance seo expert in calicut, freelance seo consultant calicut, seo specialist kozhikode, seo freelancer kerala, local seo expert calicut"
+                />
+
+                <meta name="author" content="Aswanth P" />
                 <meta name="robots" content="index, follow" />
+                <link rel="canonical" href="https://aswanth-portfolio-eta.vercel.app/" />
 
                 {/* ===== Open Graph ===== */}
-                <meta property="og:title" content="SEO Expert in Calicut – Freelance SEO Specialist | Aswanth P" />
-                <meta property="og:description" content="Aswanth P is a professional SEO expert in Calicut helping businesses rank higher on Google with technical SEO, on-page SEO, and local SEO strategies." />
+                <meta property="og:title" content="Best Freelance SEO Expert in Calicut | Aswanth P" />
+                <meta
+                    property="og:description"
+                    content="Freelance SEO expert in Calicut helping businesses improve rankings, traffic, and online visibility with proven SEO services."
+                />
                 <meta property="og:image" content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png" />
-                <meta property="og:image:alt" content="Aswanth P SEO Portfolio Preview" />
+                <meta property="og:image:alt" content="Aswanth P SEO Portfolio" />
                 <meta property="og:url" content="https://aswanth-portfolio-eta.vercel.app/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="Aswanth Portfolio" />
                 <meta property="og:locale" content="en_IN" />
 
-                {/* ===== Twitter Card ===== */}
+                {/* ===== Twitter ===== */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="SEO Expert in Calicut – Freelance SEO Specialist | Aswanth P" />
-                <meta name="twitter:description" content="Expert freelance SEO services in Calicut by Aswanth P. Improve Google rankings, boost traffic, and grow your business with proven SEO strategies." />
+                <meta name="twitter:title" content="Best Freelance SEO Expert in Calicut | Aswanth P" />
+                <meta
+                    name="twitter:description"
+                    content="Hire a freelance SEO expert in Calicut to improve rankings, increase traffic, and grow your business online."
+                />
                 <meta name="twitter:image" content="https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png" />
 
-                {/* ===== Website Schema ===== */}
-                <script type="application/ld+json">
-                    {`
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Aswanth Portfolio Website",
-      "url": "https://aswanth-portfolio-eta.vercel.app/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://aswanth-portfolio-eta.vercel.app/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    `}
-                </script>
-
-                {/* ===== Person Schema ===== */}
-                <script type="application/ld+json">
-                    {`
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Aswanth P",
-      "url": "https://aswanth-portfolio-eta.vercel.app/",
-      "jobTitle": "SEO Expert",
-      "description": "SEO expert in Calicut providing local SEO, technical SEO, on-page optimization, and link building services for businesses.",
-      "image": "https://aswanth-portfolio-eta.vercel.app/portfolio-preview.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Calicut",
-        "addressRegion": "Kerala",
-        "addressCountry": "India"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/aswanth-clt",
-        "https://github.com/aswanth7356"
-      ]
-    }
-    `}
-                </script>
+                {/* ===== Extra SEO ===== */}
+                <meta name="language" content="English" />
+                <meta name="geo.region" content="IN-KL" />
+                <meta name="geo.placename" content="Calicut, Kerala" />
+                <meta name="geo.position" content="11.2588;75.7804" />
+                <meta name="ICBM" content="11.2588, 75.7804" />
             </Helmet>
 
 

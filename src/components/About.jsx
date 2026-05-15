@@ -81,7 +81,7 @@ export default function About() {
                             data-aos-delay="100"
                         >
                             <span className="font-semibold text-gray-800 dark:text-white">
-                                SEO Expert in Calicut, Kerala
+                                Freelance SEO Expert in Calicut, Kerala
                             </span><br /><br />
 
                             I’m Aswanth, working as an <span className="">SEO Executive at Viral Mafia Agency</span> in Calicut.

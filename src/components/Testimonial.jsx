@@ -29,7 +29,8 @@ function WhyChooseMe() {
                 {/* Left Side */}
                 <div data-aos="fade-right" data-aos-delay="200">
                     <h2 className="text-4xl font-Ovo font-bold mb-5 leading-snug">
-                        Why Choose Me ?
+                        Why Hire a Freelance SEO Expert
+                        in Calicut?
                     </h2>
 
                     <p className="text-gray-600 dark:text-gray-400 mb-8 text-lg leading-relaxed">

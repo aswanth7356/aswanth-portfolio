@@ -30,12 +30,15 @@ export default function Header() {
                 </h3>
 
                 <h1
-                    className="text-2xl sm:text-4xl lg:text-5xl font-Ovo"
+                    className="text-2xl sm:text-4xl lg:text-5xl font-Poppins"
                     data-aos="fade-up"
                     data-aos-delay="400"
                     data-aos-duration="900"
                 >
-                    Organic growth with smart strategies – SEO expert in Calicut
+                    Freelance SEO Expert in Calicut {' '}
+                    <span className="text-sm sm:text-base lg:text-lg block mt-2 font-medium animate-pulse font-Ovo">
+                        Driving Organic Growth with Smart Strategies
+                    </span>
                 </h1>
 
                 {/* Premium Social Icons */}

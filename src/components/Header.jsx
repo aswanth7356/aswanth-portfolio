@@ -30,7 +30,7 @@ export default function Header() {
                 </h3>
 
                 <h1
-                    className="text-2xl sm:text-4xl lg:text-5xl font-Poppins"
+                    className="text-2xl sm:text-4xl lg:text-5xl font-Ovo"
                     data-aos="fade-up"
                     data-aos-delay="400"
                     data-aos-duration="900"

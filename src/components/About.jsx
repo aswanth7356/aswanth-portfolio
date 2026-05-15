@@ -91,8 +91,8 @@ export default function About() {
                                 rel="noopener noreferrer"
                                 className="text-gray-800 dark:text-blue-400 font-semibold hover:underline"
                             >
-                                SEO Expert in Calicut
-                            </a>,<br></br> I focus on helping businesses improve their online presence and achieve sustainable growth through effective SEO strategies.
+                               freelance SEO Expert in Calicut
+                            </a>, {' '}I focus on helping businesses improve their online presence and achieve sustainable growth through effective SEO strategies.
                         </p>
 
                         <p

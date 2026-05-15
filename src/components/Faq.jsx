@@ -22,9 +22,9 @@ export default function FAQSample() {
         "An SEO analyst creates strategies and content to connect brands with their target audience online. From optimizing websites to tracking performance, they help drive traffic, engagement, and business growth.",
     },
     {
-      question: "How does SEO help businesses?",
+      question: "How long does SEO take to show results in Calicut?",
       answer:
-        "SEO (Search Engine Optimization) helps websites rank higher on search engines like Google. Higher rankings increase website traffic, build trust, and support business growth.",
+        "For local Calicut businesses, you can typically see meaningful improvements in rankings within 2–4 months. Full results — sustained page-one rankings and significant traffic growth — usually require 4–6 months of consistent work. SEO is a long-term investment, not an overnight fix.",
     },
     {
       question: "Why is Aswanth an SEO expert in Calicut?",
@@ -32,14 +32,14 @@ export default function FAQSample() {
         "I provide practical, goal-focused SEO and digital marketing solutions. With hands-on experience and attention to each business, I help websites grow online in a simple and effective way.",
     },
     {
-      question: "How does Aswanth stay updated as an SEO expert in India?",
+      question: "Do you provide SEO services only for Calicut, or across Kerala?",
       answer:
-        "I stay updated by following Google updates, SEO blogs, and industry experts. I use tools like Semrush and Analytics, test strategies, and refine my approach based on real performance data.",
+        "While I'm based in Calicut and specialise in Kozhikode local SEO, I work with businesses across Kerala — including Malappuram, Kannur, Thrissur, Kochi, and Thiruvananthapuram. I also work with clients across India for national SEO campaigns.",
     },
     {
-      question: "How does Aswanth boost business growth with SEO?",
+      question: "Can you help my business rank on Google Maps in Calicut?",
       answer:
-        "I create practical SEO strategies and optimize websites based on business goals. By improving online visibility and targeting the right audience, I help attract more traffic and potential customers.",
+        "Yes — local and Google Maps SEO is one of my strongest specialties. I optimise Google Business Profiles, build local citations, implement geo-targeted structured data, and develop review acquisition strategies to help your business rank in the Calicut map pack.",
     },
     {
       question: "How will you help my business grow?",

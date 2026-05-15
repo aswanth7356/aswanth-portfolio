@@ -39,118 +39,137 @@ export default function About() {
                 About me
             </h2>
 
-            {/* TOP SECTION */}
-            <div className="flex flex-col lg:flex-row items-stretch gap-16 my-10">
+            {/* TOP SECTION (UPDATED) */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 my-14 items-start lg:-ml-10">
 
+                {/* LEFT - PROFILE CARD */}
                 <div
-                    className="w-64 sm:w-80 mx-auto relative group"
+                    className="relative flex flex-col items-center lg:items-start lg:ml-40"
                     data-aos="fade-right"
                     data-aos-duration="900"
                 >
 
-                    {/* Gradient Border Glow */}
-                    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500 to-purple-500 opacity-20 blur-xl group-hover:opacity-40 transition duration-500"></div>
+                    {/* Glow */}
+                    {/* <div className="absolute -inset-4 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 blur-2xl rounded-3xl"></div> */}
 
-                    {/* Image Container */}
-                    <div className="relative rounded-3xl overflow-hidden shadow-xl border border-gray-200 dark:border-white/10">
-                        <img
-                            src="./assets/cv-profile-img2.webp"
-                            alt="Aswanth SEO Executive"
-                            className="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:rotate-1"
-                        />
+                    <div className="relative w-72 sm:w-80 mx-auto mt-10">
 
-                        {/* Overlay Text */}
-                        <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center text-white text-sm font-medium">
-                            SEO & Growth 🚀
+                        {/* BACKGROUND SHAPE (collage layer) */}
+                        <div className="absolute -top-4 -left-4 w-full h-full rounded-3xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rotate-[-3deg] blur-sm"></div>
+
+                        {/* SECOND PAPER LAYER */}
+                        <div className="absolute top-2 left-2 w-full h-full rounded-3xl bg-white/30 dark:bg-white/5 rotate-[2deg]"></div>
+
+                        {/* MAIN CUT-OUT CARD */}
+                        <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur-xl">
+
+                            {/* IMAGE (cut-out feel) */}
+                            <div className="relative">
+                                <img
+                                    src="./assets/cv-profile-img2.webp"
+                                    alt="Aswanth SEO Executive"
+                                    className="w-full h-[380px] object-cover scale-110 hover:scale-115 transition duration-700"
+                                />
+
+                                {/* CUT EDGE EFFECT (top fade) */}
+                                <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-white/60 dark:from-black/40 to-transparent"></div>
+
+                                {/* CUT EDGE EFFECT (bottom fade) */}
+                                <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent"></div>
+                            </div>
+
+                            {/* BADGES */}
+                            <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+                                <span className="text-white text-sm font-semibold drop-shadow-md">
+                                    SEO & Growth 🚀
+                                </span>
+                                <span className="px-3 py-1 text-[11px] rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white">
+                                    Calicut
+                                </span>
+                            </div>
+
                         </div>
                     </div>
 
+                    {/* Info Card */}
+                    {/* <div className="mt-6 w-full sm:w-80 p-4 rounded-2xl border border-gray-200 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur-md shadow-lg">
+
+                        <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Focused on improving search visibility, increasing organic traffic, and turning visitors into real business leads through strategic SEO.
+                        </p>
+
+                    </div> */}
+
                 </div>
 
-                {/* CONTENT */}
+                {/* RIGHT - CONTENT */}
                 <div
-                    className="flex-1 flex flex-col justify-between h-full"
+                    className="flex flex-col justify-between"
                     data-aos="fade-left"
                     data-aos-duration="900"
                 >
 
-                    <div>
-                        <p
-                            className="mb-8 text-gray-700 dark:text-gray-400 leading-relaxed"
-                            data-aos="fade-up"
-                            data-aos-delay="100"
-                        >
-                            <span className="font-semibold text-gray-800 dark:text-white">
-                                Freelance SEO Expert in Calicut, Kerala
-                            </span><br /><br />
+                    <div className="space-y-6">
 
-                            I’m Aswanth, working as an <span className="">SEO Executive at Viral Mafia Agency</span> in Calicut.
-                            As an <a
+                        <p className="text-gray-700 dark:text-gray-400 leading-relaxed text-justify">
+                            <span className="font-semibold text-gray-900 dark:text-white">
+                                Freelance SEO Expert in Calicut, Kerala
+                            </span>
+
+                            <br /><br />
+
+                            I’m Aswanth, working as an{" "}
+                            <span className="font-medium text-gray-900 dark:text-white">
+                                SEO Executive at Viral Mafia Agency
+                            </span>{" "}
+                            in Calicut. As a{" "}
+                            <a
                                 href="https://www.linkedin.com/in/aswanth-clt"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-800 dark:text-blue-400 font-semibold hover:underline"
+                                className="text-indigo-600 dark:text-blue-400 font-semibold hover:underline"
                             >
-                               freelance SEO Expert in Calicut
-                            </a>, {' '}I focus on helping businesses improve their online presence and achieve sustainable growth through effective SEO strategies.
+                                freelance SEO Expert in Calicut
+                            </a>,
+                            I help businesses improve visibility and achieve sustainable growth.
                         </p>
 
-                        <p
-                            className="mb-8 text-gray-700 dark:text-gray-400 leading-relaxed"
-                            data-aos="fade-up"
-                            data-aos-delay="200"
-                        >
-                            I specialize in improving
-                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> search visibility</span>,
-                            increasing
-                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> organic traffic</span>,
-                            and achieving better
-                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> keyword rankings</span>.
-                            <br></br>I have hands-on experience in
-                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> keyword research</span>,
-                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> on-page SEO</span>,
-                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> technical SEO audits</span>, and
-                            <span className="text-gray-800 dark:text-blue-400 font-semibold"> link building</span>.
+                        <p className="text-gray-700 dark:text-gray-400 leading-relaxed text-justify">
+                            I specialize in improving{" "}
+                            <span className="font-semibold">search visibility</span>,
+                            increasing{" "}
+                            <span className="font-semibold">organic traffic</span>,
+                            and improving{" "}
+                            <span className="font-semibold">keyword rankings</span>.
+
+                            Experience includes{" "}
+                            <span className="font-medium">keyword research</span>,{" "}
+                            <span className="font-medium">on-page SEO</span>,{" "}
+                            <span className="font-medium">technical audits</span>, and{" "}
+                            <span className="font-medium">link building</span>.
                         </p>
 
-                        <p
-                            className="mb-8 text-gray-700 dark:text-gray-400 leading-relaxed"
-                            data-aos="fade-up"
-                            data-aos-delay="300"
-                        >
-                            What sets me apart is my approach to SEO — I don’t just focus on rankings, but on real business growth.
-                            By using tools like Google Analytics, Search Console, and Semrush, I create data-driven strategies that improve traffic, engagement, and conversions.
+                        <p className="text-gray-700 dark:text-gray-400 leading-relaxed text-justify">
+                            My approach focuses on real business growth — not just rankings.
+                            I use tools like Google Analytics, Search Console, and Semrush.
                         </p>
 
-                        <p
-                            className="text-gray-700 dark:text-gray-400 font-medium"
-                            data-aos="fade-up"
-                            data-aos-delay="400"
-                        >
-                            SEO is not just about tools — it’s about delivering the
-                            <span className=""> right content</span> to the
-                            <span className=""> right audience at the right time</span>.
+                        <p className="text-gray-700 dark:text-gray-400 font-medium text-justify">
+                            SEO is about delivering the <span className="text-indigo-600 dark:text-indigo-400 font-semibold">right content</span> to the <span className="text-indigo-600 dark:text-indigo-400 font-semibold">right audience</span> at the <span>right time</span>, by understanding user intent, optimizing websites, and improving search visibility for real business growth.
                         </p>
+
                     </div>
 
-                    <p
-                        className="mt-2 text-sm text-green-600 font-semibold"
-                        data-aos="fade-up"
-                        data-aos-delay="500"
-                    >
-                        <a
+                    <div className="mt-6">
+                        {/* <a
                             href="https://wa.me/+917356644734"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-3 group hover:underline"
+                            className="inline-flex items-center gap-2 px-5 py-1 rounded-lg border border-indigo-500 text-indigo-600 font-medium hover:bg-indigo-500 hover:text-white transition"
                         >
-                            Let’s transform your vision into a reality that inspires!
-
-                            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-gray-800 dark:text-white text-sm transition-all duration-300 group-hover:translate-x-1 group-hover:bg-white/40">
-                                →
-                            </span>
-                        </a>
-                    </p>
+                            Let’s connect →
+                        </a> */}
+                    </div>
 
                 </div>
             </div>
@@ -159,9 +178,9 @@ export default function About() {
             <div className="grid sm:grid-cols-3 gap-6 my-16">
 
                 <div className="p-6 border border-gray-300 dark:border-white/20 rounded-xl 
-        transition-all duration-300 ease-out
-        hover:-translate-y-2 hover:shadow-2xl hover:border-blue-400
-        hover:bg-white/70 dark:hover:bg-white/5 backdrop-blur-sm">
+                transition-all duration-300 ease-out
+                hover:-translate-y-2 hover:shadow-2xl hover:border-blue-400
+                hover:bg-white/70 dark:hover:bg-white/5 backdrop-blur-sm">
 
                     <h3 className="font-semibold text-lg mb-4">Specialization</h3>
                     <ul className="text-sm text-gray-600 leading-5 dark:text-white/80 space-y-2">
@@ -174,19 +193,15 @@ export default function About() {
                 </div>
 
                 <div className="p-6 border border-gray-300 dark:border-white/20 rounded-xl 
-        transition-all duration-300 ease-out
-        hover:-translate-y-2 hover:shadow-2xl hover:border-purple-400
-        hover:bg-white/70 dark:hover:bg-white/5 backdrop-blur-sm">
+                transition-all duration-300 ease-out
+                hover:-translate-y-2 hover:shadow-2xl hover:border-purple-400
+                hover:bg-white/70 dark:hover:bg-white/5 backdrop-blur-sm">
 
                     <h3 className="font-semibold text-lg mb-4">Experience</h3>
-
                     <div className="text-sm text-gray-600 leading-5 dark:text-white/80 space-y-3">
                         <div>
                             <p className="font-medium">SEO Executive</p>
-                            <p className="text-xs">
-                                Viral Mafia Agency • Jan 2026 -
-                                <span className="text-green-700 font-semibold"> Present</span>
-                            </p>
+                            <p className="text-xs">Viral Mafia Agency • Jan 2026 - <span className="text-green-600 font-semibold">Present</span></p>
                         </div>
 
                         <div>
@@ -202,9 +217,9 @@ export default function About() {
                 </div>
 
                 <div className="p-6 border border-gray-300 dark:border-white/20 rounded-xl 
-        transition-all duration-300 ease-out
-        hover:-translate-y-2 hover:shadow-2xl hover:border-pink-400
-        hover:bg-white/70 dark:hover:bg-white/5 backdrop-blur-sm">
+                transition-all duration-300 ease-out
+                hover:-translate-y-2 hover:shadow-2xl hover:border-pink-400
+                hover:bg-white/70 dark:hover:bg-white/5 backdrop-blur-sm">
 
                     <h3 className="font-semibold text-lg mb-4">Education</h3>
                     <p className="text-sm text-gray-600 leading-5 dark:text-white/80">
@@ -215,62 +230,44 @@ export default function About() {
 
             </div>
 
-            {/* OLD TOOLS SECTION (UNCHANGED) */}
-            <h3 className="my-6 text-2xl sm:text-2xl text-gray-900 font-Ovo dark:text-white/80" data-aos="fade-up">
+            {/* TOOLS */}
+            <h3 className="my-6 text-2xl text-gray-900 font-Ovo dark:text-white/80" data-aos="fade-up">
                 Tools I Used
             </h3>
 
-            <ul className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-4 sm:gap-6">
-    {tools.map((tool, index) => (
-        <li
-            key={tool.name}
-            data-aos="zoom-in"
-            data-aos-delay={index * 70}
-            className="group relative flex flex-col items-center justify-center
-                p-3 sm:p-4 rounded-xl
+            <ul className="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-4 sm:gap-6 md:gap-8">
+                {tools.map((tool, index) => (
+                    <li
+                        key={tool.name}
+                        data-aos="zoom-in"
+                        data-aos-delay={index * 50}
+                        className="group relative flex flex-col items-center justify-center text-center"
+                    >
+                        {/* Floating Circle */}
+                        <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full 
+                bg-white/70 dark:bg-white/10 backdrop-blur-md shadow-sm sm:shadow-md
+                flex items-center justify-center 
+                border border-indigo-200/70 dark:border-indigo-500/30
+                transition-all duration-300 
+                group-hover:scale-110 group-hover:shadow-lg group-hover:border-indigo-500">
 
-                /* BASE */
-                border border-gray-200 dark:border-white/10
-                bg-white/60 dark:bg-white/5 backdrop-blur-md
+                            <img
+                                src={tool.icon}
+                                alt={tool.name}
+                                className={`object-contain transition-all duration-300 ${tool.size === "large"
+                                    ? "w-6 sm:w-7 md:w-8"
+                                    : "w-5 sm:w-6 md:w-7"
+                                    }`}
+                            />
+                        </div>
 
-                /* TRANSITION */
-                transition-all duration-300 ease-out
-
-                /* HOVER */
-                hover:-translate-y-2
-                hover:shadow-2xl
-                hover:border-transparent
-                hover:bg-white/80 dark:hover:bg-white/10
-            "
-        >
-
-            {/* GRADIENT BORDER ON HOVER */}
-            <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300
-                bg-gradient-to-r from-blue-500 to-purple-500 p-[1px] -z-10">
-                <div className="w-full h-full rounded-xl bg-white dark:bg-black"></div>
-            </div>
-
-            {/* ICON */}
-            <div className="flex items-center justify-center mb-2">
-                <img
-                    src={tool.icon}
-                    alt={tool.name}
-                    className={`object-contain transition-all duration-300 
-                        group-hover:scale-110 group-hover:-translate-y-0.5
-                        ${tool.size === "large"
-                            ? "w-10 sm:w-12"
-                            : "w-8 sm:w-10"}`}
-                />
-            </div>
-
-            {/* LABEL */}
-            <p className="text-[10px] sm:text-xs text-gray-600 dark:text-white/70 text-center leading-tight">
-                {tool.name}
-            </p>
-
-        </li>
-    ))}
-</ul>
+                        {/* Label */}
+                        <p className="mt-2 text-[9px] sm:text-[10px] md:text-xs text-gray-600 dark:text-white/70 group-hover:text-indigo-500 transition font-medium leading-tight">
+                            {tool.name}
+                        </p>
+                    </li>
+                ))}
+            </ul>
 
         </div>
     );

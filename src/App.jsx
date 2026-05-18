@@ -34,7 +34,7 @@ export default function App() {
 
                 <meta
                     name="description"
-                    content="Looking for the best freelance SEO expert in Calicut? I help businesses in Kozhikode and Kerala grow on Google with proven SEO strategies and traffic growth."
+                    content="Trusted freelance SEO expert in Calicut, Kerala. I help local businesses get found on Google and attract real customers. Book a free consultation!"
                 />
 
                 <meta

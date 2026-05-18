@@ -45,11 +45,11 @@ export default function ContactPage() {
         <div className="relative overflow-hidden px-6 md:px-16 lg:px-24 py-24">
 
             <Helmet>
-                <title>Contact Aswanth P | Freelance SEO Specialist in Calicut</title>
+                <title>Contact Aswanth P – Let's Work Together</title>
 
                 <meta
                     name="description"
-                    content="Contact Aswanth P, a freelance SEO specialist in Calicut. Get in touch for SEO services, website optimization, and digital marketing consultation."
+                    content="Have a project in mind? I'd love to hear from you. Reach out to Aswanth P and let's discuss how I can help your business grow online!"
                 />
 
                 <link

@@ -35,11 +35,17 @@ export default function Header() {
                     data-aos-delay="400"
                     data-aos-duration="900"
                 >
-                    Freelance SEO Expert in Calicut {' '}
-                    <span className="text-sm sm:text-base lg:text-lg block mt-2 font-medium animate-pulse font-Ovo">
-                        Driving Organic Growth with Smart Strategies
-                    </span>
+                    Best Freelance SEO Expert in Calicut
                 </h1>
+
+                <p
+                    className="text-sm sm:text-base lg:text-lg block mt-2 font-medium animate-pulse font-Ovo"
+                    data-aos="fade-up"
+                    data-aos-delay="500"
+                    data-aos-duration="900"
+                >
+                    Driving Organic Growth with Smart Strategies
+                </p>
 
                 {/* Premium Social Icons */}
                 <ul className="flex items-center justify-center gap-6 mt-8">

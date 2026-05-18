@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet'
 import { Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer'
 import Work from './components/Work'
